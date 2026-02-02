@@ -1,0 +1,19 @@
+
+public static final AnimationDefinition SKULL_IDLE = AnimationDefinition.Builder.withLength(1f).looping()
+.addAnimation("bone3",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 2f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(1f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR))).build();
+public static final AnimationDefinition SKULL_ATTACK = AnimationDefinition.Builder.withLength(1f)
+.addAnimation("jaw",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(0.5f, KeyframeAnimations.posVec(0f, 2f, 0f),
+			AnimationChannel.Interpolations.LINEAR), 
+		new Keyframe(1f, KeyframeAnimations.posVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR))).build();

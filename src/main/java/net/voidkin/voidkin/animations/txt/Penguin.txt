@@ -1,0 +1,76 @@
+
+public static final AnimationDefinition PENGUIN_IDLE = AnimationDefinition.Builder.withLength(0.041676664f)
+.addAnimation("Body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0.041676664f, KeyframeAnimations.posVec(0f, -2.5f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0.041676664f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Left_Wing",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Head",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Right_Wing",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(7.5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Right_Leg",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Left_Leg",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Left_Foot",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Right_Foot",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR))).build();
+public static final AnimationDefinition PENGUIN_FLY = AnimationDefinition.Builder.withLength(0.75f).looping()
+.addAnimation("Body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(0f, -2.5f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Left_Wing",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, -90f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.25f, KeyframeAnimations.degreeVec(0f, 0f, -120f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, -40f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, -90f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Right_Wing",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 90f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.25f, KeyframeAnimations.degreeVec(0f, 0f, 120f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.5f, KeyframeAnimations.degreeVec(0f, 0f, 42.5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.75f, KeyframeAnimations.degreeVec(0f, 0f, 90f),
+			AnimationChannel.Interpolations.LINEAR))).build();
+public static final AnimationDefinition PENGUIN_SLIDE = AnimationDefinition.Builder.withLength(0.041676664f).looping()
+.addAnimation("Body",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0.041676664f, KeyframeAnimations.posVec(0f, -5f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Body",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0.041676664f, KeyframeAnimations.degreeVec(90f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("Head",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0.041676664f, KeyframeAnimations.degreeVec(-90f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR))).build();

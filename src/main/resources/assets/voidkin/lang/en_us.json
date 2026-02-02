@@ -1,0 +1,13 @@
+{
+  "itemGroup.voidkin": "Example Mod Tab",
+  "block.voidkin.example_block": "Example Block",
+  "item.voidkin.example_item": "Example Item",
+
+  "voidkin.configuration.title": "Voidkin Configs",
+  "voidkin.configuration.section.voidkin.common.toml": "Voidkin Configs",
+  "voidkin.configuration.section.voidkin.common.toml.title": "Voidkin Configs",
+  "voidkin.configuration.items": "Item List",
+  "voidkin.configuration.logDirtBlock": "Log Dirt Block",
+  "voidkin.configuration.magicNumberIntroduction": "Magic Number Text",
+  "voidkin.configuration.magicNumber": "Magic Number"
+}
