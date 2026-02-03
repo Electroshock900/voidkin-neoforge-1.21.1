@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "minecraft:desert"
+  ],
+  "spawners": {
+    "type": "voidkin:cactus_buddy",
+    "weight": 50,
+    "min": 1,
+    "max": 5
+
+  }
+}

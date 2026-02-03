@@ -1,0 +1,26 @@
+{
+  "type": "voidkin:altar_crafting",
+  "ingredients": [{
+    "item": "minecraft:diamond"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  },{
+    "item": "minecraft:coal"
+  }
+  ],
+  "result": {
+    "id": "voidkin:chakram"
+  }
+}

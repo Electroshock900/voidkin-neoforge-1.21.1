@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "voidkin:block/blood_planks",
+    "side": "voidkin:block/blood_planks",
+    "top": "voidkin:block/blood_planks"
+  }
+}

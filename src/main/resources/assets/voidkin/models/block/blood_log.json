@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "voidkin:block/blood_log_top",
+    "side": "voidkin:block/blood_log"
+  }
+}

@@ -74,7 +74,7 @@ public static Supplier<EntityType<AresArrow>> ARESARROW = ENTITY_TYPES.register(
 
     //Cactus Buddy
     public static final Supplier<EntityType<Cactus_Buddy>> CACTUS_BUDDY =
-            ENTITY_TYPES.register("cactus_buddy", () -> EntityType.Builder.of(Cactus_Buddy::new, MobCategory.CREATURE)
+            ENTITY_TYPES.register("cactus_buddy", () -> EntityType.Builder.of(Cactus_Buddy::new, MobCategory.MISC)
                             .sized(0.4f, 0.4f)
                             .build("cactus_buddy")
             );
@@ -109,8 +109,8 @@ public static Supplier<EntityType<AresArrow>> ARESARROW = ENTITY_TYPES.register(
 
     public static final Supplier<EntityType<MantaRayEntity>> MANTA_RAY =
             ENTITY_TYPES.register("manta_ray",() ->
-                    EntityType.Builder.of(MantaRayEntity::new,MobCategory.AMBIENT)
-                            .sized(2f,2f)
+                    EntityType.Builder.of(MantaRayEntity::new,MobCategory.WATER_CREATURE)
+                            .sized(2f,1f)
                             .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"manta_ray").toString())
                             );
     public static final Supplier<EntityType<OwlEntity>> OWL =

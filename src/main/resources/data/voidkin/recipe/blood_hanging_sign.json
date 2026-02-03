@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "D": {
+      "item": "voidkin:stripped_blood_log"
+    }
+  },
+  "pattern": [
+    "C C",
+    "DDD",
+    "DDD"
+  ],
+  "result": {
+    "count": 6,
+    "id": "voidkin:blood_hanging_sign"
+  },
+  "show_notification": true
+}

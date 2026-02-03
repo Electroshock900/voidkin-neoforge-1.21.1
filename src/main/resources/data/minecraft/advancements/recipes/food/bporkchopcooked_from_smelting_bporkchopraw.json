@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bporkchopraw": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voidkin:bporkchopraw"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bporkchopcooked_from_smelting_bporkchopraw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bporkchopraw",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bporkchopcooked_from_smelting_bporkchopraw"
+    ]
+  },
+  "sends_telemetry_event": false
+}

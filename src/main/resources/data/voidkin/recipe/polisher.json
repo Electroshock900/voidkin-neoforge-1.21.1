@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+
+  "key": {
+    "X": {
+      "item": "minecraft:iron_block"
+      },
+    "S": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+  "XXX",
+  " S ",
+  "SXS"
+],
+  "result": {
+    "id": "voidkin:polisher"
+  }
+}

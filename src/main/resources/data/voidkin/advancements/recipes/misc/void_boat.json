@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidkin:void_boat"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_void_planks": {
+      "conditions": {
+        "block": "minecraft:water"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "requirements": [
+    [
+      "has_void_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidkin:void_boat"
+    ]
+  },
+  "sends_telemetry_event": false
+}

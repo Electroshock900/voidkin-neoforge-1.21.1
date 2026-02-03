@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.amethyst_armor.idle": {
+			"loop": true
+		},
+		"idle": {
+			"loop": true,
+			"bones": {
+				"bipedHead": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bipedBody": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bipedRightArm": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bipedLeftArm": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bipedLeftLeg": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"bipedRightLeg": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

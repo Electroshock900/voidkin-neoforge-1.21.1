@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "voidkin:fire_charm"
+    },
+    "S": {
+      "item": "voidkin:dark_shard"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SFS",
+    "SSS"
+  ],
+  "result": {
+    "id": "voidkin:chakram"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.5,
+  "group": "darkshard",
+  "ingredient": {
+    "item": "voidkin:deepslate_dark_shard_ore"
+  },
+  "result": "voidkin:dark_shard"
+}

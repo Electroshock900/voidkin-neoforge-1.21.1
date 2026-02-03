@@ -4,6 +4,7 @@ import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.damage_sources.ModDamageSources;
 import net.voidkin.voidkin.damage_types.ModDamageTypes;
+import net.voidkin.voidkin.effect.ModEffects;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.fluid.ModFluidTypes;
 import net.voidkin.voidkin.fluid.ModFluids;
@@ -108,7 +109,7 @@ public class Voidkin {
         ModPotions.register(modEventBus);
         ModSounds.register(modEventBus);
 
-
+        ModEffects.register(modEventBus);
 
 
 

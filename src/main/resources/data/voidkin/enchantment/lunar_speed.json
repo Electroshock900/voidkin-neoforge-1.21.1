@@ -1,0 +1,35 @@
+{
+  "description": {
+    "translate": "enchantment.voidkin.lunar_speed"
+  },
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 3,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 1
+  },
+  "max_cost": {
+    "base": 51,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 4,
+  "slots": [
+    "legs",
+    "feet"
+  ],
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "id": "voidkin:lunar_speed",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 1,
+          "per_level_above_first": 1
+        },
+        "operation": "add_value"
+      }
+    ]
+  }
+}

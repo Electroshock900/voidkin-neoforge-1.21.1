@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "voidkin:block/blood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "voidkin:block/blood_pressure_plate_down"
+    }
+  }
+}

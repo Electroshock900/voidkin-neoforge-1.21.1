@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "voidkin:void_planks"
+    }
+  ],
+  "result": {
+    "id": "voidkin:void_button"
+  }
+}

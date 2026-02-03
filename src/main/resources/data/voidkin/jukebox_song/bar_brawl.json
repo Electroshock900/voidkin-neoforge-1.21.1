@@ -1,0 +1,9 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate":"item.voidkin.bar_brawl_music_disc.desc"
+  },
+  "length_in_seconds3": 162.0,
+  "length_in_seconds": 122.0,
+  "sound_event": "voidkin:bar_brawl"
+}

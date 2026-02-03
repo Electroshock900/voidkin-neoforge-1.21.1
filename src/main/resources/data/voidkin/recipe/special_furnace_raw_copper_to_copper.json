@@ -1,0 +1,14 @@
+{
+  "type": "voidkin:special_furnace",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },{
+      "item":"minecraft:raw_copper"
+    }
+  ],
+  "output": {
+    "count": 7,
+    "id": "minecraft:copper_ingot"
+  }
+}

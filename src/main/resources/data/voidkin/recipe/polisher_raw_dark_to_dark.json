@@ -1,0 +1,12 @@
+{
+  "type": "voidkin:polisher",
+  "ingredient": [
+    {
+      "item": "voidkin:raw_dark_shard"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "id": "voidkin:dark_shard"
+  }
+}

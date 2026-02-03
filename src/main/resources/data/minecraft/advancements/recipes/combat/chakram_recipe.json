@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chakram": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voidkin:chakram"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_fire_charm": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voidkin:fire_charm"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chakram_recipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_chakram",
+      "has_fire_charm",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chakram_recipe"
+    ]
+  },
+  "sends_telemetry_event": false
+}

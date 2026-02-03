@@ -1,0 +1,113 @@
+{
+  "metal_detector_found_ore": {
+    "subtitles": "sounds.voidkin.metal_detector_found_ore",
+    "sounds": [
+      "voidkin:metal_detector_found_ore"
+    ]
+  },
+  "sound_block_break": {
+    "subtitle": "sounds.voidkin.sound_block_break",
+    "sounds": [
+      "voidkin:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.voidkin.sound_block_step",
+    "sounds": [
+      "voidkin:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.voidkin.sound_block_place",
+    "sounds": [
+      "voidkin:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.voidkin.sound_block_hit",
+    "sounds": [
+      "voidkin:sound_block_hit"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.voidkin.sound_block_fall",
+    "sounds": [
+      "voidkin:sound_block_fall"
+    ]
+  },
+
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "voidkin:bar_brawl",
+        "stream" : true
+      }
+    ]
+  },
+
+  "gravity": {
+    "sounds": [
+      {
+        "name": "voidkin:gravity",
+        "stream" : true
+      }
+    ]
+  },
+  "daisies": {
+    "sounds": [
+      {
+        "name": "voidkin:daisies",
+        "stream" : true
+      }
+    ]
+  },
+  "upside_down": {
+    "sounds": [
+      {
+        "name": "voidkin:upside_down",
+        "stream" : true
+      }
+    ]
+  },
+  "alastor_mashup": {
+    "sounds": [
+      {
+        "name": "voidkin:alastor_mashup",
+        "stream" : true
+      }
+    ]
+  },
+  "loser_baby": {
+    "sounds": [
+      {
+        "name": "voidkin:loser_baby",
+        "stream" : true
+      }
+    ]
+  },
+  "losin_streak": {
+    "sounds": [
+      {
+        "name": "voidkin:losin_streak",
+        "stream" : true
+      }
+    ]
+  },
+  "love_in_a_bottle": {
+    "sounds": [
+      {
+        "name": "voidkin:love_in_a_bottle",
+        "stream" : true
+      }
+    ]
+  },
+  "brighter": {
+    "sounds": [
+      {
+        "name": "voidkin:brighter",
+        "stream" : true
+      }
+    ]
+  }
+
+}

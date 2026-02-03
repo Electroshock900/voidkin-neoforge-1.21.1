@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "@": {
+      "item": "voidkin:dark_shard"
+    },
+    "#": {
+      "item": "voidkin:darkness_block"
+    },
+    "!": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#@@",
+    "!  ",
+    "!  "
+  ],
+  "result": {
+    "id": "voidkin:scythe"
+  },
+  "show_notification": true
+}

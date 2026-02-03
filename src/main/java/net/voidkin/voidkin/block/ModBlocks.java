@@ -77,18 +77,23 @@ public class ModBlocks {
             ()-> new CactusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS)));
     public static final DeferredBlock<Block> DARK_CACTUS = registerBlock("dark_cactus",
             () -> new CactusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS)));
+    public static final DeferredBlock<Block> BLOOD_CACTUS = registerBlock("blood_cactus",
+            () -> new CactusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS)));
     public static final DeferredBlock<Block> END_CACTUS = registerBlock("end_cactus",
             () -> new CactusBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CACTUS)));
 
-    /**public static final DeferredBlock<Block> POTTED_ANTI_CACTUS = BLOCKS.register("potted_anti_cactus",
+    public static final DeferredBlock<Block> POTTED_ANTI_CACTUS = BLOCKS.register("potted_anti_cactus",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.ANTI_CACTUS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_CACTUS).noOcclusion()));
     public static final DeferredBlock<Block> POTTED_DARK_CACTUS = BLOCKS.register("potted_dark_cactus",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.DARK_CACTUS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_CACTUS).noOcclusion()));
+    public static final DeferredBlock<Block> POTTED_BLOOD_CACTUS = BLOCKS.register("potted_blood_cactus",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.BLOOD_CACTUS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_CACTUS).noOcclusion()));
     public static final DeferredBlock<Block> POTTED_END_CACTUS = BLOCKS.register("potted_end_cactus",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.END_CACTUS,
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_CACTUS).noOcclusion()))**/;
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_CACTUS).noOcclusion()));
 
 
 //DARK WOOD STUFF

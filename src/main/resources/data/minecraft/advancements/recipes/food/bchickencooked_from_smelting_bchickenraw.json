@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bchickenraw": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voidkin:bchickenraw"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bchickencooked_from_smelting_bchickenraw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bchickenraw",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bchickencooked_from_smelting_bchickenraw"
+    ]
+  },
+  "sends_telemetry_event": false
+}

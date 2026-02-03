@@ -1,0 +1,48 @@
+
+public static final AnimationDefinition MANTA_RAY_MODEL_NEW = AnimationDefinition.Builder.withLength(1.25f).looping()
+.addAnimation("bone3",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0.25f, KeyframeAnimations.posVec(0f, 1f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone3",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.25f, KeyframeAnimations.degreeVec(0f, 0f, 17.5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(1f, KeyframeAnimations.degreeVec(0f, 0f, -2.5f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone4",
+	new AnimationChannel(AnimationChannel.Targets.POSITION, 
+		new Keyframe(0f, KeyframeAnimations.posVec(-2f, 0.25f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone4",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.25f, KeyframeAnimations.degreeVec(0f, 0f, -17.5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.7083434f, KeyframeAnimations.degreeVec(0f, 0f, -12.5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(1.25f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone5",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.2916767f, KeyframeAnimations.degreeVec(0f, 0f, 20f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(1f, KeyframeAnimations.degreeVec(0f, 0f, 22.5f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone6",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, -5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(0.7083434f, KeyframeAnimations.degreeVec(0f, 0f, -12.5f),
+			AnimationChannel.Interpolations.LINEAR),
+		new Keyframe(1f, KeyframeAnimations.degreeVec(0f, 0f, -20f),
+			AnimationChannel.Interpolations.LINEAR)))
+.addAnimation("bone8",
+	new AnimationChannel(AnimationChannel.Targets.ROTATION,
+		new Keyframe(0.25f, KeyframeAnimations.degreeVec(5f, 0f, 0f),
+			AnimationChannel.Interpolations.LINEAR))).build();

@@ -64,6 +64,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLOOD_COBBLESTONE.get());
         dropSelf(ModBlocks.VOID_COBBLESTONE.get());
         dropSelf(ModBlocks.DARK_CACTUS.get());
+        dropSelf(ModBlocks.BLOOD_CACTUS.get());
         dropSelf(ModBlocks.END_CACTUS.get());
         dropSelf(ModBlocks.ANTI_CACTUS.get());
 

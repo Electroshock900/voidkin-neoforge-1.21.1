@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "darkshard",
+  "ingredient": {
+    "item": "voidkin:deepslate_dark_shard_ore"
+  },
+  "result": "voidkin:dark_shard"
+}

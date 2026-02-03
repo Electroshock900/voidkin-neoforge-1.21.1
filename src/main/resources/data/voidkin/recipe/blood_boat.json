@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "voidkin:blood_planks"
+    }
+  },
+  "pattern": [
+    "D D",
+    "DDD"
+  ],
+  "result": {
+    "id": "voidkin:blood_boat"
+  },
+  "show_notification": true
+}

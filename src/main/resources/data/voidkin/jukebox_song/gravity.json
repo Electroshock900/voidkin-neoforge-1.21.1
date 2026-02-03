@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate":"item.voidkin.gravity_music_disc.desc"
+  },
+  "length_in_seconds": 112.0,
+  "sound_event": "voidkin:gravity"
+}

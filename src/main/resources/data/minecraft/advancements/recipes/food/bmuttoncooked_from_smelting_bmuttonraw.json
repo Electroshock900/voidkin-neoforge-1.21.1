@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bmuttonraw": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "voidkin:bmuttonraw"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:bmuttoncooked_from_smelting_bmuttonraw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_bmuttonraw",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:bmuttoncooked_from_smelting_bmuttonraw"
+    ]
+  },
+  "sends_telemetry_event": false
+}

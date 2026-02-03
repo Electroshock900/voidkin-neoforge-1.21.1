@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wooden_door",
+  "key": {
+    "#": {
+      "item": "voidkin:dark_planks"
+    },
+    "!": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#!#",
+    "#!#"
+  ],
+  "result": {
+    "count": 3,
+    "id": "voidkin:dark_fence"
+  },
+  "show_notification": true
+}

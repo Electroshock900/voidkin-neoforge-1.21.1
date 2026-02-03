@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "voidkin:block/dark_slab"
+    },
+    "type=double": {
+      "model": "voidkin:block/dark_planks"
+    },
+    "type=top": {
+      "model": "voidkin:block/dark_slab_top"
+    }
+  }
+}

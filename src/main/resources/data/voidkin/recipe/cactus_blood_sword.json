@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "voidkin:dark_cactus"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  C",
+    " C ",
+    "S  "
+  ],
+  "result": {
+    "id": "voidkin:cactus_blood_sword"
+  },
+  "show_notification": true
+}

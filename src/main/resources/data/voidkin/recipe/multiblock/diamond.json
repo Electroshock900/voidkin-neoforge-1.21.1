@@ -1,0 +1,10 @@
+{
+  "type": "mymod:multiblock_recipe",
+  "main_input": { "item": "minecraft:diamond" },
+  "external_inputs": [
+    { "position": "north", "item": "minecraft:iron_ingot", "count": 2 },
+    { "position": "east", "item": "minecraft:gold_ingot", "count": 1 },
+    { "position": "west", "item": "minecraft:redstone", "count": 4 }
+  ],
+  "output": { "id": "minecraft:nether_star", "count": 1 }
+}

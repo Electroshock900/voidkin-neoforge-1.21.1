@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 50,
+  "experience": 0.7,
+  "group": "rds_ds",
+  "ingredient": {
+    "item": "voidkin:raw_dark_shard"
+  },
+  "result": "voidkin:dark_shard"
+}

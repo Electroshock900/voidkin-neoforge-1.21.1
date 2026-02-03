@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate":"item.voidkin.daisies_music_disc.desc"
+  },
+  "length_in_seconds": 144.2,
+  "sound_event": "voidkin:daisies"
+}

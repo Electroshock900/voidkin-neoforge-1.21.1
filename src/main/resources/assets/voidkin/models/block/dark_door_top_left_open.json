@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "voidkin:block/dark_door_bottom",
+    "top": "voidkin:block/dark_door_top"
+  }
+}

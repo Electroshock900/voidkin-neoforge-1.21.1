@@ -9,5 +9,231 @@
   "voidkin.configuration.items": "Item List",
   "voidkin.configuration.logDirtBlock": "Log Dirt Block",
   "voidkin.configuration.magicNumberIntroduction": "Magic Number Text",
-  "voidkin.configuration.magicNumber": "Magic Number"
+  "voidkin.configuration.magicNumber": "Magic Number",
+
+
+  "block.voidkin.voidless_block":"voidless Block",
+  "block.voidkin.darkness_block":"Darkness Block",
+  "block.voidkin.raw_darkness_block":"§l§5Impure §rDarkness Block",
+
+  "block.voidkin.dark_shard_ore":"Dark Shard Ore",
+  "block.voidkin.deepslate_dark_shard_ore":"Deepslate Dark Shard Ore",
+  "block.voidkin.nether_dark_shard_ore":"Nether Dark Shard Ore",
+
+  "block.voidkin.bchickenraw":"Raw Chicken Block",
+  "block.voidkin.bchickencooked":"Cooked Chicken Block",
+  "block.voidkin.bbeefraw":"Raw Beef Block",
+  "block.voidkin.bbeefcooked":"Cooked Beef Block",
+  "block.voidkin.bporkchopraw":"Raw Pork Block",
+  "block.voidkin.bporkchopcooked":"Cooked Pork Block",
+  "block.voidkin.bmuttonraw":"Raw Mutton Block",
+  "block.voidkin.bmuttoncooked":"Cooked Mutton Block",
+
+
+  "block.voidkin.dark_grass":"Dark Grass",
+  "block.voidkin.dark_dirt":"Dark Dirt",
+  "block.voidkin.dark_stone":"Dark Stone",
+
+  "block.voidkin.dark_sapling": "Darkness Sapling",
+  "block.voidkin.dark_log": "Darkness Log",
+  "block.voidkin.stripped_dark_log": "Stripped Darkness Log",
+  "block.voidkin.dark_wood": "Darkness Wood",
+  "block.voidkin.stripped_dark_wood": "Stripped Darkness Wood",
+  "block.voidkin.dark_leaves": "Darkness Leaves",
+  "block.voidkin.dark_planks": "Dark Wood Planks",
+  "block.voidkin.dark_stairs": "Dark Wood Stairs",
+  "block.voidkin.dark_slab": "Dark Wood Slab",
+  "block.voidkin.dark_pressure_plate": "Dark Wood Pressure Plate",
+  "block.voidkin.dark_button": "Dark Wood Button",
+  "block.voidkin.dark_fence": "Dark Wood Fence",
+  "block.voidkin.dark_fence_gate": "Dark Wood Fence Gate",
+  "block.voidkin.dark_wall": "Dark Wood Wall",
+  "block.voidkin.dark_door": "Dark Wood Door",
+  "block.voidkin.dark_trapdoor": "Dark Wood Trapdoor",
+  "block.voidkin.dark_chest": "Dark Chest",
+
+  "block.voidkin.blood_stone": "Blood Stone",
+  "block.voidkin.blood_cobblestone": "Blood Cobblestone",
+
+  "block.voidkin.blood_congealed": "Congealed Blood Block",
+  "block.voidkin.blood_coagulated": "Coagulated Blood Block",
+
+  "block.voidkin.blood_sapling": "Blood Sapling",
+  "block.voidkin.blood_log": "Blood Log",
+  "block.voidkin.blood_wood": "Blood Wood",
+  "block.voidkin.stripped_blood_log": "Stripped Blood Log",
+  "block.voidkin.stripped_blood_wood": "Stripped Blood Wood",
+  "block.voidkin.blood_leaves": "Blood Leaves",
+  "block.voidkin.blood_planks": "Blood Wood Planks",
+  "block.voidkin.blood_stairs": "Blood Wood Stairs",
+  "block.voidkin.blood_slab": "Blood Wood Slab",
+  "block.voidkin.blood_pressure_plate": "Blood Wood Pressure Plate",
+  "block.voidkin.blood_button": "Blood Wood Button",
+  "block.voidkin.blood_fence": "Blood Wood Fence",
+  "block.voidkin.blood_fence_gate": "Blood Wood Fence Gate",
+  "block.voidkin.blood_wall": "Blood Wood Wall",
+  "block.voidkin.blood_door": "Blood Wood Door",
+  "block.voidkin.blood_trapdoor": "Blood Wood Trapdoor",
+  "block.voidkin.blood_chest": "Blood Chest",
+
+  "block.voidkin.void_sapling": "Void Sapling",
+  "block.voidkin.void_log": "Void Log",
+  "block.voidkin.void_wood": "Void Wood",
+  "block.voidkin.stripped_void_log": "Stripped Void Log",
+  "block.voidkin.stripped_void_wood": "Stripped Void Wood",
+  "block.voidkin.void_leaves": "Void Leaves",
+  "block.voidkin.void_planks": "Void Wood Planks",
+  "block.voidkin.void_stairs": "Void Wood Stairs",
+  "block.voidkin.void_slab": "Void Wood Slab",
+  "block.voidkin.void_pressure_plate": "Void Wood Pressure Plate",
+  "block.voidkin.void_button": "Void Wood Button",
+  "block.voidkin.void_fence": "Void Wood Fence",
+  "block.voidkin.void_fence_gate": "Void Wood Fence Gate",
+  "block.voidkin.void_wall": "Void Wood Wall",
+  "block.voidkin.void_door": "Void Wood Door",
+  "block.voidkin.void_trapdoor": "Void Wood Trapdoor",
+  "block.voidkin.void_chest": "Void Chest",
+
+  "block.voidkin.dark_cactus": "Dark Cactus",
+  "block.voidkin.blood_cactus": "Blood Cactus",
+  "block.voidkin.end_cactus": "Ender Cactus",
+  "block.voidkin.anti_cactus": "Anti Cactus",
+  "block.voidkin.catmint": "Catmint",
+
+  "block.voidkin.void_altar": "Void Altar",
+  "block.voidkin.void_pedestal": "Void Pedestal",
+
+  "block.voidkin.s": "§b§i§4 To be continued... S",
+  "block.voidkin.s2": "§b§i§4 To be §5continued... S2",
+  "block.voidkin.candy_cane_furnace": "Candy Cane Furnace",
+  "block.voidkin.sound_block": "Sound Block",
+
+  "item.voidkin.smile":"§0§kXXX §r§0Smile!!! §kXXX",
+  "item.voidkin.spine":"Cactus Spine",
+  "item.voidkin.blood_spine":"Blood Cactus Spine",
+  "item.voidkin.anti_spine":"Anti Cactus Spine",
+
+
+  "item.voidkin.chakram": "§4Eternal Flames",
+  "item.voidkin.cactus_sword": "Cactus Sword",
+  "item.voidkin.cactus_blood_sword": "Blood Cactus Sword",
+  "item.voidkin.cactus_end_sword": "Ender Cactus Sword",
+  "item.voidkin.anti_cactus_sword": "Anti Cactus Sword",
+  "item.voidkin.scythe": "Scythe",
+  "item.voidkin.fire_charm": "§cFire Charm",
+  "item.voidkin.dark_shard": "Dark Shards",
+  "item.voidkin.raw_dark_shard": "§5Impure §rDark Shards",
+  "item.voidkin.aresbow": "§4Ares Bow",
+  "item.voidkin.ares_arrow": "§4Ares Arrow",
+  "item.voidkin.turtle_shield": "Turtle Shield",
+
+
+  "item.voidkin.cactus_egg": "Cactus Buddy Spawn Egg",
+  "item.voidkin.eyeball_monster_egg": "Eyeball Monster Spawn Egg",
+  "item.voidkin.skull_egg": "Skull Monster Spawn Egg",
+  "item.voidkin.mini_skull_egg": "Skull Monster Spawn Egg",
+  "item.voidkin.tiger_spawn_egg": "Tiger Spawn Egg",
+  "item.voidkin.lion_thing_egg": "Lion Thing Spawn Egg",
+  "item.voidkin.owl_egg": "Owl Spawn Egg",
+  "item.voidkin.horned_owl_egg": "Horned Owl Spawn Egg",
+  "item.voidkin.penguin_egg": "Penguin Spawn Egg",
+  "item.voidkin.manta_ray_egg": "Manta Ray Spawn Egg",
+
+
+  "item.voidkin.blood_bucket": "Blood Bucket",
+  "item.voidkin.ender_blood_bucket": "Ender Blood Bucket",
+  "item.voidkin.deity_blood_bucket": "Deity Blood Bucket",
+  "item.voidkin.dark_essense_bucket": "Bucket of Dark Essense",
+  "item.voidkin.soap_water_bucket": "Soapy Water Bucket",
+
+  "item.voidkin.dark_boat": "Dark Boat",
+  "item.voidkin.dark_chest_boat": "Dark Chest Boat",
+  "item.voidkin.blood_boat": "Blood Boat",
+  "item.voidkin.blood_chest_boat": "Blood Chest Boat",
+  "item.voidkin.void_boat": "Void Boat",
+  "item.voidkin.void_chest_boat": "Void Chest Boat",
+
+  "item.voidkin.amethyst_helmet": "Amethyst Helmet",
+  "item.voidkin.amethyst_chestplate": "Amethyst Chestplate",
+  "item.voidkin.amethyst_leggings": "Amethyst Leggings",
+  "item.voidkin.amethyst_boots": "Amethyst Boots",
+
+  "item.voidkin.beetlewings": "Beetle Wings",
+  "item.voidkin.abyss_boots": "Abyss Boots",
+
+  "item.voidkin.axel_ring": "Axel's Ring",
+  "item.voidkin.wbr": "Water Breathing Ring",
+
+  "entity.voidkin.cactus_buddy": "Cactus Buddy",
+  "entity.voidkin.eyeball_monster": "Eyeball Monster",
+  "entity.voidkin.lion_thing": "Lion Thing",
+  "entity.voidkin.skull": "Skull",
+  "entity.voidkin.mini_skull": "Mini Skull",
+
+  "entity.voidkin.spine": "Spine",
+  "entity.voidkin.thrown_chakram": "Chakram",
+
+  "enchantment.voidkin.bridge": "Bridging",
+  "enchantment.voidkin.lightning_striker": "Lightning Striker",
+  "enchantment.voidkin.beheading": "Beheading",
+  "enchantment.voidkin.lava_walker":"Lava Walker",
+  "enchantment.voidkin.blood_walker":"Blood Walker",
+  "enchantment.voidkin.lunar_speed": "Lunar Speed",
+
+  "block.voidkin.pedestal": "Pedestal",
+
+  "block.voidkin.polisher": "Gem Polisher",
+  "block.voidkin.special_furnace": "Special Furnace",
+  "block.voidkin.crystallizer": "Crystallizer",
+
+  "item.voidkin.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.voidkin.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "item.voidkin.gravity_music_disc": "Gravity Music Disc",
+  "item.voidkin.gravity_music_disc.desc": "Lute & Adam - Gravity",
+
+  "item.voidkin.daisies_music_disc": "Daisies Music Disc",
+  "item.voidkin.daisies_music_disc.desc": "Black Gryphon & Baasik - Daisies",
+
+  "item.voidkin.upside_down_music_disc": "Upside Down Music Disc",
+  "item.voidkin.upside_down_music_disc.desc": "Black Gryphon & Baasik - Upside Down",
+
+  "item.voidkin.alastor_mashup_music_disc": "Alastor Mashup Music Disc",
+  "item.voidkin.alastor_mashup_music_disc.desc": "Black Gryphon & Baasik - Upside Down x Daises X Insane",
+
+  "item.voidkin.loser_baby_music_disc": "Loser Baby Music Disc",
+  "item.voidkin.loser_baby_music_disc.desc": "Angel Dust & Husker - Loser Baby",
+
+  "item.voidkin.losin_streak_music_disc": "Losin' Streak Music Disc",
+  "item.voidkin.losin_streak_music_disc.desc": "Angel Dust - Losin' Streak",
+
+  "item.voidkin.husk_love_music_disc": "Love In A Bottle Music Disc",
+  "item.voidkin.husk_love_music_disc.desc": "Husker - Love In A Bottle",
+
+  "item.voidkin.brighter_music_disc": "Brighter Music Disc",
+  "item.voidkin.brighter_music_disc.desc": "Vox - Brighter",
+
+
+  "item.voidkin.tomahawk": "Tomahawk",
+
+  "item.minecraft.potion.effect.spider_potion": "Spider Potion",
+  "item.minecraft.splash_potion.effect.spider_potion": "Splash Spider Potion",
+  "item.minecraft.lingering_potion.effect.spider_potion": "Lingering Spider Potion",
+
+  "container.voidkin.dark_chest": "Dark Chest",
+  "container.voidkin.blood_chest": "Blood Chest",
+
+  "creativetab.voidless_tab":"§lVoidkin Tab",
+  "creativetab.abyss_tab":"§4Abyss Tab",
+  "creativetab.voidless_nature_tab":"§lVoidkin of Nature",
+  "creativetab.psycho_tab":"§l§mPSYCHO Tab",
+
+  "name.voidkin.crystallizer": "Crystallizer",
+
+
+  "death.attack.voidkin.life_steals": "%s's life was stolen by %s",
+  "death.attack.voidkin.life_steals.item": "%s's life was stolen by %s with %s",
+
+  "death.attack.voidkin.chakrams": "%s was burned to ash by %s",
+  "death.attack.voidkin.chakrams.item": "%s was burned to ash by %s using %s"
 }

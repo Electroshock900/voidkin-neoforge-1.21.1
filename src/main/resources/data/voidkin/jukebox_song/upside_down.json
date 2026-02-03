@@ -1,0 +1,9 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate":"item.voidkin.upside_down_music_disc.desc"
+  },
+  "length_in_seconds3": 162.0,
+  "length_in_seconds": 158.0,
+  "sound_event": "voidkin:upside_down"
+}

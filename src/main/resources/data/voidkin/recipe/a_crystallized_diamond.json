@@ -1,0 +1,10 @@
+{
+  "type": "voidkin:crystallizing",
+  "ingredient": {
+    "item": "voidkin:raw_dark_shard"
+  },
+  "result": {
+    "id": "voidkin:dark_shard",
+    "count": 5
+  }
+}

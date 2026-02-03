@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "voidkin:item/alastor_mashup_music_disc"
+  }
+}

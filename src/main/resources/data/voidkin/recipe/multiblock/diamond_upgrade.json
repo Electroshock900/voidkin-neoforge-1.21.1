@@ -1,0 +1,44 @@
+{
+  "type": "voidkin:multiblock",
+  "external_inputs": [
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "count": 2,
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "main_input": {
+    "item": "minecraft:diamond"
+  },
+  "output": {
+    "count": 1,
+    "id": "nether_star"
+  }
+}

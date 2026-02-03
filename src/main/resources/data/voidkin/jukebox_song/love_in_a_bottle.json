@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate":"item.voidkin.husk_love_music_disc.desc"
+  },
+  "length_in_seconds": 121.0,
+  "sound_event": "voidkin:love_in_a_bottle"
+}

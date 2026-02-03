@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "voidkin:void_planks"
+    },
+    "!": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "!#!",
+    "!#!"
+  ],
+  "result": {
+    "count": 3,
+    "id": "voidkin:void_fence_gate"
+  },
+  "show_notification": true
+}

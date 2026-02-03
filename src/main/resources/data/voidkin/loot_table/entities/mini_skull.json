@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 50,
+          "name": "minecraft:bone",
+          "count": 6
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "voidkin:raw_dark_shard"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "voidkin:item/loser_baby_music_disc"
+  }
+}
