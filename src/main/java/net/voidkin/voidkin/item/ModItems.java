@@ -109,10 +109,10 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.DARK, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final DeferredItem<Item> BLOOD_BOOTS = ITEMS.register("blood_boots",
-            () -> new HemogenesisBoots(ModArmorMaterials.DARK, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new HemogenesisBoots(ModArmorMaterials.BLOOD, ArmorItem.Type.BOOTS, new Item.Properties()));
 
-    public static final DeferredItem<Item> FROSTBOOTS = ITEMS.register("frostboots",
-            ()-> new ArmorItem(ModArmorMaterials.AMETHYST,ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> FROSTBOOTS = ITEMS.register("frost_boots",
+            ()-> new ArmorItem(ArmorMaterials.IRON,ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> CACTUS_BOOTS = ITEMS.register("cactus_boots",
             () -> new ArmorItem(ModArmorMaterials.CACTUS, ArmorItem.Type.BOOTS, new Item.Properties()));

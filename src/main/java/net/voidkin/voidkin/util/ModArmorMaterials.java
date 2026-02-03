@@ -31,7 +31,14 @@ public class ModArmorMaterials{
         map.put(ArmorItem.Type.LEGGINGS, 10);
         map.put(ArmorItem.Type.CHESTPLATE, 13);
         map.put(ArmorItem.Type.HELMET, 8);
-    }), 27, 4.20F, 2.6F, () -> ModItems.DARK_SHARD.get());
+    }), 27, 4.20F, 2.6F, ModItems.DARK_SHARD);
+
+    public static final Holder<ArmorMaterial>BLOOD = register("blood", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+        map.put(ArmorItem.Type.BOOTS, 8);
+        map.put(ArmorItem.Type.LEGGINGS, 10);
+        map.put(ArmorItem.Type.CHESTPLATE, 13);
+        map.put(ArmorItem.Type.HELMET, 8);
+    }), 27, 4.20F, 2.6F, ModItems.SOUL_MUD);
 
     public static final Holder<ArmorMaterial>CACTUS = register("cactus", Util.make(new EnumMap<>(ArmorItem.Type.class), (map)-> {
         map.put(ArmorItem.Type.BOOTS, 6);

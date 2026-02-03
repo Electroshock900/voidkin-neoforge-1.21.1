@@ -12,7 +12,7 @@
   "voidkin.configuration.magicNumber": "Magic Number",
 
 
-  "block.voidkin.voidless_block":"voidless Block",
+  "block.voidkin.voidless_block":"Voidless Block",
   "block.voidkin.darkness_block":"Darkness Block",
   "block.voidkin.raw_darkness_block":"§l§5Impure §rDarkness Block",
 
@@ -98,7 +98,9 @@
   "block.voidkin.blood_cactus": "Blood Cactus",
   "block.voidkin.end_cactus": "Ender Cactus",
   "block.voidkin.anti_cactus": "Anti Cactus",
+
   "block.voidkin.catmint": "Catmint",
+  "block.voidkin.lotus": "Lotus Flower",
 
   "block.voidkin.void_altar": "Void Altar",
   "block.voidkin.void_pedestal": "Void Pedestal",
@@ -160,6 +162,7 @@
 
   "item.voidkin.beetlewings": "Beetle Wings",
   "item.voidkin.abyss_boots": "Abyss Boots",
+  "item.voidkin.blood_boots": "Abyss Boots",
 
   "item.voidkin.axel_ring": "Axel's Ring",
   "item.voidkin.wbr": "Water Breathing Ring",
