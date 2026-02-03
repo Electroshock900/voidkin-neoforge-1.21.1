@@ -96,14 +96,14 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.CATMINT.get());
                         pOutput.accept(ModBlocks.LOTUS.get());
 //BOATS
-                        /*
+
                         pOutput.accept(ModItems.DARK_BOAT.get());
                         pOutput.accept(ModItems.DARK_CHEST_BOAT.get());
                         pOutput.accept(ModItems.BLOOD_BOAT.get());
                         pOutput.accept(ModItems.BLOOD_CHEST_BOAT.get());
                         pOutput.accept(ModItems.VOID_BOAT.get());
                         pOutput.accept(ModItems.VOID_CHEST_BOAT.get());
-                        */
+                        
 
                         pOutput.accept(ModBlocks.SBLOCK.get());
                         pOutput.accept(ModBlocks.POLISHER.get());
