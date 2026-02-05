@@ -9,6 +9,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.event.EventHooks;
+import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.projectiles.AresArrowItem;
 import net.voidkin.voidkin.item.ModItems;
 import net.minecraft.world.InteractionHand;
@@ -22,7 +23,9 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class AresBowItem extends ProjectileWeaponItem {
+public class AresBowItem extends BowItem {
+    public static final int MAX_DRAW_DURATION = 20;
+    public static final int DEFAULT_RANGE = 50;
 
     public AresBowItem(Properties properties) {
         //super(ModMaterials.CACTUS,0,0.0F,properties);
@@ -89,7 +92,24 @@ public class AresBowItem extends ProjectileWeaponItem {
     ) {
         projectile.shootFromRotation(shooter, shooter.getXRot(), shooter.getYRot() + angle, 0.0F, velocity, inaccuracy);
     }
+    @Override
+    protected Projectile createProjectile(Level level, LivingEntity shooter, ItemStack weapon, ItemStack ammo, boolean isCrit) {
+        Item var8 = ammo.getItem();
+        AresArrowItem var10000;
+        if (var8 instanceof AresArrowItem arrowitem1) {
+            var10000 = arrowitem1;
+        } else {
+            var10000 = (AresArrowItem) ModItems.ARESARROW.asItem();
+        }
 
+        AresArrowItem arrowitem = var10000;
+        AbstractArrow abstractarrow = arrowitem.createArrow(level, ammo, shooter, weapon);
+        if (isCrit) {
+            abstractarrow.setCritArrow(true);
+        }
+
+        return this.customArrow(abstractarrow, ammo, weapon);
+    }
     /**
      * Gets the velocity of the arrow entity from the bow's charge
      */
@@ -114,11 +134,11 @@ public class AresBowItem extends ProjectileWeaponItem {
        }
 
        public AbstractArrow customArrow (AbstractArrow arrow){
-           return arrow;
+           return ModEntities.ARESARROW.get().create(arrow.level());
        }
 
        public int getDefaultProjectileRange () {
-           return 15;
+           return 50;
        }
 
    }

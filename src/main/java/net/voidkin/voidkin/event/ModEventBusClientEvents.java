@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.voidkin.voidkin.Voidkin;
@@ -19,6 +20,7 @@ import net.voidkin.voidkin.entity.ModModelLayers;
 import net.voidkin.voidkin.entity.boats.ModBoatRenderer;
 import net.voidkin.voidkin.entity.model.*;
 import net.voidkin.voidkin.entity.render.*;
+import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.menu.ModMenuTypes;
 import net.voidkin.voidkin.menu.screens.*;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridScreen;
@@ -29,7 +31,7 @@ import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.particles.ModParticles;
 
-@EventBusSubscriber(modid= Voidkin.MODID,bus=EventBusSubscriber.Bus.GAME, value =  Dist.CLIENT)
+@EventBusSubscriber(modid= Voidkin.MODID,bus = EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
@@ -146,4 +148,20 @@ public class ModEventBusClientEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
 
+
+    /**@SubscribeEvent
+    public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {
+        if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.ARESBOW.get()) {
+            float fovModifier = 1f;
+            int ticksUsingItem = event.getPlayer().getTicksUsingItem();
+            float deltaTicks = (float)ticksUsingItem / 20f;
+            if(deltaTicks > 1f) {
+                deltaTicks = 1f;
+            } else {
+                deltaTicks *= deltaTicks;
+            }
+            fovModifier *= 1f - deltaTicks * 0.15f;
+            event.setNewFovModifier(fovModifier);
+        }
+    }**/
 }
