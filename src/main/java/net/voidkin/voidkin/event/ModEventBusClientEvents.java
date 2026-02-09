@@ -149,7 +149,7 @@ public class ModEventBusClientEvents {
     }
 
 
-    /**@SubscribeEvent
+    @SubscribeEvent
     public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {
         if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == ModItems.ARESBOW.get()) {
             float fovModifier = 1f;
@@ -163,5 +163,5 @@ public class ModEventBusClientEvents {
             fovModifier *= 1f - deltaTicks * 0.15f;
             event.setNewFovModifier(fovModifier);
         }
-    }**/
+    }
 }

@@ -23,6 +23,7 @@ public class ModTabs {
                     .displayItems((pParameters, pOutput) ->{
                         pOutput.accept(ModBlocks.SBLOCK.get());
                         pOutput.accept(ModItems.FROSTBOOTS.get());
+                        pOutput.accept(ModItems.CHAINSAW.get());
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
                         pOutput.accept(ModItems.DAISIES_MUSIC_DISC.get());
                         pOutput.accept(ModItems.GRAVITY_MUSIC_DISC.get());

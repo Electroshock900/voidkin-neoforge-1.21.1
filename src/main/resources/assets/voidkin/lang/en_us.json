@@ -234,6 +234,11 @@
   "name.voidkin.crystallizer": "Crystallizer",
 
 
+  "tooltip.voidkin.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
+  "tooltip.voidkin.chainsaw.tooltip.1": "This chainsaw is awesome and will cut down trees!",
+  "tooltip.voidkin.chainsaw.tooltip.2": "§oChainsaw go vroom!§r",
+
+
   "death.attack.voidkin.life_steals": "%s's life was stolen by %s",
   "death.attack.voidkin.life_steals.item": "%s's life was stolen by %s with %s",
 

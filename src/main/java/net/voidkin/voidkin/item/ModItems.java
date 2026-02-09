@@ -56,11 +56,15 @@ public class ModItems {
 
     public static final DeferredItem<Item> CHAKRAM = ITEMS.register("chakram", () -> new ChakramItem(ModMaterials.DARKNESS,0,6.0F,new Item.Properties().fireResistant()));
     public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe", ()-> new SwordItem(ModMaterials.DARKNESS, new Item.Properties()));
+
     public static final DeferredItem<Item> ARESBOW = ITEMS.register("aresbow", ()-> new AresBowItem(new Item.Properties().fireResistant()));
     public static final DeferredItem<Item> ARESARROW = ITEMS.register("ares_arrow", ()-> new AresArrowItem(new Item.Properties().fireResistant().stacksTo(64)));
 
     public static final DeferredItem<Item> REGROWTHAXE = ITEMS.register("regrowth_axe", () -> new AxeOfRegrowthItem(ModMaterials.CACTUS,0,3, new Item.Properties()));
     public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk", () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+
+    public static final DeferredItem<Item> CHAINSAW =
+            ITEMS.registerItem("chainsaw", ChainsawItem::new, new Item.Properties().durability(32));
 
     public static final DeferredItem<Item> BEETLEWINGS = ITEMS.register("beetlewings", ()-> new BeetleWingsItem(new Item.Properties().durability(543).rarity(Rarity.UNCOMMON)));
     public static final DeferredItem<Item> SOUL_COIN = ITEMS.register("soul_coin", ()-> new Item(new Item.Properties()));

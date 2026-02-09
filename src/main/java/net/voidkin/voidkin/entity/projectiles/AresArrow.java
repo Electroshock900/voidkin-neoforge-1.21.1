@@ -7,6 +7,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.projectile.Arrow;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.Potions;
 import net.voidkin.voidkin.entity.ModEntities;
@@ -20,41 +21,43 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.voidkin.voidkin.item.ModItems;
 
+import javax.annotation.Nullable;
 import java.util.Set;
 
 public class AresArrow extends AbstractArrow {
 
-    private static final int EXPOSED_POTION_DECAY_TIME = 600;
-    private static final int NO_EFFECT_COLOR = -1;
-    private static final EntityDataAccessor<Integer> ID_EFFECT_COLOR = SynchedEntityData.defineId(Arrow.class, EntityDataSerializers.INT);
-    private static final byte EVENT_POTION_PUFF = 0;
-    private Potion potion = Potions.WATER.value();
-    private final Set<MobEffectInstance> effects = Sets.newHashSet();
-    private boolean fixedColor;
-    public AresArrow(EntityType<? extends AresArrow> p_36858_, Level p_36859_) {
-        super(p_36858_, p_36859_);
+    public AresArrow(EntityType<? extends AresArrow> entityType, Level level) {
+        super(entityType, level);
+    }
+
+    public AresArrow(Level level, double x, double y, double z, ItemStack pickupItemStack, @javax.annotation.Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.ARESARROW.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
+    }
+
+    public AresArrow(Level level, LivingEntity owner, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.ARESARROW.get(), owner, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
     }
 
 
 
-    public int getColor() {
+    /*public int getColor() {
         return this.entityData.get(ID_EFFECT_COLOR);
-    }
+    }*/
 
     public void addAdditionalSaveData(CompoundTag pCompound) {
         super.addAdditionalSaveData(pCompound);
-
-
     }
-    public AresArrow(Level p_36866_, LivingEntity p_36867_) {
-        super(ModEntities.ARESARROW.get(),p_36866_);
-    }
+    //public AresArrow(Level p_36866_, LivingEntity p_36867_) {
+        //super(ModEntities.ARESARROW.get(),p_36866_);
+    //}
 
 
-    protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
+    /*protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
         super.defineSynchedData(pBuilder);
         this.entityData.set(ID_EFFECT_COLOR, -1);
-    }
+    }*/
 
     public void tick() {
         super.tick();
@@ -116,13 +119,6 @@ public class AresArrow extends AbstractArrow {
         result.getEntity().setSharedFlagOnFire(true);
         result.getEntity().setRemainingFireTicks(150);
         super.onHitEntity(result);
-    }
-
-    protected ItemStack getPickupItem() {
-            //if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return ItemStack.EMPTY;//new ItemStack(ModItems.ARESARROW.get());
-
-
     }
 
     @Override

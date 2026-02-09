@@ -1,5 +1,7 @@
 package net.voidkin.voidkin;
 
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.damage_sources.ModDamageSources;
@@ -8,6 +10,7 @@ import net.voidkin.voidkin.effect.ModEffects;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.fluid.ModFluidTypes;
 import net.voidkin.voidkin.fluid.ModFluids;
+import net.voidkin.voidkin.item.ModItemProperties;
 import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.menu.ModMenuTypes;
 import net.voidkin.voidkin.particles.ModParticles;
@@ -151,4 +154,13 @@ public class Voidkin {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value=Dist.CLIENT)
+        public static class ClientModEvents{
+            @SubscribeEvent
+            public static void onClientSetup(FMLClientSetupEvent event) {
+                ModItemProperties.addCustomItemProperties();
+            }
+        }
+
+
 }

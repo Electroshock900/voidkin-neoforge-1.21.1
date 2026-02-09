@@ -26,6 +26,9 @@ public class ModSounds {
     public static final Supplier<SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvents("sound_block_place");
     public static final Supplier<SoundEvent> SOUND_BLOCK_HIT = registerSoundEvents("sound_block_hit");
 
+    public static final Supplier<SoundEvent> CHAINSAW_PULL = registerSoundEvents("chainsaw_pull");
+    public static final Supplier<SoundEvent> CHAINSAW_CUT = registerSoundEvents("chainsaw_cut");
+
     public static final Supplier<SoundEvent> BAR_BRAWL = registerSoundEvents("bar_brawl");
     public static final ResourceKey<JukeboxSong> BAR_BRAWL_KEY = createSong("bar_brawl");
 

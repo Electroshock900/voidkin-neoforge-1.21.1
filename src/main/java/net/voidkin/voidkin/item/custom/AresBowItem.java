@@ -4,12 +4,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.neoforge.event.EventHooks;
 import net.voidkin.voidkin.entity.ModEntities;
+import net.voidkin.voidkin.entity.projectiles.AresArrow;
 import net.voidkin.voidkin.item.projectiles.AresArrowItem;
 import net.voidkin.voidkin.item.ModItems;
 import net.minecraft.world.InteractionHand;
@@ -24,6 +26,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public class AresBowItem extends BowItem {
+    public static final Predicate<ItemStack> ARROW_ONLY = (arrow) -> arrow.is(ModItems.ARESARROW.asItem());
     public static final int MAX_DRAW_DURATION = 20;
     public static final int DEFAULT_RANGE = 50;
 
@@ -61,13 +64,18 @@ public class AresBowItem extends BowItem {
             ItemStack itemstack = player.getProjectile(stack);
             if (!itemstack.isEmpty()) {
                 int i = this.getUseDuration(stack, entityLiving) - timeLeft;
-                i = net.neoforged.neoforge.event.EventHooks.onArrowLoose(stack, level, player, i, !itemstack.isEmpty());
+                i = EventHooks.onArrowLoose(stack, level, player, i, !itemstack.isEmpty());
                 if (i < 0) return;
                 float f = getPowerForTime(i);
                 if (!((double)f < 0.1)) {
                     List<ItemStack> list = draw(stack, itemstack, player);
-                    if (level instanceof ServerLevel serverlevel && !list.isEmpty()) {
-                        this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, f * 3.0F, 1.0F, f == 1.0F, null);
+                    if (level instanceof ServerLevel serverlevel /**&& !list.isEmpty()**/) {
+
+                            //AbstractArrow arrow = new AresArrow(ModEntities.ARESARROW.get(),level);
+                            //arrow.setBaseDamage(13.0); // Stronger than normal
+                            //arrow.setRemainingFireTicks(13); // Fire effect
+                            this.shoot(serverlevel, player, player.getUsedItemHand(), stack, list, f * 3.0F, 1.0F, f == 1.0F, null);
+                            //level.addFreshEntity(arrow);
                     }
 
                     level.playSound(
@@ -80,10 +88,21 @@ public class AresBowItem extends BowItem {
                             1.0F,
                             1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F
                     );
+                    level.playSound(
+                            null,
+                            player.getX(),
+                            player.getY(),
+                            player.getZ(),
+                            SoundEvents.FIRECHARGE_USE,
+                            SoundSource.PLAYERS,
+                            1.0F,
+                            1.0F / (level.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F
+                    );
                     player.awardStat(Stats.ITEM_USED.get(this));
                 }
             }
         }
+        super.releaseUsing(stack, level, entityLiving, timeLeft);
     }
 
     @Override
@@ -110,6 +129,7 @@ public class AresBowItem extends BowItem {
 
         return this.customArrow(abstractarrow, ammo, weapon);
     }
+
     /**
      * Gets the velocity of the arrow entity from the bow's charge
      */
@@ -138,7 +158,7 @@ public class AresBowItem extends BowItem {
        }
 
        public int getDefaultProjectileRange () {
-           return 50;
+           return DEFAULT_RANGE;
        }
 
    }

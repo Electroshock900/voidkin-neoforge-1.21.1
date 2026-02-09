@@ -21,6 +21,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+        this.tag(ItemTags.ARROWS)
+                .add(ModItems.ARESARROW.get());
         this.tag(ModTags.Items.CHAKRAM_ENCHANTABLE)
                 .add(ModItems.CHAKRAM.get());
         this.tag(ItemTags.TRIDENT_ENCHANTABLE)
