@@ -9,6 +9,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.ModItems;
+import net.voidkin.voidkin.particles.ModParticles;
 
 import javax.annotation.Nullable;
 
@@ -69,7 +70,7 @@ public class Blood_Spine extends AbstractArrow {
 **/
             for(int j = 0; j < p_36877_; ++j) {
                 //this.level.addParticle(ParticleTypes.CRIT, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
-                this.level().addParticle(ParticleTypes.FLAME, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
+                this.level().addParticle(ModParticles.DRIPPING_BLOOD.get(), this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
             }
 
         }
@@ -81,7 +82,7 @@ public class Blood_Spine extends AbstractArrow {
             double d2 = (double)(i >> 0 & 255) / 255.0D;
 **/
             for(int j = 0; j < p_36877_; ++j) {
-                this.level().addParticle(ParticleTypes.LAVA, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
+                this.level().addParticle(ModParticles.FALLING_BLOOD.get(), this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
                 //this.level.addParticle(ParticleTypes.FALLING_LAVA, this.getRandomX(0.5D), this.getRandomY(), this.getRandomZ(0.5D),0,0,0);//, d0, d1, d2);
             }
 
