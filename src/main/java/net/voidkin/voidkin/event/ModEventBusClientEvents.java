@@ -20,6 +20,7 @@ import net.voidkin.voidkin.entity.ModModelLayers;
 import net.voidkin.voidkin.entity.boats.ModBoatRenderer;
 import net.voidkin.voidkin.entity.model.*;
 import net.voidkin.voidkin.entity.render.*;
+import net.voidkin.voidkin.item.ModItemProperties;
 import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.menu.ModMenuTypes;
 import net.voidkin.voidkin.menu.screens.*;
@@ -45,6 +46,7 @@ public class ModEventBusClientEvents {
 
         event.registerLayerDefinition(Manta_Ray_Model.LAYER_LOCATION, Manta_Ray_Model::createBodyLayer);
         event.registerLayerDefinition(Owl_Model.LAYER_LOCATION, Owl_Model::createBodyLayer);
+        event.registerLayerDefinition(HornedOwlModel.LAYER_LOCATION, HornedOwlModel::createBodyLayer);
         event.registerLayerDefinition(Penguin_Model.LAYER_LOCATION, Penguin_Model::createBodyLayer);
 
         event.registerLayerDefinition(War_Turtle_Model.LAYER_LOCATION, War_Turtle_Model::createBodyLayer);
@@ -61,6 +63,8 @@ public class ModEventBusClientEvents {
     }
     @SubscribeEvent
     public static void doSetup(FMLClientSetupEvent event) {
+
+
         EntityRenderers.register(ModEntities.CHAKRAM.get(), Thrown_Chakram_Renderer::new);
         EntityRenderers.register(ModEntities.SPINE.get(), Spine_Renderer::new);
         EntityRenderers.register(ModEntities.ANTI_SPINE.get(), Anti_Spine_Renderer::new);
@@ -75,6 +79,7 @@ public class ModEventBusClientEvents {
 
         EntityRenderers.register(ModEntities.MANTA_RAY.get(), Manta_Ray_Renderer::new);
         EntityRenderers.register(ModEntities.OWL.get(), OwlRenderer::new);
+        EntityRenderers.register(ModEntities.HORNED_OWL.get(), Horned_Owl_Renderer::new);
         EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
 
         EntityRenderers.register(ModEntities.WAR_TURTLE.get(), War_Turtle_Renderer::new);
@@ -164,4 +169,5 @@ public class ModEventBusClientEvents {
             event.setNewFovModifier(fovModifier);
         }
     }
+
 }

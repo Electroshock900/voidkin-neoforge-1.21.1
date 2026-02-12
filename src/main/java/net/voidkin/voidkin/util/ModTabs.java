@@ -82,17 +82,20 @@ public class ModTabs {
                         pOutput.accept(ModItems.CHAKRAM.get());
                         pOutput.accept(ModItems.TURTLESHIELD.get());
                         pOutput.accept(ModItems.ARESBOW.get());
+                        pOutput.accept(ModItems.CACTUS_BOW.get());
+                        pOutput.accept(ModItems.BLOOD_CACTUS_BOW.get());
                         //pOutput.accept(ModItems.ARESARROW.get());
                         pOutput.accept(ModItems.BEETLEWINGS.get());
 //SPAWN EGGS
-                        pOutput.accept(ModItems.CBSE.get());
-                        pOutput.accept(ModItems.EMSE.get());
-                        pOutput.accept(ModItems.SSE.get());
-                        pOutput.accept(ModItems.MSSE.get());
-                        pOutput.accept(ModItems.LTSE.get());
-                        pOutput.accept(ModItems.MRSE.get());
-                        pOutput.accept(ModItems.OSE.get());
-                        pOutput.accept(ModItems.PSE.get());
+                        pOutput.accept(ModItems.CACTUS_EGG.get());
+                        pOutput.accept(ModItems.EYEBALL_MONSTER_EGG.get());
+                        pOutput.accept(ModItems.SKULL_EGG.get());
+                        pOutput.accept(ModItems.MINI_SKULL_EGG.get());
+                        pOutput.accept(ModItems.LION_THING_EGG.get());
+                        pOutput.accept(ModItems.MANTA_RAY_EGG.get());
+                        pOutput.accept(ModItems.HORNED_OWL_EGG.get());
+                        pOutput.accept(ModItems.OWL_EGG.get());
+                        pOutput.accept(ModItems.PENGUIN_EGG.get());
 //PLANTS
                         pOutput.accept(ModBlocks.CATMINT.get());
                         pOutput.accept(ModBlocks.LOTUS.get());

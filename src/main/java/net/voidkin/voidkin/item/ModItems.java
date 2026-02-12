@@ -50,14 +50,16 @@ public class ModItems {
     public static final DeferredItem<Item> BLOOD_CACTUS_SWORD = ITEMS.register("cactus_blood_sword", () -> new BloodCactusSwordItem(ModMaterials.CACTUS,3,2.0F,new Item.Properties()));
     public static final DeferredItem<Item> END_CACTUS_SWORD = ITEMS.register("cactus_end_sword", () -> new EndCactusSwordItem(ModMaterials.CACTUS,3,2.0F,new Item.Properties()));
 
+    public static final DeferredItem<Item> CACTUS_BOW = ITEMS.register("cactus_bow", ()-> new CactusBowItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> CACTUS_SPINE = ITEMS.register("cactus_spine",()->new Cactus_Spine_Item(new Item.Properties().stacksTo(64)));
+    public static final DeferredItem<Item> BLOOD_CACTUS_BOW = ITEMS.register("blood_cactus_bow", ()-> new BloodCactusBowItem(new Item.Properties().stacksTo(1)));
     public static final DeferredItem<Item> BLOOD_SPINE = ITEMS.register("blood_spine",()->new Blood_Spine_Item(new Item.Properties().stacksTo(64)));
     public static final DeferredItem<Item> ANTI_SPINE = ITEMS.register("anti_spine",()->new Anti_Cactus_Spine_Item(new Item.Properties().stacksTo(64)));
 
     public static final DeferredItem<Item> CHAKRAM = ITEMS.register("chakram", () -> new ChakramItem(ModMaterials.DARKNESS,0,6.0F,new Item.Properties().fireResistant()));
     public static final DeferredItem<Item> SCYTHE = ITEMS.register("scythe", ()-> new SwordItem(ModMaterials.DARKNESS, new Item.Properties()));
 
-    public static final DeferredItem<Item> ARESBOW = ITEMS.register("aresbow", ()-> new AresBowItem(new Item.Properties().fireResistant()));
+    public static final DeferredItem<Item> ARESBOW = ITEMS.register("aresbow", ()-> new AresBowItem(new Item.Properties().fireResistant().stacksTo(1)));
     public static final DeferredItem<Item> ARESARROW = ITEMS.register("ares_arrow", ()-> new AresArrowItem(new Item.Properties().fireResistant().stacksTo(64)));
 
     public static final DeferredItem<Item> REGROWTHAXE = ITEMS.register("regrowth_axe", () -> new AxeOfRegrowthItem(ModMaterials.CACTUS,0,3, new Item.Properties()));
@@ -67,18 +69,20 @@ public class ModItems {
             ITEMS.registerItem("chainsaw", ChainsawItem::new, new Item.Properties().durability(32));
 
     public static final DeferredItem<Item> BEETLEWINGS = ITEMS.register("beetlewings", ()-> new BeetleWingsItem(new Item.Properties().durability(543).rarity(Rarity.UNCOMMON)));
-    public static final DeferredItem<Item> SOUL_COIN = ITEMS.register("soul_coin", ()-> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> SOUL_MUD = ITEMS.register("soul_mud",()-> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> SOUL_COIN = ITEMS.registerItem("soul_coin", Item::new, new Item.Properties());
+    public static final DeferredItem<Item> SOUL_MUD = ITEMS.registerItem("soul_mud", Item::new, new Item.Properties());
 
 //Spawn Eggs
-    public static final DeferredItem<Item> CBSE = ITEMS.register("cactus_egg", () -> new DeferredSpawnEggItem(ModEntities.CACTUS_BUDDY,0x649832,0xbabf95,new Item.Properties()));
-    public static final DeferredItem<Item> EMSE = ITEMS.register("eyeball_monster_egg", () -> new DeferredSpawnEggItem(ModEntities.EYEBALL_MONSTER,0xffffff,0xf5ffc4,new Item.Properties()));
-    public static final DeferredItem<Item> SSE = ITEMS.register("skull_egg", () -> new DeferredSpawnEggItem(ModEntities.SKULL,0xffffff,0xffffff,new Item.Properties()));
-    public static final DeferredItem<Item> MSSE = ITEMS.register("mini_skull_egg", () -> new DeferredSpawnEggItem(ModEntities.MINI_SKULL,0x432f02,0xff24ff,new Item.Properties()));
-    public static final DeferredItem<Item> LTSE = ITEMS.register("lion_thing_egg", () -> new DeferredSpawnEggItem(ModEntities.LION_THING,0x773d3d,0x2e2e2e,new Item.Properties()));
-    public static final DeferredItem<Item> MRSE = ITEMS.register("manta_ray_egg", () -> new DeferredSpawnEggItem(ModEntities.MANTA_RAY,0x773d3d,0x2e2e2e,new Item.Properties()));
-    public static final DeferredItem<Item> OSE = ITEMS.register("owl_egg", () -> new DeferredSpawnEggItem(ModEntities.OWL,0x773d3d,0xcba5a5,new Item.Properties()));
-    public static final DeferredItem<Item> PSE = ITEMS.register("penguin_egg", () -> new DeferredSpawnEggItem(ModEntities.PENGUIN,0x473d77,0x756aa9,new Item.Properties()));
+    public static final DeferredItem<Item> CACTUS_EGG = ITEMS.register("cactus_egg", () -> new DeferredSpawnEggItem(ModEntities.CACTUS_BUDDY,0x649832,0xbabf95,new Item.Properties()));
+    public static final DeferredItem<Item> EYEBALL_MONSTER_EGG = ITEMS.register("eyeball_monster_egg", () -> new DeferredSpawnEggItem(ModEntities.EYEBALL_MONSTER,0xffffff,0xf5ffc4,new Item.Properties()));
+    public static final DeferredItem<Item> SKULL_EGG = ITEMS.register("skull_egg", () -> new DeferredSpawnEggItem(ModEntities.SKULL,0xffffff,0xffffff,new Item.Properties()));
+    public static final DeferredItem<Item> MINI_SKULL_EGG = ITEMS.register("mini_skull_egg", () -> new DeferredSpawnEggItem(ModEntities.MINI_SKULL,0x432f02,0xff24ff,new Item.Properties()));
+    public static final DeferredItem<Item> LION_THING_EGG = ITEMS.register("lion_thing_egg", () -> new DeferredSpawnEggItem(ModEntities.LION_THING,0x773d3d,0x2e2e2e,new Item.Properties()));
+    public static final DeferredItem<Item> MANTA_RAY_EGG = ITEMS.register("manta_ray_egg", () -> new DeferredSpawnEggItem(ModEntities.MANTA_RAY,0x773d3d,0x2e2e2e,new Item.Properties()));
+    public static final DeferredItem<Item> OWL_EGG = ITEMS.register("owl_egg", () -> new DeferredSpawnEggItem(ModEntities.OWL,0x773d3d,0xcba5a5,new Item.Properties()));
+    public static final DeferredItem<Item> HORNED_OWL_EGG = ITEMS.register("horned_owl_egg", () -> new DeferredSpawnEggItem(ModEntities.HORNED_OWL,0x773d3d,0xcba5a5,new Item.Properties()));
+    public static final DeferredItem<Item> PENGUIN_EGG = ITEMS.register("penguin_egg", () -> new DeferredSpawnEggItem(ModEntities.PENGUIN,0x473d77,0x756aa9,new Item.Properties()));
 
 
 //Buckets

@@ -10,6 +10,8 @@ import net.minecraft.world.level.Level;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.ModItems;
 
+import javax.annotation.Nullable;
+
 public class Cactus_Spine extends AbstractArrow {
 
     public Cactus_Spine(EntityType<? extends Cactus_Spine> pEntity, Level pLevel) {
@@ -17,6 +19,15 @@ public class Cactus_Spine extends AbstractArrow {
     }
     public Cactus_Spine(LivingEntity shooter, Level level){
         super(ModEntities.SPINE.get(), shooter, level, new ItemStack(ModItems.CACTUS_SPINE.get()), null);
+    }
+    public Cactus_Spine(Level level, double x, double y, double z, ItemStack pickupItemStack, @javax.annotation.Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.SPINE.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
+    }
+
+    public Cactus_Spine(Level level, LivingEntity owner, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.SPINE.get(), owner, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
     }
 
     public void tick() {
@@ -55,13 +66,6 @@ public class Cactus_Spine extends AbstractArrow {
 
         }
         //}
-
-    protected ItemStack getPickupItem() {
-            //if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return ItemStack.EMPTY;//(ModItems.CACTUS_SPINE.get());
-
-
-    }
 
     @Override
     protected ItemStack getDefaultPickupItem() {

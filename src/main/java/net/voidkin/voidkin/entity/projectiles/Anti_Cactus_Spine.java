@@ -1,6 +1,7 @@
 package net.voidkin.voidkin.entity.projectiles;
 
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.world.entity.LivingEntity;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.EntityType;
@@ -9,19 +10,23 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.voidkin.voidkin.item.ModItems;
 
+import javax.annotation.Nullable;
+
 public class Anti_Cactus_Spine extends AbstractArrow {
 
     public Anti_Cactus_Spine(EntityType<? extends Anti_Cactus_Spine> p_36858_, Level p_36859_) {
         super(ModEntities.ANTI_SPINE.get(), p_36859_);
     }
-/*
-    public Anti_Cactus_Spine(Level p_36861_, double p_36862_, double p_36863_, double p_36864_) {
-        super(ModEntities.ANTI_SPINE.get(), p_36862_, p_36863_, p_36864_, p_36861_);
+
+    public Anti_Cactus_Spine(Level level, double x, double y, double z, ItemStack pickupItemStack, @javax.annotation.Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.ANTI_SPINE.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
     }
-*/
-    //public Anti_Cactus_Spine(Level p_36866_, LivingEntity p_36867_) {
-    //    super(ModEntities.ANTI_SPINE.get(), p_36867_, p_36866_);
-    //}
+
+    public Anti_Cactus_Spine(Level level, LivingEntity owner, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.ANTI_SPINE.get(), owner, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
+    }
 
     protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
         super.defineSynchedData(pBuilder);
@@ -81,12 +86,6 @@ public class Anti_Cactus_Spine extends AbstractArrow {
         }
         //}
 
-    protected ItemStack getPickupItem() {
-            //if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return ItemStack.EMPTY;//new ItemStack(ModItems.CACTUS_SPINE.get());
-
-
-    }
 
     @Override
     protected ItemStack getDefaultPickupItem() {

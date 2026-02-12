@@ -119,6 +119,12 @@ public static Supplier<EntityType<AresArrow>> ARESARROW = ENTITY_TYPES.register(
                             .sized(1f,2f)
                             .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"owl").toString())
                             );
+    public static final Supplier<EntityType<HornedOwlEntity>> HORNED_OWL =
+            ENTITY_TYPES.register("horned_owl",() ->
+                    EntityType.Builder.of(HornedOwlEntity::new,MobCategory.AMBIENT)
+                            .sized(1f,2f)
+                            .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"horned_owl").toString())
+                            );
     public static final Supplier<EntityType<PenguinEntity>> PENGUIN =
             ENTITY_TYPES.register("penguin",() ->
                     EntityType.Builder.of(PenguinEntity::new,MobCategory.AMBIENT)

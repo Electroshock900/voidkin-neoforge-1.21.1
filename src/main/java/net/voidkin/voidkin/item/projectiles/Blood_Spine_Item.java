@@ -1,7 +1,11 @@
 package net.voidkin.voidkin.item.projectiles;
 
+import net.minecraft.core.Direction;
+import net.minecraft.core.Position;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.Item;
 import net.voidkin.voidkin.entity.projectiles.Blood_Spine;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,12 +14,25 @@ import net.minecraft.world.item.ArrowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import net.voidkin.voidkin.entity.projectiles.Cactus_Spine;
 
-public class Blood_Spine_Item extends Item {
+import javax.annotation.Nullable;
+
+public class Blood_Spine_Item extends ArrowItem {
     public Blood_Spine_Item(Properties properties) {
         super(properties);
     }
 
+    public AbstractArrow createArrow(Level world, ItemStack stack, LivingEntity shooter, @Nullable ItemStack weapon){
+        return new Blood_Spine(world, shooter, stack.copyWithCount(1), weapon);
+    }
+
+    @Override
+    public Projectile asProjectile(Level world, Position pos, ItemStack stack, Direction direction) {
+        AbstractArrow spine = new Blood_Spine(world, pos.x(), pos.y(), pos.z(), stack.copyWithCount(1),null);
+        spine.pickup = AbstractArrow.Pickup.ALLOWED;
+        return spine;
+    }
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player pPlayer, InteractionHand pUsedHand) {
 

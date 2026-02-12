@@ -10,6 +10,8 @@ public class ModItemProperties {
                 (stack, level, entity, seed) -> stack.get(ModDataComponents.COORDINATES) != null ? 1f : 0f);
 **/
         makeCustomBow(ModItems.ARESBOW.get());
+        makeCustomBow(ModItems.CACTUS_BOW.get());
+        makeCustomBow(ModItems.BLOOD_CACTUS_BOW.get());
     }
 
     private static void makeCustomBow(Item item) {

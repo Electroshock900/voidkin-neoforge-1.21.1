@@ -10,6 +10,8 @@ import net.minecraft.world.level.Level;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.ModItems;
 
+import javax.annotation.Nullable;
+
 public class Blood_Spine extends AbstractArrow {
 
     public Blood_Spine(EntityType<? extends Blood_Spine> p_36858_, Level p_36859_) {
@@ -18,6 +20,15 @@ public class Blood_Spine extends AbstractArrow {
 
     public Blood_Spine(Level level,LivingEntity shooter) {
         super(ModEntities.BLOODSPINE.get(), shooter, level, new ItemStack(ModItems.BLOOD_SPINE.get()), null);
+    }
+    public Blood_Spine(Level level, double x, double y, double z, ItemStack pickupItemStack, @javax.annotation.Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.BLOODSPINE.get(), x, y, z, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
+    }
+
+    public Blood_Spine(Level level, LivingEntity owner, ItemStack pickupItemStack, @Nullable ItemStack firedFromWeapon) {
+        super(ModEntities.BLOODSPINE.get(), owner, level, pickupItemStack, firedFromWeapon);
+        //this.updateColor();
     }
 
     protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
@@ -77,10 +88,6 @@ public class Blood_Spine extends AbstractArrow {
         }
         //}
 
-    protected ItemStack getPickupItem() {
-        //if (this.effects.isEmpty() && this.potion == Potions.EMPTY) {
-            return ItemStack.EMPTY;//new ItemStack(ModItems.BLOOD_SPINE.get());
-        }
 
     @Override
     protected ItemStack getDefaultPickupItem() {

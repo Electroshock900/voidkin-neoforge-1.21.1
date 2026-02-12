@@ -17,6 +17,7 @@ public class  ModEventBusEvents {
         event.put(ModEntities.SKULL.get(), Skull_Entity.setAttributes());
         event.put(ModEntities.MINI_SKULL.get(), Mini_Skull_Entity.setAttributes());
         event.put(ModEntities.MANTA_RAY.get(), MantaRayEntity.setAttributes());
+        event.put(ModEntities.HORNED_OWL.get(), HornedOwlEntity.setAttributes());
         event.put(ModEntities.OWL.get(), OwlEntity.setAttributes());
         event.put(ModEntities.PENGUIN.get(), PenguinEntity.setAttributes());
         event.put(ModEntities.WAR_TURTLE.get(), WarTurtle.createAttributes());
