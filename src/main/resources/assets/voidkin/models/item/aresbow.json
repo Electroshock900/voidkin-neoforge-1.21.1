@@ -216,16 +216,34 @@
 			}
 		}
 	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [0, -90, 0],
-			"translation": [0, -5, 1],
-			"scale": [0.75, 0.75, 0.75]
-		},
-		"firstperson_righthand": {
-			"rotation": [31.69, -76.17, 31.58]
-		}
-	},
+    "display": {
+      "thirdperson_righthand": {
+        "rotation": [0, -90, 0],
+        "translation": [0, -5, 1],
+        "scale": [0.75, 0.75, 0.75]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [0, 90, 0],
+        "translation": [0, -5, 1],
+        "scale": [0.75, 0.75, 0.75]
+      },
+      "firstperson_righthand": {
+       "rotation": [31.69, -76.17, 31.58],
+       "scale": [0.68, 0.68, 0.68]
+      },
+      "firstperson_lefthand": {
+        "rotation": [-31.69, 76.17, 31.58],
+        "scale": [0.68, 0.68, 0.68]
+      },
+      "gui": {
+        "translation": [-0.5, -1.75, 0],
+        "scale": [0.5, 0.5, 0.5]
+      },
+      "fixed": {
+        "translation": [0, -1.75, 0],
+        "scale": [0.5, 0.5, 0.5]
+     }
+    },
   "overrides": [
     {
       "predicate": {
