@@ -37,7 +37,7 @@
   "main_input": {
     "item": "minecraft:diamond"
   },
-  "output": {
+  "result": {
     "count": 1,
     "id": "nether_star"
   }

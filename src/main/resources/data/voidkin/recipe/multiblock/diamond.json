@@ -6,5 +6,5 @@
     { "position": "east", "item": "minecraft:gold_ingot", "count": 1 },
     { "position": "west", "item": "minecraft:redstone", "count": 4 }
   ],
-  "output": { "id": "minecraft:nether_star", "count": 1 }
+  "result": { "id": "minecraft:nether_star", "count": 1 }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:shaped_crafting",
+  "type": "minecraft:crafting_shaped",
   "key": {
     "$": {
       "item": "minecraft:stick"
@@ -8,7 +8,7 @@
       "item": "voidkin:dark_shard"
     }
   },
-  "output": {
+  "result": {
     "count": 1,
     "id": "scythe"
   },

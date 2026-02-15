@@ -7,7 +7,7 @@
       "item":"minecraft:raw_copper"
     }
   ],
-  "output": {
+  "result": {
     "count": 7,
     "id": "minecraft:copper_ingot"
   }
