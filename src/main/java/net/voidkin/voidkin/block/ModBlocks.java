@@ -414,10 +414,10 @@ public class ModBlocks {
 
     //public static final DeferredBlock<Block> DOM_BLOCK = registerBlock("dom_block",() -> new DomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     //public static final DeferredBlock<Block> SUB_BLOCK = registerBlock("sub_block",() -> new SubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    /**
+
     public static final DeferredBlock<Block> VOID_ALTAR = registerBlock("void_altar",() -> new VoidAltarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> VOID_PEDESTAL = registerBlock("void_pedestal",() -> new VoidPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-**/
+
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",() -> new PedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 
     //public static final DeferredBlock<Block> SPECIAL_FURNACE = registerBlock("special_furnace",() -> new SpecialFurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
