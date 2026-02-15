@@ -14,8 +14,7 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.voidkin.voidkin.Voidkin;
-import net.voidkin.voidkin.block.blockentity.renderer.PedestalBlockEntityRenderer;
-import net.voidkin.voidkin.block.blockentity.renderer.PolisherBlockEntityRenderer;
+import net.voidkin.voidkin.block.blockentity.renderer.*;
 import net.voidkin.voidkin.entity.ModModelLayers;
 import net.voidkin.voidkin.entity.boats.ModBoatRenderer;
 import net.voidkin.voidkin.entity.model.*;
@@ -143,10 +142,10 @@ public class ModEventBusClientEvents {
         //event.registerBlockEntityRenderer(ModBlockEntities.SPECIAL_FURNACE_BLOCK_ENTITY.get(), SpecialFurnaceBlockEntityRenderer::new);
         //event.registerBlockEntityRenderer(ModBlockEntities.DOM_BE.get(), DomBER::new);
         event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL.get(), PedestalBlockEntityRenderer::new);
-        /**
-        event.registerBlockEntityRenderer(ModBlockEntities.VOID_ALTAR.get(), VoidAltarBlockEntityRenderer::new);
-        event.registerBlockEntityRenderer(ModBlockEntities.VOID_PEDESTAL.get(), VoidPedestalBlockEntityRenderer::new);
-        **/
+
+        //event.registerBlockEntityRenderer(ModBlockEntities.VOID_ALTAR.get(), VoidAltarBlockEntityRenderer::new);
+        //event.registerBlockEntityRenderer(ModBlockEntities.VOID_PEDESTAL.get(), VoidPedestalBlockEntityRenderer::new);
+
         //event.registerBlockEntityRenderer(ModBlockEntities.ABE.get(), AltarBER::new);
 
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_SIGN.get(), SignRenderer::new);

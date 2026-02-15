@@ -27,7 +27,7 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<SubMenu>> SUB_MENU =
             registerMenuType("sub_menu", SubMenu::new);*/
 /**
-    public static final DeferredHolder<MenuType<?>, MenuType<VoidAltarMenu>> VOID_ALTAR_MENU =
+    /**public static final DeferredHolder<MenuType<?>, MenuType<VoidAltarMenu>> VOID_ALTAR_MENU =
             registerMenuType("void_altar_menu", VoidAltarMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<VoidPedestalMenu>> VOID_PEDESTAL_MENU =
             registerMenuType("void_pedestal_menu", VoidPedestalMenu::new);

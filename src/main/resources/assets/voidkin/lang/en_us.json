@@ -151,6 +151,12 @@
   "item.voidkin.dark_essense_bucket": "Bucket of Dark Essense",
   "item.voidkin.soap_water_bucket": "Soapy Water Bucket",
 
+  "fluid_type.voidkin.blood_fluid": "Blood",
+  "fluid_type.voidkin.ender_fluid": "Ender Blood",
+  "fluid_type.voidkin.deity_blood_fluid": "Deity Blood",
+  "fluid_type.voidkin.dark_essence_fluid": "Dark Essence",
+
+
   "item.voidkin.dark_boat": "Dark Boat",
   "item.voidkin.dark_chest_boat": "Dark Chest Boat",
   "item.voidkin.blood_boat": "Blood Boat",

@@ -47,7 +47,7 @@ public class ModBlockEntities {
 */
 
 /**
-    public static final Supplier<BlockEntityType<VoidAltarBlockEntity>> VOID_ALTAR =
+    /**public static final Supplier<BlockEntityType<VoidAltarBlockEntity>> VOID_ALTAR =
             BLOCK_ENTITIES.register("void_altar", ()->
                     BlockEntityType.Builder.of(VoidAltarBlockEntity::new,
                             ModBlocks.VOID_ALTAR.get()).build(null));
