@@ -73,6 +73,13 @@ public class ModFluidTypes {
                    FluidType.Properties.create().lightLevel(14).density(-3).canConvertToSource(true).sound(SoundAction.get("drink"), SoundEvents.HONEY_DRINK))
             );
 
+    public static final Supplier<FluidType> SHIMMER_FLUID_TYPE = FLUID_TYPES.register("shimmer_fluid",
+            ()-> new BaseFluidType(WATER_STILL_RL,WATER_FLOWING_RL,SOAP_OVERLAY_RL,
+                    0xffffff, new Vector3f(255f/255f, 255f/255f,255f/255f),
+                    FluidType.Properties.create().lightLevel(13).canConvertToSource(true)
+                            .sound(SoundAction.get("drink"), SoundEvents.WARDEN_LISTENING_ANGRY)
+            ));
+
 
     private static Supplier<FluidType> soap(String name, FluidType.Properties block){
 

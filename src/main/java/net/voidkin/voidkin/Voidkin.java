@@ -1,12 +1,21 @@
 package net.voidkin.voidkin;
 
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.block.ModBlocks;
-import net.voidkin.voidkin.damage_sources.ModDamageSources;
-import net.voidkin.voidkin.damage_types.ModDamageTypes;
+import net.voidkin.voidkin.chests.*;
+import net.voidkin.voidkin.chests.network.TopStacksSyncPacket;
+import net.voidkin.voidkin.datagen.ModDataComponents;
 import net.voidkin.voidkin.effect.ModEffects;
+import net.voidkin.voidkin.enchantments.ModEnchantmentEffects;
+import net.voidkin.voidkin.enchantments.ModEnchantments;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.fluid.ModFluidTypes;
 import net.voidkin.voidkin.fluid.ModFluids;
@@ -17,6 +26,7 @@ import net.voidkin.voidkin.particles.ModParticles;
 import net.voidkin.voidkin.recipe.ModRecipes;
 import net.voidkin.voidkin.sounds.ModSounds;
 import net.voidkin.voidkin.util.*;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -47,6 +57,10 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Voidkin.MODID)
@@ -81,11 +95,22 @@ public class Voidkin {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
+    public static String toEnglishName(String internalName) {
+        return Arrays.stream(internalName.toLowerCase(Locale.ROOT).split("_"))
+                .map(StringUtils::capitalize)
+                .collect(Collectors.joining(" "));
+    }
+    public static ResourceLocation prefix(String name) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, name.toLowerCase(Locale.ROOT));
+    }
+
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Voidkin(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::setupPackets);
+        modEventBus.addListener(this::registerCapabilities);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
@@ -113,6 +138,15 @@ public class Voidkin {
         ModSounds.register(modEventBus);
 
         ModEffects.register(modEventBus);
+        ModEnchantments.register(modEventBus);
+        ModEnchantmentEffects.register(modEventBus);
+
+        ModChestsBlocks.CHEST_BLOCKS.register(modEventBus);
+        ModChestsBlockEntityTypes.BLOCK_ENTITIES.register(modEventBus);
+        ModChestsItems.ITEMS.register(modEventBus);
+        ModChestsMenuTypes.CONTAINERS.register(modEventBus);
+
+        ModDataComponents.REGISTRY.register(modEventBus);
 
 
 
@@ -162,5 +196,23 @@ public class Voidkin {
             }
         }
 
+
+        public void setupPackets(RegisterPayloadHandlersEvent event) {
+            PayloadRegistrar registrar = event.registrar(MODID).versioned("1.0.0").optional();
+
+            registrar.playBidirectional(TopStacksSyncPacket.TYPE, TopStacksSyncPacket.STREAM_CODEC, TopStacksSyncPacket::handle);
+        }
+
+    public void registerCapabilities(RegisterCapabilitiesEvent event) {
+        event.registerBlock(Capabilities.ItemHandler.BLOCK, (level, pos, state, blockEntity, side) -> level.getBlockEntity(pos) instanceof AbstractModChestBlockEntity ironChestBlockEntity ? new InvWrapper(ironChestBlockEntity) : null,
+                ModChestsBlocks.IRON_CHEST.get(), ModChestsBlocks.TRAPPED_IRON_CHEST.get(),
+                //ModChestsBlocks.GOLD_CHEST.get(), ModChestsBlocks.TRAPPED_GOLD_CHEST.get(),
+                //ModChestsBlocks.DIAMOND_CHEST.get(), ModChestsBlocks.TRAPPED_DIAMOND_CHEST.get(),
+                //ModChestsBlocks.COPPER_CHEST.get(), ModChestsBlocks.TRAPPED_COPPER_CHEST.get(),
+                //ModChestsBlocks.CRYSTAL_CHEST.get(), ModChestsBlocks.TRAPPED_CRYSTAL_CHEST.get(),
+                ModChestsBlocks.OBSIDIAN_CHEST.get(), ModChestsBlocks.TRAPPED_OBSIDIAN_CHEST.get()
+                //ModChestsBlocks.DIRT_CHEST.get()
+        );
+    }
 
 }

@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "cactus_end_sword",
 	"textures": {
 		"0": "voidkin:item/ender_cactus_sword",
 		"particle": "voidkin:item/ender_cactus_sword"

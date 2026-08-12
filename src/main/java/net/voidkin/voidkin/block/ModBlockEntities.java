@@ -30,6 +30,8 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(PolisherBlockEntity::new,
                             ModBlocks.POLISHER.get()).build(null));
 
+
+
     public static final Supplier<BlockEntityType<SBlockEntity>> S_BLOCK_ENTITY =
                     BLOCK_ENTITIES.register("s_block_entity", () -> BlockEntityType.Builder.of(
                                     SBlockEntity::new,
@@ -62,7 +64,10 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(PedestalBlockEntity::new,
                             ModBlocks.PEDESTAL.get()).build(null));
 
-
+    public static final Supplier<BlockEntityType<Pedestal2BlockEntity>> PEDESTAL_2 =
+            BLOCK_ENTITIES.register("pedestal2", ()->
+                    BlockEntityType.Builder.of(Pedestal2BlockEntity::new,
+                            ModBlocks.PEDESTAL2.get()).build(null));
 
     public static final Supplier<BlockEntityType<CrystallizerBlockEntity>> CRYSTALLIZER =
             BLOCK_ENTITIES.register("crystallizer", () -> BlockEntityType.Builder.of(

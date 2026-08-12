@@ -39,6 +39,7 @@ public class ModParticles {
             PARTICLE_TYPES.register("void_flame_small", ()-> new SimpleParticleType(false));
     public static final Supplier<SimpleParticleType> VOID_FLAME =
             PARTICLE_TYPES.register("void_flame", ()-> new SimpleParticleType(false));
+
     public static final Supplier<SimpleParticleType> ANTI_VOID =
             PARTICLE_TYPES.register("anti_void", ()-> new SimpleParticleType(false));
     public static final Supplier<SimpleParticleType> SMALL_ANTI_VOID =

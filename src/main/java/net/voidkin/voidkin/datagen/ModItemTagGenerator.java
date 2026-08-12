@@ -1,5 +1,6 @@
 package net.voidkin.voidkin.datagen;
 
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.block.ModBlocks;
@@ -25,6 +26,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.ARESARROW.get());
         this.tag(ModTags.Items.CHAKRAM_ENCHANTABLE)
                 .add(ModItems.CHAKRAM.get());
+        this.tag(ModTags.Items.VOIDKIN_CHANGEABLE)
+                .add(ModItems.ANTI_CACTUS_SWORD.get())
+                .add(ModItems.CACTUS_SWORD.get())
+                .add(Items.IRON_INGOT)
+                .add(Items.GOLD_INGOT);
         this.tag(ItemTags.TRIDENT_ENCHANTABLE)
                 .add(ModItems.CHAKRAM.get());
 
@@ -54,6 +60,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.BLOOD_PLANKS.get().asItem())
                 .add(ModBlocks.VOID_PLANKS.get().asItem())
         ;
+
+
 
     }
 

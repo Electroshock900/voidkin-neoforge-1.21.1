@@ -45,7 +45,7 @@ public class ModArmorMaterials{
         map.put(ArmorItem.Type.LEGGINGS, 7);
         map.put(ArmorItem.Type.CHESTPLATE, 8);
         map.put(ArmorItem.Type.HELMET, 6);
-    }), 37, 2.0F, 1.3F, () -> Items.CACTUS);
+    }), 27, 2.0F, 1.3F, () -> Items.CACTUS);
 
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,

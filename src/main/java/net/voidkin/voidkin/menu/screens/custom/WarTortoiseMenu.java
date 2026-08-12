@@ -10,6 +10,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.voidkin.voidkin.entity.custom.WarTortoise;
+import net.voidkin.voidkin.item.armor.WarTortoiseArmor;
 import net.voidkin.voidkin.menu.ModMenuTypes;
 
 import java.util.List;
@@ -39,7 +40,7 @@ public class WarTortoiseMenu extends AbstractContainerMenu {
         this.addSlot(new Slot(wartortoiseContainer, 0, 8, 63) {
             @Override
             public boolean mayPlace(ItemStack pStack) {
-                return false;//pStack.getItem() instanceof WartortoiseArmorItem;
+                return pStack.getItem() instanceof WarTortoiseArmor;
             }
         });
         // Dye Slot

@@ -8,11 +8,14 @@ import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.phys.Vec3;
 
 public class BeheadingEnchantment implements EnchantmentEntityEffect {
+    public static final MapCodec<BeheadingEnchantment> CODEC = MapCodec.unit(BeheadingEnchantment::new);
+
     /*@Override
     public float getDamageBonus(int level, MobType mobType, ItemStack enchantedItem) {
         return 6.5f * level;
         //super.getDamageBonus(level, mobType, enchantedItem);
     }*/
+
 
     @Override
     public void apply(ServerLevel pLevel, int pEnchantmentLevel, EnchantedItemInUse pItem, Entity pEntity, Vec3 pOrigin) {
@@ -21,6 +24,6 @@ public class BeheadingEnchantment implements EnchantmentEntityEffect {
 
     @Override
     public MapCodec<? extends EnchantmentEntityEffect> codec() {
-        return null;
+        return CODEC;
     }
 }

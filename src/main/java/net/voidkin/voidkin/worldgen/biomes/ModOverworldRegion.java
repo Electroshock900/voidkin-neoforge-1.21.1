@@ -20,7 +20,14 @@ public class ModOverworldRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
-        this.addBiome(mapper, ParameterUtils.Temperature.NEUTRAL, ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Continentalness.INLAND, ParameterUtils.Erosion.EROSION_0, ParameterUtils.Weirdness.FULL_RANGE, ParameterUtils.Depth.SURFACE,-0.3F,ModBiomes.BLOOD_BIOME);
+        this.addBiome(mapper, ParameterUtils.Temperature.NEUTRAL,
+                ParameterUtils.Humidity.NEUTRAL, ParameterUtils.Continentalness.INLAND,
+                ParameterUtils.Erosion.EROSION_0, ParameterUtils.Weirdness.FULL_RANGE,
+                ParameterUtils.Depth.SURFACE,-0.3F,ModBiomes.BLOOD_BIOME);
+        this.addBiome(mapper,ParameterUtils.Temperature.WARM,
+                ParameterUtils.Humidity.HUMID, ParameterUtils.Continentalness.DEEP_OCEAN,
+                ParameterUtils.Erosion.EROSION_0, ParameterUtils.Weirdness.FULL_RANGE,
+                ParameterUtils.Depth.FULL_RANGE, -0.6F, ModBiomes.BLOOD_OCEAN);
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, ModBiomes.DARK_BIOME);
             //modifiedVanillaOverworldBuilder.replaceBiome(Biomes.FOREST, ModBiomes.BLOOD_BIOME);

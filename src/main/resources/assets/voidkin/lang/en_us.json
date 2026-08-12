@@ -30,9 +30,10 @@
   "block.voidkin.bmuttoncooked":"Cooked Mutton Block",
 
 
-  "block.voidkin.dark_grass":"Dark Grass",
+  "block.voidkin.dark_grass_block":"Dark Grass",
   "block.voidkin.dark_dirt":"Dark Dirt",
   "block.voidkin.dark_stone":"Dark Stone",
+  "block.voidkin.dark_cobblestone":"Dark Cobblestone",
 
   "block.voidkin.dark_sapling": "Darkness Sapling",
   "block.voidkin.dark_log": "Darkness Log",
@@ -51,6 +52,8 @@
   "block.voidkin.dark_door": "Dark Wood Door",
   "block.voidkin.dark_trapdoor": "Dark Wood Trapdoor",
   "block.voidkin.dark_chest": "Dark Chest",
+  "block.voidkin.dark_sign": "Dark Sign",
+  "block.voidkin.dark_hanging_sign": "Dark Hanging Sign",
 
   "block.voidkin.blood_stone": "Blood Stone",
   "block.voidkin.blood_cobblestone": "Blood Cobblestone",
@@ -75,41 +78,61 @@
   "block.voidkin.blood_door": "Blood Wood Door",
   "block.voidkin.blood_trapdoor": "Blood Wood Trapdoor",
   "block.voidkin.blood_chest": "Blood Chest",
+  "block.voidkin.blood_sign": "Blood Sign",
+  "block.voidkin.blood_hanging_sign": "Blood Hanging Sign",
 
-  "block.voidkin.void_sapling": "Void Sapling",
-  "block.voidkin.void_log": "Void Log",
-  "block.voidkin.void_wood": "Void Wood",
-  "block.voidkin.stripped_void_log": "Stripped Void Log",
-  "block.voidkin.stripped_void_wood": "Stripped Void Wood",
-  "block.voidkin.void_leaves": "Void Leaves",
-  "block.voidkin.void_planks": "Void Wood Planks",
-  "block.voidkin.void_stairs": "Void Wood Stairs",
-  "block.voidkin.void_slab": "Void Wood Slab",
-  "block.voidkin.void_pressure_plate": "Void Wood Pressure Plate",
-  "block.voidkin.void_button": "Void Wood Button",
-  "block.voidkin.void_fence": "Void Wood Fence",
-  "block.voidkin.void_fence_gate": "Void Wood Fence Gate",
-  "block.voidkin.void_wall": "Void Wood Wall",
-  "block.voidkin.void_door": "Void Wood Door",
-  "block.voidkin.void_trapdoor": "Void Wood Trapdoor",
-  "block.voidkin.void_chest": "Void Chest",
+
+  "block.voidkin.void_stone": "Abyssal Stone",
+  "block.voidkin.void_cobblestone": "Abyssal Cobblestone",
+
+  "block.voidkin.void_sapling": "Abyssal Sapling",
+  "block.voidkin.void_log": "Abyssal Log",
+  "block.voidkin.void_wood": "Abyssal Wood",
+  "block.voidkin.stripped_void_log": "Stripped Abyssal Log",
+  "block.voidkin.stripped_void_wood": "Stripped Abyssal Wood",
+  "block.voidkin.void_leaves": "Abyssal Leaves",
+  "block.voidkin.void_planks": "Abyssal Wood Planks",
+  "block.voidkin.void_stairs": "Abyssal Wood Stairs",
+  "block.voidkin.void_slab": "Abyssal Wood Slab",
+  "block.voidkin.void_pressure_plate": "Abyssal Wood Pressure Plate",
+  "block.voidkin.void_button": "Abyssal Wood Button",
+  "block.voidkin.void_fence": "Abyssal Wood Fence",
+  "block.voidkin.void_fence_gate": "Abyssal Wood Fence Gate",
+  "block.voidkin.void_wall": "Abyssal Wood Wall",
+  "block.voidkin.void_door": "Abyssal Wood Door",
+  "block.voidkin.void_trapdoor": "Abyssal Wood Trapdoor",
+  "block.voidkin.void_chest": "Abyssal Chest",
+  "block.voidkin.void_sign": "Abyssal Sign",
+  "block.voidkin.void_hanging_sign": "Abyssal Hanging Sign",
+
 
   "block.voidkin.dark_cactus": "Dark Cactus",
   "block.voidkin.blood_cactus": "Blood Cactus",
   "block.voidkin.end_cactus": "Ender Cactus",
   "block.voidkin.anti_cactus": "Anti Cactus",
 
+  "block.voidkin.bleeding_deity_block": "Bleeding Deity Block",
+
+  "block.voidkin.void_rose": "Void Rose",
   "block.voidkin.catmint": "Catmint",
   "block.voidkin.lotus": "Lotus Flower",
 
-  "block.voidkin.void_altar": "Void Altar",
-  "block.voidkin.void_pedestal": "Void Pedestal",
+  "block.voidkin.void_altar": "Abyssal Altar",
+  "block.voidkin.void_pedestal": "Abyssal Pedestal",
 
   "block.voidkin.s": "§b§i§4 To be continued... S",
   "block.voidkin.s2": "§b§i§4 To be §5continued... S2",
   "block.voidkin.candy_cane_furnace": "Candy Cane Furnace",
   "block.voidkin.sound_block": "Sound Block",
 
+  "block.voidkin.iron_chest": "Iron Chest",
+  "block.voidkin.trapped_iron_chest": " Trapped Iron Chest",
+  "block.voidkin.obsidian_chest": "Obsidian Chest",
+  "block.voidkin.trapped_obsidian_chest": "Trapped Obsidian Chest",
+  "item.voidkin.iron_to_obsidian_chest_upgrade": "Iron to Obsidian Chest Upgrade",
+
+  "item.voidkin.void_torch": "Void Torch",
+  "item.voidkin.d_torch": "D Torch",
   "item.voidkin.smile":"§0§kXXX §r§0Smile!!! §kXXX",
   "item.voidkin.cactus_bow": "Cactus Bow",
   "item.voidkin.blood_cactus_bow": "Blood Cactus Bow",
@@ -134,6 +157,7 @@
 
 
   "item.voidkin.cactus_egg": "Cactus Buddy Spawn Egg",
+  "item.voidkin.celestial_turtle_egg": "Celestial Turtle Spawn Egg",
   "item.voidkin.eyeball_monster_egg": "Eyeball Monster Spawn Egg",
   "item.voidkin.skull_egg": "Skull Monster Spawn Egg",
   "item.voidkin.mini_skull_egg": "Skull Monster Spawn Egg",
@@ -143,27 +167,44 @@
   "item.voidkin.horned_owl_egg": "Horned Owl Spawn Egg",
   "item.voidkin.penguin_egg": "Penguin Spawn Egg",
   "item.voidkin.manta_ray_egg": "Manta Ray Spawn Egg",
+  "item.voidkin.war_turtle_egg": "War Turtle Spawn Egg",
+  "item.voidkin.war_tortoise_egg": "War Tortoise Spawn Egg",
+  "item.voidkin.war_tortoise_hybrid_egg": "War Turtle Hybrid Spawn Egg",
 
 
   "item.voidkin.blood_bucket": "Blood Bucket",
   "item.voidkin.ender_blood_bucket": "Ender Blood Bucket",
   "item.voidkin.deity_blood_bucket": "Deity Blood Bucket",
+  "item.voidkin.shimmer_bucket": "Shimmer Bucket",
+  "item.voidkin.void_lava_bucket": "Void Lava Bucket",
   "item.voidkin.dark_essense_bucket": "Bucket of Dark Essense",
   "item.voidkin.soap_water_bucket": "Soapy Water Bucket",
+
+  "item.voidkin.void_goblet": "Void Goblet",
+  "item.voidkin.filled_void_goblet_blood": "Blood filled Void Goblet",
+  "item.voidkin.filled_void_goblet_deity": "Deity blood filled Void Goblet",
+  "item.voidkin.filled_void_goblet_abyss": "Abyssal blood filled Void Goblet",
 
   "fluid_type.voidkin.blood_fluid": "Blood",
   "fluid_type.voidkin.ender_fluid": "Ender Blood",
   "fluid_type.voidkin.deity_blood_fluid": "Deity Blood",
   "fluid_type.voidkin.dark_essence_fluid": "Dark Essence",
 
+  "item.voidkin.regrowth_axe": "Axe of Regrowth",
+  "item.voidkin.lightning_bolt": "Lightning Bolt",
+  "item.voidkin.wood_hammer": "Wood Hammer",
+  "item.voidkin.dark_hammer": "Void-touched Hammer",
+  "item.voidkin.big_shovel": "Big Shovel",
 
 
   "item.voidkin.dark_boat": "Dark Boat",
   "item.voidkin.dark_chest_boat": "Dark Chest Boat",
   "item.voidkin.blood_boat": "Blood Boat",
   "item.voidkin.blood_chest_boat": "Blood Chest Boat",
-  "item.voidkin.void_boat": "Void Boat",
-  "item.voidkin.void_chest_boat": "Void Chest Boat",
+  "item.voidkin.void_boat": "Abyssal Boat",
+  "item.voidkin.void_chest_boat": "Abyssal Chest Boat",
+
+
 
   "item.voidkin.amethyst_helmet": "Amethyst Helmet",
   "item.voidkin.amethyst_chestplate": "Amethyst Chestplate",
@@ -171,8 +212,20 @@
   "item.voidkin.amethyst_boots": "Amethyst Boots",
 
   "item.voidkin.beetlewings": "Beetle Wings",
+
+
+  "item.voidkin.abyss_helmet": "Abyss Helmet",
+  "item.voidkin.abyss_chestplate": "Abyss Chestplate",
+  "item.voidkin.abyss_leggings": "Abyss Leggings",
   "item.voidkin.abyss_boots": "Abyss Boots",
-  "item.voidkin.blood_boots": "Abyss Boots",
+
+  "item.voidkin.cactus_helmet": "Cactus Helmet",
+  "item.voidkin.cactus_chestplate": "Cactus Chestplate",
+  "item.voidkin.cactus_leggings": "Cactus Leggings",
+  "item.voidkin.cactus_boots": "Cactus Boots",
+
+
+  "item.voidkin.blood_boots": "Blood Boots",
 
   "item.voidkin.axel_ring": "Axel's Ring",
   "item.voidkin.wbr": "Water Breathing Ring",
@@ -194,6 +247,7 @@
   "enchantment.voidkin.lunar_speed": "Lunar Speed",
 
   "block.voidkin.pedestal": "Pedestal",
+  "block.voidkin.pedestal2": "Pedestal 2",
 
   "block.voidkin.polisher": "Gem Polisher",
   "block.voidkin.special_furnace": "Special Furnace",
@@ -229,9 +283,30 @@
 
   "item.voidkin.tomahawk": "Tomahawk",
 
-  "item.minecraft.potion.effect.spider_potion": "Spider Potion",
-  "item.minecraft.splash_potion.effect.spider_potion": "Splash Spider Potion",
-  "item.minecraft.lingering_potion.effect.spider_potion": "Lingering Spider Potion",
+
+  "effect.voidkin.headless": "Voidheadedness",
+  "effect.voidkin.spider": "Wall Cling",
+
+
+  "item.minecraft.potion.effect.spider_potion": "Wall Cling Potion",
+  "item.minecraft.splash_potion.effect.spider_potion": "Splash Wall Cling Potion",
+  "item.minecraft.lingering_potion.effect.spider_potion": "Lingering Wall Cling Potion",
+  "item.minecraft.tipped_arrow.effect.spider_potion": "Arrow of Wall Cling",
+
+  "item.minecraft.potion.effect.headless_potion": "Voidheaded Potion",
+  "item.minecraft.splash_potion.effect.headless_potion": "Voidheaded Potion",
+  "item.minecraft.lingering_potion.effect.headless_potion": "Voidheaded Potion",
+  "item.minecraft.tipped_arrow.effect.headless_potion": "Arrow of the Void Head",
+
+  "item.minecraft.potion.effect.headless_potion2": "Voidheaded II Potion",
+  "item.minecraft.splash_potion.effect.headless_potion2": "Voidheaded II Potion",
+  "item.minecraft.lingering_potion.effect.headless_potion2": "Voidheaded II Potion",
+  "item.minecraft.tipped_arrow.effect.headless_potion2": "Ascended Arrow of the Void Head",
+
+
+  "item.minecraft.potion.effect.dder_potion": "Spider Potion",
+  "item.minecraft.splash_potion.effect.sder_potion": "Splash Spider Potion",
+  "item.minecraft.lingering_potion.effect.sder_potion": "Lingering Spider Potion",
 
   "container.voidkin.dark_chest": "Dark Chest",
   "container.voidkin.blood_chest": "Blood Chest",
@@ -242,6 +317,13 @@
   "creativetab.psycho_tab":"§l§mPSYCHO Tab",
 
   "name.voidkin.crystallizer": "Crystallizer",
+
+  "curios.identifier.quiver": "Quiver",
+  "curios.identifier.big_quiver": "Big Quiver",
+  "curios.identifier.void_quiver": "Void Quiver",
+
+  "curios.identifier.backpack": "Backpack",
+  "curios.identifier.big_backpack": "Big Backpack",
 
 
   "tooltip.voidkin.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
@@ -254,4 +336,8 @@
 
   "death.attack.voidkin.chakrams": "%s was burned to ash by %s",
   "death.attack.voidkin.chakrams.item": "%s was burned to ash by %s using %s"
+
+
+
+
 }

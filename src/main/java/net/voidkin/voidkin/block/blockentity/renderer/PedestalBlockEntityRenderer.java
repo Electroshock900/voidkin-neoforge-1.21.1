@@ -33,28 +33,16 @@ public class PedestalBlockEntityRenderer implements BlockEntityRenderer<Pedestal
         //itemStack.getEntityRepresentation().
         //pPoseStack.mulPose(Axis.YP.rotationDegrees(26f));
         pPoseStack.rotateAround(Axis.YP.rotationDegrees(13F),0f, 22f, 0f);
+
+        double tick = pBlockEntity.getLevel().getGameTime() + pPartialTick;
+
+
+        pPoseStack.mulPose(Axis.YP.rotationDegrees((float)(tick * 2f) % 360));
+        pPoseStack.translate(0.0D, Math.sin((tick/7) % (2 * Math.PI)) * 0.095D, 0.0D);
+
         itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(), pBlockEntity.getBlockPos()),
                 OverlayTexture.NO_OVERLAY, pPoseStack, pBuffer, pBlockEntity.getLevel(), 1);
 
-        ItemStack stack = pBlockEntity.inventory.getStackInSlot(0);
-
-        if (!stack.isEmpty()) {
-            double tick = pBlockEntity.getLevel().getGameTime() + pPartialTick;
-            pPoseStack.pushPose();
-            pPoseStack.translate(0.5f, 1.2f, 0.5f);
-            pPoseStack.scale(
-                    0.65f,0.65f,0.65f
-
-            );
-            //pPoseStack.scale(0.5f, 0.5f, 0.5f);
-            pPoseStack.mulPose(Axis.YP.rotationDegrees((float)(tick * 2f) % 360));
-            //pPoseStack.mulPose(Axis.YP.rotationDegrees((float)(tick * 10.0D) % 360));
-            pPoseStack.translate(0.0D, Math.sin((tick/7) % (2 * Math.PI)) * 0.095D, 0.0D);
-            //pPoseStack.rotateAround(Axis.YP.rotationDegrees(13F),0f, 22f, 0f);
-            itemRenderer.renderStatic(stack, ItemDisplayContext.GROUND, getLightLevel(pBlockEntity.getLevel(), pBlockEntity.getBlockPos()),
-                    OverlayTexture.NO_OVERLAY, pPoseStack, pBuffer, pBlockEntity.getLevel(), 1);
-            pPoseStack.popPose();
-        }
 
 
         pPoseStack.popPose();

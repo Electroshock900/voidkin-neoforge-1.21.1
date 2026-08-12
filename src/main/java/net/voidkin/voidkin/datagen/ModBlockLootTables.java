@@ -37,11 +37,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.SBLOCK.get());
         dropSelf(ModBlocks.SOUND_BLOCK.get());
+        dropSelf(ModBlocks.DRIPPER.get());
+        dropSelf(ModBlocks.PEDESTAL2.get());
 
         dropSelf(ModBlocks.CATMINT.get());
         add(ModBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(ModBlocks.CATMINT.get()));
         dropSelf(ModBlocks.LOTUS.get());
         add(ModBlocks.POTTED_LOTUS.get(), createPotFlowerItemTable(ModBlocks.LOTUS.get()));
+        dropSelf(ModBlocks.VOID_ROSE.get());
+        add(ModBlocks.POTTED_VOID_ROSE.get(), createPotFlowerItemTable(ModBlocks.VOID_ROSE.get()));
+        add(ModBlocks.POTTED_ANTI_CACTUS.get(), createPotFlowerItemTable(ModBlocks.ANTI_CACTUS.get()));
+        add(ModBlocks.POTTED_DARK_CACTUS.get(), createPotFlowerItemTable(ModBlocks.DARK_CACTUS.get()));
+        add(ModBlocks.POTTED_BLOOD_CACTUS.get(), createPotFlowerItemTable(ModBlocks.BLOOD_CACTUS.get()));
+        add(ModBlocks.POTTED_END_CACTUS.get(), createPotFlowerItemTable(ModBlocks.END_CACTUS.get()));
+
 
         //dropSelf(ModBlocks.CANDY_CANE_FURNACE.get());
         //dropSelf(ModBlocks.SPECIAL_FURNACE.get());
@@ -67,6 +76,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.BLOOD_CACTUS.get());
         dropSelf(ModBlocks.END_CACTUS.get());
         dropSelf(ModBlocks.ANTI_CACTUS.get());
+
 
         add(ModBlocks.DARK_STONE.get(),(block)-> createSingleItemTableWithSilkTouch(ModBlocks.DARK_COBBLESTONE.get(),ModBlocks.DARK_STONE.get().asItem()));
         add(ModBlocks.BLOOD_STONE.get(),(block)-> createSingleItemTableWithSilkTouch(ModBlocks.BLOOD_COBBLESTONE.get(),ModBlocks.BLOOD_STONE.get().asItem()));
@@ -123,6 +133,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createSingleItemTable(ModItems.DARK_HANGING_SIGN.get()));
         add(ModBlocks.DARK_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.DARK_HANGING_SIGN.get()));
+
 
         dropSelf(ModBlocks.BLOOD_PLANKS.get());
         dropSelf(ModBlocks.BLOOD_STAIRS.get());

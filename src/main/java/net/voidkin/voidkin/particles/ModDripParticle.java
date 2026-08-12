@@ -94,7 +94,7 @@ public class ModDripParticle extends TextureSheetParticle {
 
 
     @OnlyIn(Dist.CLIENT)
-    public class DrippingBloodParticle extends TextureSheetParticle {
+    public static class DrippingBloodParticle extends TextureSheetParticle {
 
         private final SpriteSet sprites;
 
@@ -290,6 +290,9 @@ public class ModDripParticle extends TextureSheetParticle {
 
     }
 
+
+
+
     public static TextureSheetParticle createBloodDripHangParticle(SimpleParticleType pType, ClientLevel pLevel, double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed) {
             DripHangParticle $$8 = new DripHangParticle(pLevel, pX, pY, pZ, ModFluids.SOURCE_BLOOD.get(),ModParticles.FALLING_BLOOD.get());
             $$8.isGlowing = false;
@@ -322,7 +325,7 @@ public class ModDripParticle extends TextureSheetParticle {
 //            $$8.gravity *= 0.01F;
 //            $$8.lifetime = 100;
             //$$8.setColor(0.51171875F, 0.03125F, 0.890625F);
-            $$8.setColor(1F, 0.854901961F, 0.380392157F);
+            $$8.setColor(74F/255F, 20f/255F, 140F/255F);
             return $$8;
     }
     public static TextureSheetParticle createDeityBloodDripFallParticle(SimpleParticleType pType, ClientLevel pLevel, double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed) {
@@ -331,7 +334,10 @@ public class ModDripParticle extends TextureSheetParticle {
 //            $$8.gravity *= 0.01F;
 //            $$8.lifetime = 100;
             //$$8.setColor(0.51171875F, 0.03125F, 0.890625F);
-            $$8.setColor(1F, 0.854901961F, 0.380392157F);
+            $$8.setColor(74F/255F, 20f/255F, 140F/255F);
+
+
+        //$$8.setColor(1F, 0.854901961F, 0.380392157F);
             return $$8;
     }
     public static TextureSheetParticle createDeityBloodDripLandParticle(SimpleParticleType pType, ClientLevel pLevel, double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed) {
@@ -340,7 +346,8 @@ public class ModDripParticle extends TextureSheetParticle {
 //            $$8.gravity *= 0.01F;
 //            $$8.lifetime = 100;
             //$$8.setColor(0.51171875F, 0.03125F, 0.890625F);
-            $$8.setColor(1F, 0.854901961F, 0.380392157F);
+            //$$8.setColor(1F, 0.854901961F, 0.380392157F);
+            $$8.setColor(74F/255F, 20f/255F, 140F/255F);
             return $$8;
     }
 

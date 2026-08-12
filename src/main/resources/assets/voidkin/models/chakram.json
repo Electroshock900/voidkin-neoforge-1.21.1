@@ -1,4 +1,5 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
 	"parent": "chakram",
 	"textures": {
@@ -370,6 +371,7 @@
 		{
 			"name": "group",
 			"origin": [0, 0, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [
 				0,
@@ -379,60 +381,70 @@
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [4, 5]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [6, 7]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [8, 9]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [10, 11]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [12, 13]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [14, 15]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [16, 17]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [18, 19]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [20, 21]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
+					"scope": 0,
 					"color": 0,
 					"children": [22, 23]
 				}

@@ -30,7 +30,7 @@ public class WarTortoiseHybridMenu extends AbstractContainerMenu {
     }
 
     public WarTortoiseHybridMenu(int containerId, Inventory inventory, Container wartortoisehybridContainer, final WarTortoiseHybrid wartortoisehybrid, int columns) {
-        super(ModMenuTypes.WAR_TURTLE_MENU.get(), containerId);
+        super(ModMenuTypes.WAR_TORTOISE_HYBRID_MENU.get(), containerId);
         this.wartortoisehybridContainer = wartortoisehybridContainer;
         this.wartortoisehybrid = wartortoisehybrid;
         wartortoisehybridContainer.startOpen(inventory.player);

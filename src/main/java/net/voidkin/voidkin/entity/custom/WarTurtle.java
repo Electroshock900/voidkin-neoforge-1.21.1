@@ -1,6 +1,9 @@
 package net.voidkin.voidkin.entity.custom;
 
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
@@ -8,6 +11,7 @@ import net.neoforged.neoforge.event.EventHooks;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.entity.variants.WarTortoiseVariant;
+import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridMenu;
 import net.voidkin.voidkin.particles.ModParticles;
 import net.voidkin.voidkin.util.*;
 import net.voidkin.voidkin.item.armor.WarTurtleArmor;
@@ -39,7 +43,9 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.voidkin.voidkin.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
-public class WarTurtle extends TamableAnimal implements ContainerListener, HasCustomInventoryScreen {
+import java.awt.*;
+
+public class WarTurtle extends TamableAnimal implements ContainerListener, HasCustomInventoryScreen, MenuProvider {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -167,19 +173,26 @@ public class WarTurtle extends TamableAnimal implements ContainerListener, HasCu
                     toggleSitting();
                 }
 
+
                 return InteractionResult.SUCCESS;
             }
         }
 
-        //else if(isTame() && pHand == InteractionHand.MAIN_HAND && ){
+        if (!this.level().isClientSide && (!this.isVehicle() || this.hasPassenger(pPlayer)) && this.isTame() && pPlayer.isCrouching()) {
+            pPlayer.openMenu(new SimpleMenuProvider((ix, inventory2, pPlayer2) ->
+                            new WarTurtleMenu(ix, inventory2,this.inventory, this,4),
+                    this.getDisplayName()), buf -> {
+                buf.writeUUID(getUUID());
+            });
+        }
 
-    else if(isTame() && pHand == InteractionHand.MAIN_HAND && !isFood(itemstack) && !pPlayer.isSecondaryUseActive()) {
+    else if(isTame() && pHand == InteractionHand.MAIN_HAND && !pPlayer.isSecondaryUseActive()) {
             if (item instanceof WarTurtleArmor) {
                 if (!hasArmorOn()) {
                     this.inventory.setItem(0, itemstack);
                     pPlayer.getItemInHand(pHand).getItem().getDefaultInstance().shrink(1);
                     pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
-                    pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
+                    //pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(3d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
                     //pPlayer.level().addParticle(ModParticles.GHOSTLY_FLAME_FX.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
                     pPlayer.level().addParticle(ModParticles.DEATH_SKULLS.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
                     //pPlayer.level().addParticle(ModParticles.GHOSTLY_FLAME_FX.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
@@ -187,7 +200,9 @@ public class WarTurtle extends TamableAnimal implements ContainerListener, HasCu
                     Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(0, 64));
                 }
             }
-            /*else if (item instanceof ){//ItemStack(Blocks.CHEST.asItem()){
+
+            /*
+            else if (item instanceof ItemStack(Blocks.CHEST){
                 if (!hasTier1Chest()) {
                     setChest(TIER_1_CHEST_SLOT, true);
                 }if (!hasTier2Chest()&& hasTier1Chest()) {
@@ -195,12 +210,10 @@ public class WarTurtle extends TamableAnimal implements ContainerListener, HasCu
                 }if (!hasTier3Chest() &&hasTier2Chest() && hasTier1Chest()) {
                     setChest(TIER_3_CHEST_SLOT, true);
                 }
-            }*/
+            }
+            */
             toggleSitting();
             return InteractionResult.SUCCESS;
-        } else if (this.isTame()) {
-            this.openCustomInventoryScreen(pPlayer);
-            return InteractionResult.sidedSuccess(this.level().isClientSide());
         }
 
         return super.mobInteract(pPlayer, pHand);
@@ -445,20 +458,25 @@ public class WarTurtle extends TamableAnimal implements ContainerListener, HasCu
 
     @Override
     public void openCustomInventoryScreen(Player player) {
-        if (!this.level().isClientSide && (!this.isVehicle() || this.hasPassenger(player)) && this.isTame()) {
-            ServerPlayer serverPlayer = (ServerPlayer) player;
+        if (!this.level().isClientSide && (!this.isVehicle() || this.hasPassenger(player)) && this.isTame())
+        {
+                ServerPlayer serverPlayer = (ServerPlayer) player;
             if (player.containerMenu != player.inventoryMenu) {
                 player.closeContainer();
             }
 
-            serverPlayer.openMenu(new SimpleMenuProvider((ix, playerInventory, playerEntityx) ->
+            if(player.isSecondaryUseActive()){
+            serverPlayer.openMenu(this);
+            }
+                    /*new SimpleMenuProvider((ix, playerInventory, playerEntityx) ->
                     new WarTurtleMenu(ix, playerInventory, this.inventory, this, 4), this.getDisplayName()), buf -> {
                 buf.writeUUID(getUUID());
-            });
-        }
-    }
+            }*/
 
-    /* ARMOR */
+            }
+        }
+
+        /* ARMOR */
     @Override
     protected void actuallyHurt(DamageSource damageSource, float damageAmount) {
         if (!this.canArmorAbsorb(damageSource)) {
@@ -481,6 +499,12 @@ public class WarTurtle extends TamableAnimal implements ContainerListener, HasCu
     public boolean hasArmorOn() {
         return isWearingBodyArmor();
     }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new WarTurtleMenu(i, inventory, this.inventory, this, 4);
+    };
+
 
 /**
     /* DYEABLE *

@@ -7,6 +7,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.voidkin.voidkin.damage_types.ModDamageTypes;
 
 import javax.annotation.Nullable;
@@ -18,13 +20,18 @@ public class ModDamageSources {
     public static DamageSource CHAKRAM;
     public ModDamageSources(RegistryAccess registryAccess, Registry<DamageType> damageTypes){
         DAMAGE_TYPES=registryAccess.registryOrThrow(Registries.DAMAGE_TYPE);
-        LIFE_STEAL = new DamageSource(registryAccess.lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(ModDamageTypes.LIFE_STEALS),null,null,null);
+        LIFE_STEAL = new DamageSource(registryAccess.lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(ModDamageTypes.LIFE_STEALS),null, null,null);
         CHAKRAM = new DamageSource(registryAccess.lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(ModDamageTypes.CHAKRAMS),null,null,null);
     }
 
     public DamageSource chakram(Entity pTrident, @Nullable Entity pThrower) {
         return this.source(ModDamageTypes.CHAKRAMS, pTrident, pThrower);
     }
+
+    public static DamageSource lifeSteal(Entity causer) {
+        return new DamageSource(causer.level().registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ModDamageTypes.LIFE_STEALS), causer);
+    }
+
     public DamageSource source(ResourceKey<DamageType> pDamageTypeKey) {
         return new DamageSource(this.DAMAGE_TYPES.getHolderOrThrow(pDamageTypeKey));
     }

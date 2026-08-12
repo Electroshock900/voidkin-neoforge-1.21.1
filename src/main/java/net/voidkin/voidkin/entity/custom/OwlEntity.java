@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.Tags;
+import net.voidkin.voidkin.entity.ModEntities;
 import org.jetbrains.annotations.Nullable;
 
 public class OwlEntity extends Animal implements FlyingAnimal {
@@ -146,7 +147,7 @@ public class OwlEntity extends Animal implements FlyingAnimal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob mob) {
-        return null;
+        return ModEntities.OWL.get().create(level);
     }
 
 

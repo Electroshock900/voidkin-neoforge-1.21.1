@@ -15,7 +15,7 @@ public record LifeSteal() implements EnchantmentEntityEffect {
 
     @Override
     public void apply(ServerLevel pLevel, int pEnchantmentLevel, EnchantedItemInUse pItem, Entity pEntity, Vec3 pOrigin) {
-        pItem.owner().heal(6.5f * (float) pEnchantmentLevel);
+        pItem.owner().heal(4.5f * (float) pEnchantmentLevel);
 
         pEntity.hurt(ModDamageSources.LIFE_STEAL, 6.5f * (float) pEnchantmentLevel);
     }

@@ -1,5 +1,6 @@
 package net.voidkin.voidkin.entity.custom;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.Util;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
@@ -23,7 +24,10 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -36,12 +40,15 @@ import net.neoforged.neoforge.event.EventHooks;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.entity.variants.WarTortoiseVariant;
 import net.voidkin.voidkin.item.armor.WarTortoiseArmor;
+import net.voidkin.voidkin.item.armor.WarTurtleArmor;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseMenu;
 import net.voidkin.voidkin.entity.ModEntities;
+import net.voidkin.voidkin.menu.screens.custom.WarTurtleMenu;
 import net.voidkin.voidkin.particles.ModParticles;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class WarTortoise extends TamableAnimal implements Saddleable,ContainerListener, HasCustomInventoryScreen {
+public class WarTortoise extends TamableAnimal implements Saddleable, ContainerListener, HasCustomInventoryScreen, MenuProvider {
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(WarTortoise.class, EntityDataSerializers.INT);
 
@@ -123,7 +130,7 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
     }
     /* TAMABLE*/
     @Override
-    public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
+    public @NotNull InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
         ItemStack itemstack = pPlayer.getItemInHand(pHand);
         Item item = itemstack.getItem();
 
@@ -146,27 +153,36 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
                     toggleSitting();
                 }
 
+
                 return InteractionResult.SUCCESS;
             }
         }
 
-        //else if(isTame() && pHand == InteractionHand.MAIN_HAND && ){
+        if (!this.level().isClientSide && (!this.isVehicle() || this.hasPassenger(pPlayer)) && this.isTame() && pPlayer.isCrouching()) {
+            pPlayer.openMenu(new SimpleMenuProvider((ix, inventory2, pPlayer2) ->
+                    new WarTortoiseMenu(ix, inventory2,this.inventory, this,4),
+                    this.getDisplayName()), buf -> {
+                buf.writeUUID(getUUID());
+            });
+        }
 
-        else if(isTame() && pHand == InteractionHand.MAIN_HAND && !isFood(itemstack) && !pPlayer.isSecondaryUseActive()) {
+        else if(isTame() && pHand == InteractionHand.MAIN_HAND && !pPlayer.isSecondaryUseActive()) {
             if (item instanceof WarTortoiseArmor) {
                 if (!hasArmorOn()) {
                     this.inventory.setItem(0, itemstack);
                     pPlayer.getItemInHand(pHand).getItem().getDefaultInstance().shrink(1);
                     pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
-                    pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
-                    pPlayer.level().addParticle(ModParticles.VOID_FLAME.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
+                    //pPlayer.level().addParticle(ParticleTypes.FLAME, this.getRandomX(3d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
+                    //pPlayer.level().addParticle(ModParticles.GHOSTLY_FLAME_FX.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
                     pPlayer.level().addParticle(ModParticles.DEATH_SKULLS.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
-                    pPlayer.level().addParticle(ModParticles.DRIPPING_DEITY_BLOOD.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
+                    //pPlayer.level().addParticle(ModParticles.GHOSTLY_FLAME_FX.get(), this.getRandomX(2d), this.getRandomY(), this.getRandomZ(2d), 0, 0, 0);
                 }else{
                     Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(0, 64));
                 }
             }
-            /*else if (item instanceof ){//ItemStack(Blocks.CHEST.asItem()){
+
+            /*
+            else if (item instanceof ItemStack(Blocks.CHEST){
                 if (!hasTier1Chest()) {
                     setChest(TIER_1_CHEST_SLOT, true);
                 }if (!hasTier2Chest()&& hasTier1Chest()) {
@@ -174,12 +190,10 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
                 }if (!hasTier3Chest() &&hasTier2Chest() && hasTier1Chest()) {
                     setChest(TIER_3_CHEST_SLOT, true);
                 }
-            }*/
+            }
+            */
             toggleSitting();
             return InteractionResult.SUCCESS;
-        } else if (this.isTame()) {
-            this.openCustomInventoryScreen(pPlayer);
-            return InteractionResult.sidedSuccess(this.level().isClientSide);
         }
 
         return super.mobInteract(pPlayer, pHand);
@@ -385,12 +399,12 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
             dropChestInventory(TIER_3_CHEST_SLOT);
         }
 
- if(container.getItem(0).getItem() instanceof WarTortoiseArmor) {
- setBodyArmorItem(container.getItem(0));
- }
- if(container.getItem(0).isEmpty() && isWearingBodyArmor()) {
- setBodyArmorItem(ItemStack.EMPTY);
- }
+        if(container.getItem(0).getItem() instanceof WarTortoiseArmor) {
+            setBodyArmorItem(container.getItem(0));
+        }
+        if(container.getItem(0).isEmpty() && isWearingBodyArmor()) {
+            setBodyArmorItem(ItemStack.EMPTY);
+        }
 /*
  if(!container.getItem(1).isEmpty()) {
  this.entityData.set(DYE_STACK, container.getItem(1));
@@ -483,12 +497,11 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
             ServerPlayer serverPlayer = (ServerPlayer) player;
             if (player.containerMenu != player.inventoryMenu) {
                 player.closeContainer();
+                //Voidkin.LOGGER.debug("FAILED");
             }
 
-            serverPlayer.openMenu(new SimpleMenuProvider((ix, playerInventory, playerEntityx) ->
-                    new WarTortoiseMenu(ix, playerInventory, this.inventory, this, 4), this.getDisplayName()), buf -> {
-                buf.writeUUID(getUUID());
-            });
+            serverPlayer.openMenu(this);
+
         }
     }
     /* ARMOR */
@@ -513,5 +526,10 @@ public class WarTortoise extends TamableAnimal implements Saddleable,ContainerLi
 
     public boolean hasArmorOn() {
         return isWearingBodyArmor();
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new WarTortoiseMenu(i, inventory, this.inventory, this, 4);
     }
 }

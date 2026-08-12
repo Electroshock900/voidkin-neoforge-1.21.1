@@ -19,7 +19,7 @@ import net.voidkin.voidkin.item.ModItems;
 import java.util.function.IntFunction;
 
 public class ModBoatEntity extends Boat {
-    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModBoatEntity.class, EntityDataSerializers.INT);
+    private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(Boat.class, EntityDataSerializers.INT);
 
     public ModBoatEntity(EntityType<? extends Boat> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
@@ -42,13 +42,18 @@ public class ModBoatEntity extends Boat {
         };
     }
 
+    @Override
+    public boolean fireImmune() {
+        return true;
+    }
+
 
     public void setVariant(Type pVariant) {
         this.entityData.set(DATA_ID_TYPE, pVariant.ordinal());
     }
 
     public Type getModVariant() {
-        return ModBoatEntity.Type.byId(this.entityData.get(DATA_ID_TYPE));
+        return Type.byId(this.entityData.get(DATA_ID_TYPE));
     }
 
 
@@ -56,7 +61,7 @@ public class ModBoatEntity extends Boat {
     protected void defineSynchedData(SynchedEntityData.Builder builder)
     {
         super.defineSynchedData(builder);
-        builder.define(DATA_ID_TYPE, ModBoatEntity.Type.DARK.ordinal());
+        builder.define(DATA_ID_TYPE, Type.DARK.ordinal());
     }
 
 

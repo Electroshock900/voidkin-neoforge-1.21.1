@@ -37,13 +37,13 @@ import org.jetbrains.annotations.Nullable;
 //import software.bernie.geckolib.core.animation.AnimationState;
 //import software.bernie.geckolib.core.object.PlayState;
 
-public class Cactus_Buddy extends Animal /**implements GeoEntity{**/ implements RangedAttackMob {
+public class Cactus_Buddy extends TamableAnimal /**implements GeoEntity{**/ implements RangedAttackMob {
     //private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(Cactus_Buddy.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(Cactus_Buddy.class, EntityDataSerializers.BOOLEAN);
-    public Cactus_Buddy(EntityType<? extends Animal> entityType, Level level) {
+    public Cactus_Buddy(EntityType<? extends Cactus_Buddy> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -144,6 +144,7 @@ public class Cactus_Buddy extends Animal /**implements GeoEntity{**/ implements 
                 .add(Attributes.MOVEMENT_SPEED,0.2F)
                 .build();
 }
+
     @Override
     protected void registerGoals() {
 

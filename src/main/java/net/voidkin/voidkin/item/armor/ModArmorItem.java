@@ -3,6 +3,7 @@ package net.voidkin.voidkin.item.armor;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ArmorItem;
@@ -18,8 +19,8 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
-                    .put(ModArmorMaterials.DARK,
-                            List.of(new MobEffectInstance(ModEffects.SPIDER_EFFECT, 200, 1, false, false)))
+                    .put(ModArmorMaterials.DARK, List.of(new MobEffectInstance(ModEffects.SPIDER_EFFECT, 200, 1, false, false)))
+                    .put(ModArmorMaterials.CACTUS, List.of(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 5, false, false)))
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties){
@@ -44,7 +45,7 @@ public class ModArmorItem extends ArmorItem {
         }
     }
 
-    private void addEffectToPlayer(Player player, List<MobEffectInstance> mapEffect) {
+    public void addEffectToPlayer(Player player, List<MobEffectInstance> mapEffect) {
         boolean hasPlayerEffect = mapEffect.stream().allMatch(effect -> player.hasEffect(effect.getEffect()));
 
         if(!hasPlayerEffect) {
@@ -55,7 +56,7 @@ public class ModArmorItem extends ArmorItem {
         }
     }
 
-    private boolean hasPlayerCorrectArmorOn(Holder<ArmorMaterial> mapArmorMaterial, Player player) {
+    public boolean hasPlayerCorrectArmorOn(Holder<ArmorMaterial> mapArmorMaterial, Player player) {
         for(ItemStack armorStack : player.getArmorSlots()) {
             if(!(armorStack.getItem() instanceof ArmorItem)) {
                 return false;
@@ -71,7 +72,7 @@ public class ModArmorItem extends ArmorItem {
                 && chestplate.getMaterial() == mapArmorMaterial && helmet.getMaterial() == mapArmorMaterial;
     }
 
-    private boolean hasFullSuitOfArmorOn(Player player) {
+    public boolean hasFullSuitOfArmorOn(Player player) {
         ItemStack boots = player.getInventory().getArmor(0);
         ItemStack leggings = player.getInventory().getArmor(1);
         ItemStack chestplate = player.getInventory().getArmor(2);

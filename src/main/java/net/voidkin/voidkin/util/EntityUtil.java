@@ -21,14 +21,14 @@ public class EntityUtil {
 
         boolean flag = victim.hurtMarked;//(level, source, f);
         if (flag) {
-            /*float f1 = getKnockback(entity, victim, source);
+            float f1 = level.getMoonPhase();//1getKnockback(entity, victim, source);
             if (f1 > 0.0F && victim instanceof LivingEntity livingentity) {
                 if (flingSound != null) {
                     entity.playSound(flingSound, 1.0F, 1.0F);
                 }
                 livingentity.knockback(f1 * 0.5F, Mth.sin(entity.getYRot() * Mth.DEG_TO_RAD), -Mth.cos(entity.getYRot() * Mth.DEG_TO_RAD));
                 entity.setDeltaMovement(entity.getDeltaMovement().multiply(0.6D, 1.0D, 0.6D));
-            }*/
+            }
             EnchantmentHelper.doPostAttackEffects(level, victim, source);
             entity.setLastHurtMob(entity);
         }

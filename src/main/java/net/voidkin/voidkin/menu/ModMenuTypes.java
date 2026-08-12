@@ -13,6 +13,8 @@ import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTurtleMenu;
 
+import java.util.function.Supplier;
+
 public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(Registries.MENU, Voidkin.MODID);
@@ -34,6 +36,9 @@ public class ModMenuTypes {
 **/
     public static final DeferredHolder<MenuType<?>, MenuType<PedestalMenu>> PEDESTAL_MENU =
             registerMenuType("pedestal_menu", PedestalMenu::new);
+
+    public static final Supplier<MenuType<Pedestal2Menu>> PEDESTAL2_MENU =
+            registerMenuType("pedestal2_menu", Pedestal2Menu::new);
 
 
     public static final DeferredHolder<MenuType<?>, MenuType<WarTurtleMenu>> WAR_TURTLE_MENU =

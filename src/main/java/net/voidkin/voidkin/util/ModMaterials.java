@@ -10,5 +10,6 @@ import net.voidkin.voidkin.item.ModItems;
 
 public class ModMaterials {
     public static final Tier DARKNESS = new SimpleTier(ModTags.Blocks.ANTI_VOID_BLOCKS,1300,13.0F,6.5F,13,()->Ingredient.of(ModItems.DARK_SHARD.get()));
-    public static final Tier CACTUS = new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 13,1300,3.0F,7, ()->Ingredient.of(Blocks.CACTUS));
+    public static final Tier CACTUS = new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 13,130,3.0F,7, ()->Ingredient.of(Blocks.CACTUS));
+    public static final Tier WOODEN_DARK = new SimpleTier(ModTags.Blocks.VOIDKIN_BLOCKS, 13, 130, 1.3F, 3, () -> Ingredient.of(Blocks.OBSIDIAN));
 }

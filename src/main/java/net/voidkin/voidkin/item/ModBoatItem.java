@@ -55,8 +55,8 @@ public class ModBoatItem extends Item {
                 Boat boat = this.getBoat(pLevel, hitresult);
                 if(boat instanceof ModChestBoatEntity chestBoat) {
                     chestBoat.setVariant(this.type);
-                } else if(boat instanceof ModBoatEntity mod_boat) {
-                    mod_boat.setVariant(this.type);
+                } else if(boat instanceof ModBoatEntity) {
+                    ((ModBoatEntity)boat).setVariant(this.type);
                 }
                 boat.setYRot(pPlayer.getYRot());
                 if (!pLevel.noCollision(boat, boat.getBoundingBox())) {
@@ -80,7 +80,7 @@ public class ModBoatItem extends Item {
     }
 
     private Boat getBoat(Level pLevel, HitResult hitResult) {
-        return (ModBoatEntity) (this.hasChest ? new ModChestBoatEntity(pLevel, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) :
+        return (Boat) (this.hasChest ? new ModChestBoatEntity(pLevel, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z) :
                 new ModBoatEntity(pLevel, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z));
     }
 }

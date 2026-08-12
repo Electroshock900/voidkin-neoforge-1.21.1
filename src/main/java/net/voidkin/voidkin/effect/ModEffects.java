@@ -21,8 +21,15 @@ public class ModEffects {
 
     public static final Holder<MobEffect> SPIDER_EFFECT = MOB_EFFECTS.register("spider",
             () -> new SpiderEffect(MobEffectCategory.BENEFICIAL, 0x36ebab)
-                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"spider"),
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"effect.speed"),
                             1.2f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
+    public static final Holder<MobEffect> HEADLESS = MOB_EFFECTS.register("headless",
+            ()-> new HeadlessEffect(MobEffectCategory.HARMFUL, 0xeb36ab)
+                    .addAttributeModifier(Attributes.MOVEMENT_SPEED, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "effect.speed"), 1.2f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+                    //.addAttributeModifier(Attributes.SWEEPING_DAMAGE_RATIO, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"headless_sweep"), 7.2f, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static void register(IEventBus eventBus){
         MOB_EFFECTS.register(eventBus);
     }

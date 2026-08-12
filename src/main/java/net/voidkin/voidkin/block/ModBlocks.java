@@ -5,11 +5,14 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.block.custom.*;
+import net.voidkin.voidkin.block.custom.flowers.VoidRoseFlower;
+import net.voidkin.voidkin.block.custom.fluids.ShimmerFluidBlock;
 import net.voidkin.voidkin.block.custom.signs.ModHangingSignBlock;
 import net.voidkin.voidkin.block.custom.signs.ModStandingSignBlock;
 import net.voidkin.voidkin.block.custom.signs.ModWallHangingSignBlock;
 import net.voidkin.voidkin.block.custom.signs.ModWallSignBlock;
 import net.voidkin.voidkin.block.types.*;
+import net.voidkin.voidkin.effect.ModEffects;
 import net.voidkin.voidkin.sounds.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -241,8 +244,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<LiquidBlock> VOID_LAVA_BLOCK = registerBlock("void_lava_block",
             () -> new LiquidBlock(ModFluids.SOURCE_VOID_LAVA.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable()));
+    public static final DeferredBlock<LiquidBlock> SHIMMER_BLOCK = registerBlock("shimmer_block",
+            () -> new ShimmerFluidBlock(ModFluids.SOURCE_SHIMMER.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable()));
     /*public static final DeferredBlock<LiquidBlock> ESSENCE_BLOCK = registerBlock("dark_essence_block",
             () -> new LiquidBlock(ModFluids.SOURCE_ESSENCE, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable()));*/
+
+
+
 
     public static final DeferredBlock<Block> BLOOD_COAGULATED = registerBlock("blood_coagulated",
             ()-> new CoagulatedBloodBlock(BlockBehaviour.Properties.of()));
@@ -255,6 +263,7 @@ public class ModBlocks {
 //DARK BIOME STUFF
     public static final DeferredBlock<Block> DARK_GRASS = registerBlock("dark_grass_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
+
     public static final DeferredBlock<Block> DARK_DIRT = registerBlock("dark_dirt",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> DARK_STONE = registerBlock("dark_stone",
@@ -300,14 +309,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> VOID_WALL_HANGING_SIGN = BLOCKS.register("void_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BLOOD));
     /*public static final DeferredBlock<Block> VOID_CHEST = registerBlock("void_chest",
-            ()-> new ModChestBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHEST),))
+            ()-> new ModC2hestBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHEST),))
 */
 
 
     //TORCHS
 
     public static final DeferredBlock<Block> VOID_TORCH = BLOCKS.register("void_torch",
-            ()-> new ModTorchBlock(BlockBehaviour.Properties.of(), ParticleTypes.SOUL_FIRE_FLAME){
+            ()-> new ModTorchBlock(BlockBehaviour.Properties.of(), ParticleTypes.SOUL){
         @Override
         public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
             double d0 = (double)pPos.getX() + 0.5D;
@@ -320,7 +329,7 @@ public class ModBlocks {
             });
 
     public static final DeferredBlock<Block> VOID_WALL_TORCH = BLOCKS.register("void_torch_wall",
-            ()-> new ModWallTorchBlock(BlockBehaviour.Properties.of(), ParticleTypes.SOUL_FIRE_FLAME) {
+            ()-> new ModWallTorchBlock(BlockBehaviour.Properties.of(), ParticleTypes.SOUL) {
                 @Override
                 public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
                     double d0 = (double) pPos.getX() + 0.5D;
@@ -396,12 +405,21 @@ public class ModBlocks {
     public static final DeferredBlock<Block> POTTED_CATMINT = BLOCKS.register("potted_catmint",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM).noOcclusion().noCollission()));
+
     public static final DeferredBlock<Block> LOTUS = registerBlock("lotus",
             ()-> new FlowerBlock(MobEffects.ABSORPTION, 5,
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM).noOcclusion().noCollission()));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM).noOcclusion().noCollission().instabreak()));
     public static final DeferredBlock<Block> POTTED_LOTUS = BLOCKS.register("potted_lotus",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.LOTUS,
-                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM).noOcclusion()));
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM).noOcclusion().noCollission()));
+
+    public static final DeferredBlock<Block> VOID_ROSE = registerBlock("void_rose",
+            ()-> new VoidRoseFlower(ModEffects.SPIDER_EFFECT, 20,
+                    BlockBehaviour.Properties.of().noOcclusion().noCollission().instabreak()));
+    public static final DeferredBlock<Block> POTTED_VOID_ROSE = BLOCKS.register("potted_void_rose",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.VOID_ROSE,
+            BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM).noCollission()));
+
 
 
     //public static final DeferredBlock<DeathPortalBlock> DARKSIDE_PORTAL = registerBlock("darkside_portal", () -> new DeathPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable()));
@@ -419,6 +437,7 @@ public class ModBlocks {
     //public static final DeferredBlock<Block> VOID_PEDESTAL = registerBlock("void_pedestal",() -> new VoidPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 **/
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",() -> new PedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PEDESTAL2 = registerBlock("pedestal2",() -> new Pedestal2Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 
     //public static final DeferredBlock<Block> SPECIAL_FURNACE = registerBlock("special_furnace",() -> new SpecialFurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     //public static final DeferredBlock<Block> ABYSSALBOX = registerBlock("abyssal_container",()-> new AbyssalContainer(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
@@ -426,7 +445,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEATH_PORTAL = registerBlock("deathportal",
             () -> new DeathPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable().noOcclusion().noCollission()));
 
-
+    public static final DeferredBlock<Block> ANTI_CHEST = registerBlock("f0",
+            () -> new Block(BlockBehaviour.Properties.of().ignitedByLava().noLootTable()));
 
 
     //public static final DeferredBlock<Block> CRATE_ABYSS = BLOCKS.register("crate_ebony", () -> new AbyssalCrate());

@@ -8,6 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.voidkin.voidkin.block.ModBlocks;
+import net.voidkin.voidkin.chests.ModChestsBlocks;
+import net.voidkin.voidkin.chests.ModChestsItems;
 import net.voidkin.voidkin.item.ModItems;
 
 import java.util.function.Supplier;
@@ -43,6 +45,7 @@ public class ModTabs {
                     .displayItems((pParameters, pOutput) ->{
                         pOutput.accept(ModBlocks.DEATH_BLOCK.get());
                         pOutput.accept(ModItems.FIRE_CHARM.get());
+                        pOutput.accept(ModItems.CHAKRAM.get());
 //ORES AND BLOCKS OF ORES
                         pOutput.accept(ModItems.RAW_DARK_SHARD.get());
                         pOutput.accept(ModItems.DARK_SHARD.get());
@@ -79,15 +82,23 @@ public class ModTabs {
                         pOutput.accept(ModItems.AMETHYST_CHESTPLATE.get());
                         pOutput.accept(ModItems.AMETHYST_LEGGINGS.get());
                         pOutput.accept(ModItems.AMETHYST_BOOTS.get());
+
+                        pOutput.accept(ModItems.CACTUS_HELMET.get());
+                        pOutput.accept(ModItems.CACTUS_CHESTPLATE.get());
+                        pOutput.accept(ModItems.CACTUS_LEGGINGS.get());
+                        pOutput.accept(ModItems.CACTUS_BOOTS.get());
+
                         pOutput.accept(ModItems.CHAKRAM.get());
                         pOutput.accept(ModItems.TURTLESHIELD.get());
                         pOutput.accept(ModItems.ARESBOW.get());
+                        pOutput.accept(ModItems.ARESARROW.get());
+                        pOutput.accept(ModItems.BOLT);
                         pOutput.accept(ModItems.CACTUS_BOW.get());
                         pOutput.accept(ModItems.BLOOD_CACTUS_BOW.get());
-                        //pOutput.accept(ModItems.ARESARROW.get());
                         pOutput.accept(ModItems.BEETLEWINGS.get());
 //SPAWN EGGS
                         pOutput.accept(ModItems.CACTUS_EGG.get());
+                        pOutput.accept(ModItems.CELESTIAL_TURTLE_EGG.get());
                         pOutput.accept(ModItems.EYEBALL_MONSTER_EGG.get());
                         pOutput.accept(ModItems.SKULL_EGG.get());
                         pOutput.accept(ModItems.MINI_SKULL_EGG.get());
@@ -96,6 +107,9 @@ public class ModTabs {
                         pOutput.accept(ModItems.HORNED_OWL_EGG.get());
                         pOutput.accept(ModItems.OWL_EGG.get());
                         pOutput.accept(ModItems.PENGUIN_EGG.get());
+                        pOutput.accept(ModItems.WAR_TURTLE_EGG);
+                        pOutput.accept(ModItems.WAR_TORTOISE_EGG);
+                        pOutput.accept(ModItems.WAR_TORTOISE_HYBRID_EGG);
 //PLANTS
                         pOutput.accept(ModBlocks.CATMINT.get());
                         pOutput.accept(ModBlocks.LOTUS.get());
@@ -114,6 +128,7 @@ public class ModTabs {
                         //pOutput.accept(ModBlocks.VOID_ALTAR.get());
                         //pOutput.accept(ModBlocks.VOID_PEDESTAL.get());
                         pOutput.accept(ModBlocks.PEDESTAL.get());
+                        pOutput.accept(ModBlocks.PEDESTAL2.get());
                         //pOutput.accept(ModBlocks.AB.get());
 
                         pOutput.accept(ModBlocks.DEATH_PORTAL.get());
@@ -211,6 +226,7 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.VOID_SIGN.get());
                         pOutput.accept(ModBlocks.VOID_HANGING_SIGN.get());
 
+                        pOutput.accept(ModBlocks.VOID_ROSE.get());
 
                         pOutput.accept(ModBlocks.ANTI_CACTUS.get());
                         pOutput.accept(ModBlocks.DARK_CACTUS.get());
@@ -218,6 +234,8 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.END_CACTUS.get());
 
                         pOutput.accept(ModItems.BLOOD_BUCKET.get());
+                        pOutput.accept(ModItems.SHIMMER_BUCKET.get());
+                        pOutput.accept(ModItems.VOID_LAVA_BUCKET.get());
                         pOutput.accept(ModBlocks.BLOOD_COAGULATED.get());
                         pOutput.accept(ModBlocks.BLOOD_CONGEALED.get());
 
@@ -228,15 +246,31 @@ public class ModTabs {
                     .displayItems((pParameters, pOutput) ->
                     {
 
+
                         pOutput.accept(ModItems.ARESBOW.get());
                         pOutput.accept(ModItems.ARESARROW.get());
+
+                        pOutput.accept(ModItems.QUIVER.get());
+                        pOutput.accept(ModItems.BIG_QUIVER.get());
+                        pOutput.accept(ModItems.VOID_QUIVER.get());
+
+                        pOutput.accept(ModItems.BACKPACK.get());
+
+                        pOutput.accept(ModItems.ABYSS_HELMET.get());
+                        pOutput.accept(ModItems.ABYSS_CHESTPLATE.get());
+                        pOutput.accept(ModItems.ABYSS_LEGGINGS.get());
                         pOutput.accept(ModItems.ABYSS_BOOTS.get());
+
                         pOutput.accept(ModItems.BLOOD_BOOTS.get());
 
                         pOutput.accept(ModItems.BLOOD_BUCKET.get());
                         pOutput.accept(ModItems.DEITY_BLOOD_BUCKET.get());
                         pOutput.accept(ModItems.ENDER_BLOOD_BUCKET.get());
                         pOutput.accept(ModItems.DARK_ESSENCE_BUCKET.get());
+                        pOutput.accept(ModItems.VOID_GOBLET.get());
+                        pOutput.accept(ModItems.BLOOD_FILLED_VOID_GOBLET.get());
+                        pOutput.accept(ModItems.ENDER_BLOOD_FILLED_VOID_GOBLET.get());
+                        pOutput.accept(ModItems.DEITY_BLOOD_FILLED_VOID_GOBLET.get());
 
                         pOutput.accept(ModItems.VOID_TORCH.get());
                         pOutput.accept(ModItems.D_TORCH.get());
@@ -245,6 +279,11 @@ public class ModTabs {
 
                         /**pOutput.accept(ModBlocks.VOID_ALTAR.get());
                         pOutput.accept(ModBlocks.VOID_PEDESTAL.get());**/
+
+                        pOutput.accept(ModItems.WOOD_HAMMER.get());
+                        pOutput.accept(ModItems.DARKNESS_HAMMER.get());
+                        pOutput.accept(ModItems.BIG_SHOVEL.get());
+                        //pOutput.acceptAll(ModItems.ABYSS_ARMOR.entrySet().iterator());
                     }).build());
     public static final Supplier<CreativeModeTab> BIOMECHANICAL_TAB = CREATIVE_MODE_TABS.register("biomechanical_tab",
             ()-> CreativeModeTab.builder()
@@ -253,6 +292,19 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.BLOOD_COAGULATED.get());
                         pOutput.accept(ModBlocks.BLOOD_CONGEALED.get());
                     }).build());
+
+    public static final Supplier<CreativeModeTab> CHEST_TAB = CREATIVE_MODE_TABS.register("chest_tab",
+            () -> CreativeModeTab.builder()
+                    .title(Component.literal("Chest Tab"))
+                    .displayItems((pParameters, pOutput) ->
+            {
+                pOutput.accept(ModChestsItems.IRON_TO_OBSIDIAN_CHEST_UPGRADE);
+                pOutput.accept(ModChestsBlocks.IRON_CHEST.get());
+                pOutput.accept(ModChestsBlocks.TRAPPED_IRON_CHEST.get());
+                pOutput.accept(ModChestsBlocks.OBSIDIAN_CHEST.get());
+                pOutput.accept(ModChestsBlocks.TRAPPED_OBSIDIAN_CHEST.get());
+
+            }).build());
 
 
     public static void register(IEventBus eventBus){

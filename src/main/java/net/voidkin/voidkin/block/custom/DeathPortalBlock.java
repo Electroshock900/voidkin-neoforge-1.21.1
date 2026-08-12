@@ -2,6 +2,7 @@ package net.voidkin.voidkin.block.custom;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.ItemInteractionResult;
 import net.voidkin.voidkin.particles.ModParticles;
 import net.voidkin.voidkin.worldgen.dimension.ModDimensions;
 //import net.voidkin.voidkin.worldgen.portal.ModTeleporter;
@@ -21,11 +22,16 @@ public class DeathPortalBlock extends Block {
     }
 
 
+
+
+
+
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
         //if (pEntity.canChangeDimensions(pLevel, new Level)) {
             //handleHerbMayfairPortal(pEntity,pPos);
         //}
+
     }
 
     //public InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, BlockHitResult pHit) {

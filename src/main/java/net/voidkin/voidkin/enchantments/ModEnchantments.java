@@ -46,10 +46,17 @@ public class ModEnchantments {
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "lightning_striker"));
     public static ResourceKey<Enchantment> BEHEADING = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"beheading"));
+
+    public static ResourceKey<Enchantment> CACTUS_KIN = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "cactus_kin"));
+
     public static ResourceKey<Enchantment> BLOOD_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"blood_walker"));
     public static ResourceKey<Enchantment> LAVA_WALKER = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"lava_walker"));
+
+    public static ResourceKey<Enchantment> LIFE_STEAL = ResourceKey.create(Registries.ENCHANTMENT,
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "life_steal"));
 
     public static ResourceKey<Enchantment> FLAMEPORTATION = ResourceKey.create(Registries.ENCHANTMENT,
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "flameportation"));
@@ -71,7 +78,20 @@ public class ModEnchantments {
                 .exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
                 .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
                         EnchantmentTarget.VICTIM, new LightningStrikerEnchantment()));
-        
+
+        register(context, LIFE_STEAL, Enchantment.enchantment(Enchantment.definition(
+                        items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
+                        //items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
+                        5,
+                        7,
+                        Enchantment.dynamicCost(5, 8),
+                        Enchantment.dynamicCost(25, 8),
+                        2,
+                        EquipmentSlotGroup.MAINHAND))
+                //.exclusiveWith(enchantments.getOrThrow(EnchantmentTags.DAMAGE_EXCLUSIVE))
+                .withEffect(EnchantmentEffectComponents.POST_ATTACK, EnchantmentTarget.ATTACKER,
+                        EnchantmentTarget.VICTIM, new LifeSteal()));
+
         register(
                 context,
                 BLOOD_WALKER,

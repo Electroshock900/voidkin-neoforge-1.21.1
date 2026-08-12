@@ -79,6 +79,11 @@ public static Supplier<EntityType<AresArrow>> ARESARROW = ENTITY_TYPES.register(
                             .build("cactus_buddy")
             );
 
+    public static final Supplier<EntityType<CelestialTurtle>> CELESTIAL_TURTLE =
+        ENTITY_TYPES.register("celestial_turtle", ()-> EntityType.Builder.of(CelestialTurtle::new, MobCategory.MISC)
+                .sized(4f, 4f)
+                .build("celestial_turtle"));
+
     public static final Supplier<EntityType<Skull_Entity>> SKULL =
             ENTITY_TYPES.register("skull",
                     () -> EntityType.Builder.of(Skull_Entity::new, MobCategory.MONSTER)

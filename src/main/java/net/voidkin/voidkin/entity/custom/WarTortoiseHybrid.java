@@ -24,7 +24,9 @@ import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.monster.Creeper;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -39,10 +41,12 @@ import net.voidkin.voidkin.entity.variants.WarTortoiseHybridVariant;
 import net.voidkin.voidkin.item.armor.WarTortoiseHybridArmor;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridMenu;
 import net.voidkin.voidkin.entity.ModEntities;
+import net.voidkin.voidkin.menu.screens.custom.WarTortoiseMenu;
+import net.voidkin.voidkin.menu.screens.custom.WarTurtleMenu;
 import net.voidkin.voidkin.particles.ModParticles;
 import org.jetbrains.annotations.Nullable;
 
-public class WarTortoiseHybrid extends TamableAnimal implements Saddleable,ContainerListener, HasCustomInventoryScreen {
+public class WarTortoiseHybrid extends TamableAnimal implements Saddleable,ContainerListener, HasCustomInventoryScreen, MenuProvider {
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(WarTortoiseHybrid.class, EntityDataSerializers.INT);
 
@@ -193,6 +197,10 @@ public class WarTortoiseHybrid extends TamableAnimal implements Saddleable,Conta
             return InteractionResult.SUCCESS;
         } else if (this.isTame()) {
             this.openCustomInventoryScreen(pPlayer);
+            if (pPlayer instanceof ServerPlayer serverPlayer){
+                serverPlayer.openMenu(this);
+
+            }
             return InteractionResult.sidedSuccess(this.level().isClientSide);
         }
         return super.mobInteract(pPlayer, pHand);
@@ -503,22 +511,27 @@ public class WarTortoiseHybrid extends TamableAnimal implements Saddleable,Conta
         return columns * 3 + 5;
     }
 
+
     public boolean hasInventoryChanged(Container inventory) {
         return this.inventory != inventory;
     }
 
     @Override
     public void openCustomInventoryScreen(Player player) {
-        if (!this.level().isClientSide && (!this.isVehicle() || this.hasPassenger(player)) && this.isTame()) {
+        if (!this.level().isClientSide && this.isTame()) {
+
             ServerPlayer serverPlayer = (ServerPlayer) player;
             if (player.containerMenu != player.inventoryMenu) {
                 player.closeContainer();
+                Voidkin.LOGGER.debug("FAILED");
             }
+            serverPlayer.openMenu(this);
 
-            serverPlayer.openMenu(new SimpleMenuProvider((ix, playerInventory, playerEntityx) ->
-                    new WarTortoiseHybridMenu(ix, playerInventory, this.inventory, this, 4), this.getDisplayName()), buf -> {
-                buf.writeUUID(getUUID());
-            });
+
+            //serverPlayer.openMenu(new SimpleMenuProvider((ix, playerInventory, playerEntityx) ->
+                    //new WarTortoiseHybridMenu(ix, playerInventory, this.inventory, this, 4), this.getDisplayName()), buf -> {
+                //buf.writeUUID(getUUID());
+            //});
         }
     }
 
@@ -544,6 +557,11 @@ public class WarTortoiseHybrid extends TamableAnimal implements Saddleable,Conta
 
     public boolean hasArmorOn() {
         return isWearingBodyArmor();
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new WarTortoiseHybridMenu(i, inventory, this.inventory, this,4);
     }
 
     /*Move Control*/

@@ -14,7 +14,12 @@ public class ModPotions {
             DeferredRegister.create(BuiltInRegistries.POTION, Voidkin.MODID);
 
     public static final Holder<Potion> SPIDER_POTION = POTIONS.register("spider_potion",
-            ()-> new Potion(new MobEffectInstance(ModEffects.SPIDER_EFFECT,200,2)));
+            ()-> new Potion(new MobEffectInstance(ModEffects.SPIDER_EFFECT,1200)));
+
+    public static final Holder<Potion> HEADLESS_POTION = POTIONS.register("headless_potion",
+            () -> new Potion(new MobEffectInstance(ModEffects.HEADLESS, 1200)));
+    public static final Holder<Potion> HEADLESS_POTION2 = POTIONS.register("headless_potion2",
+            () -> new Potion(new MobEffectInstance(ModEffects.HEADLESS, 900, 1)));
 
     public static void register(IEventBus eventBus){
         POTIONS.register(eventBus);

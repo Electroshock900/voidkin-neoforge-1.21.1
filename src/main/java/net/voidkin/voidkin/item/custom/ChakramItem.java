@@ -140,7 +140,7 @@ public class ChakramItem extends SwordItem implements ProjectileItem{
                             player.startAutoSpinAttack(20, 8.0F, pStack);
                             if (player.onGround()) {
                                 float f6 = 1.1999999F;
-                                player.move(MoverType.SELF, new Vec3(0.0, 1.1999999F, 0.0));
+                                player.move(MoverType.SELF, new Vec3(1.1999999F, 0.0,0.0));
                             }
 
                             pLevel.playSound(null, player, holder.value(), SoundSource.PLAYERS, 1.0F, 1.0F);

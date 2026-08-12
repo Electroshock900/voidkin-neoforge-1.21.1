@@ -14,18 +14,17 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.voidkin.voidkin.Voidkin;
+import net.voidkin.voidkin.block.blockentity.CrystallizerBlockEntity;
 import net.voidkin.voidkin.block.blockentity.renderer.*;
 import net.voidkin.voidkin.entity.ModModelLayers;
 import net.voidkin.voidkin.entity.boats.ModBoatRenderer;
 import net.voidkin.voidkin.entity.model.*;
 import net.voidkin.voidkin.entity.render.*;
-import net.voidkin.voidkin.item.ModItemProperties;
 import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.menu.ModMenuTypes;
-import net.voidkin.voidkin.menu.screens.*;
-import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridScreen;
-import net.voidkin.voidkin.menu.screens.custom.WarTortoiseScreen;
-import net.voidkin.voidkin.menu.screens.custom.WarTurtleScreen;
+import net.voidkin.voidkin.menu.screens.CrystallizerScreen;
+import net.voidkin.voidkin.menu.screens.PedestalScreen;
+import net.voidkin.voidkin.menu.screens.PolisherScreen;
 import net.voidkin.voidkin.particles.*;
 import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.entity.ModEntities;
@@ -36,6 +35,8 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(Cactus_Buddy_Model.LAYER_LOCATION, Cactus_Buddy_Model::createBodyLayer);
+        event.registerLayerDefinition(CelestialTurtleModel.LAYER_LOCATION, CelestialTurtleModel::createBodyLayer);
+
         event.registerLayerDefinition(ModModelLayers.SKULL_LAYER, Skull_Entity_Model::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.LION_THING_LAYER, Lion_Thing_Model::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.MINI_SKULL_LAYER, Mini_Skull_Entity_Model::createBodyLayer);
@@ -71,6 +72,9 @@ public class ModEventBusClientEvents {
         EntityRenderers.register(ModEntities.ARESARROW.get(), Ares_Arrow_Renderer::new);
 
         EntityRenderers.register(ModEntities.CACTUS_BUDDY.get(), Cactus_Buddy_Renderer::new);
+
+        EntityRenderers.register(ModEntities.CELESTIAL_TURTLE.get(), CelestialTurtleRenderer::new);
+
         EntityRenderers.register(ModEntities.EYEBALL_MONSTER.get(), Eyeball_Monster_Renderer::new);
         EntityRenderers.register(ModEntities.SKULL.get(), Skull_Renderer::new);
         EntityRenderers.register(ModEntities.MINI_SKULL.get(), Mini_Skull_Renderer::new);
@@ -91,8 +95,8 @@ public class ModEventBusClientEvents {
 
         //MenuScreens.register(ModMenuTypes.CANDY_CANE_FURNACE_MENU.get(), CandyCaneFurnaceScreen::new);
 
-        //MenuScreens.register(ModMenuTypes.POLISHING_MENU.get(), PolisherScreen::new);
-        //MenuScreens.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
+        //MenuScreens.create(ModMenuTypes.POLISHING_MENU.get(), PolisherScreen::new);
+        //MenuScreens.create(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
 
         /*MenuScreens.register(ModMenuTypes.DOM_MENU.get(), DomScreen::new);
         MenuScreens.register(ModMenuTypes.SUB_MENU.get(), SubScreen::new);*/
@@ -100,11 +104,11 @@ public class ModEventBusClientEvents {
         MenuScreens.register(ModMenuTypes.VOID_ALTAR_MENU.get(), VoidAltarScreen::new);
         MenuScreens.register(ModMenuTypes.VOID_PEDESTAL_MENU.get(), VoidPedestalScreen::new);
  **/
-    /**
-        MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
 
 
-        MenuScreens.register(ModMenuTypes.WAR_TURTLE_MENU.get(), WarTurtleScreen::new);
+
+
+    /**    MenuScreens.register(ModMenuTypes.WAR_TURTLE_MENU.get(), WarTurtleScreen::new);
         MenuScreens.register(ModMenuTypes.WAR_TORTOISE_MENU.get(), WarTortoiseScreen::new);
         MenuScreens.register(ModMenuTypes.WAR_TORTOISE_HYBRID_MENU.get(), WarTortoiseHybridScreen::new);
 **/
@@ -140,8 +144,10 @@ public class ModEventBusClientEvents {
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.POLISHER_BLOCK_ENTITY.get(), PolisherBlockEntityRenderer::new);
         //event.registerBlockEntityRenderer(ModBlockEntities.SPECIAL_FURNACE_BLOCK_ENTITY.get(), SpecialFurnaceBlockEntityRenderer::new);
+        //event.registerBlockEntityRenderer(ModBlockEntities.CRYSTALLIZER.get(), CrystallizerBlockEntityRen);
         //event.registerBlockEntityRenderer(ModBlockEntities.DOM_BE.get(), DomBER::new);
         event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL.get(), PedestalBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_2.get(), Pedestal2BlockEntityRenderer::new);
 
         //event.registerBlockEntityRenderer(ModBlockEntities.VOID_ALTAR.get(), VoidAltarBlockEntityRenderer::new);
         //event.registerBlockEntityRenderer(ModBlockEntities.VOID_PEDESTAL.get(), VoidPedestalBlockEntityRenderer::new);

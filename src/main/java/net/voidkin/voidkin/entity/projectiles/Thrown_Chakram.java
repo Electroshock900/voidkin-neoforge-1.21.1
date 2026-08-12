@@ -1,10 +1,13 @@
 package net.voidkin.voidkin.entity.projectiles;
 
+import net.minecraft.core.Direction;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec2;
 import net.voidkin.voidkin.damage_types.ModDamageTypes;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.ModItems;
@@ -40,6 +43,8 @@ public class Thrown_Chakram extends AbstractArrow {
     private boolean dealtDamage;
 
     public int clientSideReturnChakramTickCount;
+    public float rotation;
+    public Vec2 groundedOffset;
 
     public Thrown_Chakram(EntityType<Thrown_Chakram> thrownChakramEntityType, Level level) {
         super(ModEntities.CHAKRAM.get(),level);
@@ -66,6 +71,7 @@ public class Thrown_Chakram extends AbstractArrow {
     private byte getLoyaltyFromItem(ItemStack pStack) {
         return this.level() instanceof ServerLevel serverlevel ? (byte) Mth.clamp(EnchantmentHelper.getTridentReturnToOwnerAcceleration(serverlevel, pStack, this), 0, 127) : 0;
     }
+    public boolean isGrounded(){return inGround;}
 
 
     @Override
@@ -91,6 +97,90 @@ public class Thrown_Chakram extends AbstractArrow {
         this.entityData.set(ID_FOIL, pPickupItemStack.hasFoil());
     }
 
+    public float getRenderingRotation() {
+        rotation += 0.5f;
+        if(rotation >= 360) {
+            rotation = 0;
+        }
+        return rotation;
+    }
+
+    @Override
+    protected void onHitEntity(EntityHitResult result) {
+        super.onHitEntity(result);
+        Entity entity = result.getEntity();
+        entity.hurt(this.damageSources().thrown(this, this.getOwner()), 4);
+
+        if (!this.level().isClientSide) {
+            this.level().broadcastEntityEvent(this, (byte)3);
+            this.discard();
+        }
+        //Entity entity = result.getEntity();
+        float f = 8.0F;
+
+
+        Entity entity1 = this.getOwner();
+        DamageSource damagesource = ModDamageTypes.getEntityDamageSource(this.level(),ModDamageTypes.CHAKRAMS,this.getOwner());
+        //this.damageSources().source(this, (Entity) (entity1 == null ? this : entity1));
+        if(this.level() instanceof ServerLevel level) {
+            if (entity instanceof LivingEntity livingentity) {
+                f +=
+                        EnchantmentHelper.modifyDamage(level,
+                                this.ChakramItem,
+                                livingentity,
+                                damagesource,
+                                3.0F);
+            }
+        }
+        this.dealtDamage = true;
+        SoundEvent soundevent = SoundEvents.TRIDENT_HIT;
+        if (entity.hurt(damagesource, f)) {
+            if (entity.getType() == EntityType.ENDERMAN) {
+                return;
+            }
+            if(this.level() instanceof ServerLevel level) {
+                if (entity instanceof LivingEntity livingEntity) {
+                    //LivingEntity livingentity1 = (LivingEntity) entity;
+                    //if (entity1 instanceof LivingEntity) {
+                    EnchantmentHelper.doPostAttackEffects(level, livingEntity, ModDamageTypes.getEntityDamageSource(livingEntity.level(),ModDamageTypes.CHAKRAMS,this.getOwner()));
+                    //EnchantmentHelper.doPostDamageEffects((LivingEntity)entity1, livingentity1);
+
+
+                    this.doPostHurtEffects(livingEntity);
+                }
+
+            }
+        }
+
+        this.setDeltaMovement(this.getDeltaMovement().multiply(-0.01D, -0.01D, -0.1D));
+        this.playSound(soundevent, 1.0F,  1.0F);
+    }
+
+    @Override
+    protected void onHitBlock(BlockHitResult result) {
+        super.onHitBlock(result);
+        groundedOffset = new Vec2(90f,0f);
+
+        /*if(result.getDirection() == Direction.SOUTH) {
+            groundedOffset = new Vec2(0f,0f);
+        }
+        if(result.getDirection() == Direction.NORTH) {
+            groundedOffset = new Vec2(215f, 0f);
+        }
+        if(result.getDirection() == Direction.EAST) {
+            groundedOffset = new Vec2(215f,-90f);
+        }
+        if(result.getDirection() == Direction.WEST) {
+            groundedOffset = new Vec2(215f,90f);
+        }
+
+        if(result.getDirection() == Direction.DOWN) {
+            groundedOffset = new Vec2(115f,180f);
+        }
+        if(result.getDirection() == Direction.UP) {
+            groundedOffset = new Vec2(285f,180f);
+        }*/
+    }
 
     public void tick() {
         if (this.inGroundTime > 4) {
@@ -161,47 +251,6 @@ public class Thrown_Chakram extends AbstractArrow {
         return this.dealtDamage ? null : super.findHitEntity(p_37575_, p_37576_);
     }
 
-    protected void onHitEntity(EntityHitResult p_37573_) {
-        Entity entity = p_37573_.getEntity();
-        float f = 8.0F;
-
-
-            Entity entity1 = this.getOwner();
-            DamageSource damagesource = ModDamageTypes.getEntityDamageSource(this.level(),ModDamageTypes.CHAKRAMS,this.getOwner());
-                    //this.damageSources().source(this, (Entity) (entity1 == null ? this : entity1));
-        if(this.level() instanceof ServerLevel level) {
-            if (entity instanceof LivingEntity livingentity) {
-                f +=
-                        EnchantmentHelper.modifyDamage(level,
-                                this.ChakramItem,
-                                livingentity,
-                                damagesource,
-                                3.0F);
-            }
-        }
-            this.dealtDamage = true;
-            SoundEvent soundevent = SoundEvents.TRIDENT_HIT;
-            if (entity.hurt(damagesource, f)) {
-                if (entity.getType() == EntityType.ENDERMAN) {
-                    return;
-                }
-                if(this.level() instanceof ServerLevel level) {
-                    if (entity instanceof LivingEntity livingEntity) {
-                        //LivingEntity livingentity1 = (LivingEntity) entity;
-                        //if (entity1 instanceof LivingEntity) {
-                        EnchantmentHelper.doPostAttackEffects(level, livingEntity, ModDamageTypes.getEntityDamageSource(livingEntity.level(),ModDamageTypes.CHAKRAMS,this.getOwner()));
-                        //EnchantmentHelper.doPostDamageEffects((LivingEntity)entity1, livingentity1);
-
-
-                        this.doPostHurtEffects(livingEntity);
-                    }
-
-                }
-            }
-
-        this.setDeltaMovement(this.getDeltaMovement().multiply(-0.01D, -0.1D, -0.01D));
-        this.playSound(soundevent, 1.0F,  1.0F);
-    }
 
     protected boolean tryPickup(Player player) {
         return super.tryPickup(player) || this.isNoPhysics() && this.ownedBy(player) && player.getInventory().add(this.getPickupItem());

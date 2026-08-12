@@ -17,6 +17,9 @@ public class ModEnchantmentEffects {
 
     public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIGHTNING_STRIKER =
             ENTITY_ENCHANTMENT_EFFECTS.register("lightning_striker", () -> LightningStrikerEnchantment.CODEC);
+    public static final Supplier<MapCodec<? extends EnchantmentEntityEffect>> LIFE_STEAL =
+            ENTITY_ENCHANTMENT_EFFECTS.register("life_steal", () -> LifeSteal.CODEC);
+
 
     public static final DeferredRegister<MapCodec<? extends EnchantmentLocationBasedEffect>> LOCATION_BASED_ENCHANTMENT_EFFECTS =
             DeferredRegister.create(Registries.ENCHANTMENT_LOCATION_BASED_EFFECT_TYPE, Voidkin.MODID);

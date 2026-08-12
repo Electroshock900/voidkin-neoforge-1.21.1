@@ -44,9 +44,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels(){
-        simpleItem(ModItems.DAISIES_MUSIC_DISC);
-        simpleItem(ModItems.UPSIDE_DOWN_MUSIC_DISC);
-        simpleItem(ModItems.GRAVITY_MUSIC_DISC);
+        simpleItem(ModItems.VOID_GOBLET);
+        simpleItem(ModItems.BLOOD_FILLED_VOID_GOBLET);
+        simpleItem(ModItems.ENDER_BLOOD_FILLED_VOID_GOBLET);
+        simpleItem(ModItems.DEITY_BLOOD_FILLED_VOID_GOBLET);
+
+        //spawnEggItem(ModItems.CELESTIAL_TURTLE_EGG.get());
+
+
+        //simpleItem(ModItems.BRIGHTER_MUSIC_DISC);
         //simpleItem(_);
     }
     protected void registerModels2() {

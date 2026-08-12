@@ -1,0 +1,11 @@
+{
+  "entities": [
+    "minecraft:player",
+    "minecraft:armor_stand",
+    "minecraft:skeleton",
+    "minecraft:stray"
+  ],
+  "slots": [
+    "quiver"
+  ]
+}

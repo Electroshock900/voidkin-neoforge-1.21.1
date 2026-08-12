@@ -1,6 +1,7 @@
 package net.voidkin.voidkin.item;
 
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.material.Fluids;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -9,10 +10,7 @@ import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.entity.boats.ModBoatEntity;
 import net.voidkin.voidkin.fluid.ModFluids;
-import net.voidkin.voidkin.item.armor.HemogenesisBoots;
-import net.voidkin.voidkin.item.armor.WarTortoiseArmor;
-import net.voidkin.voidkin.item.armor.WarTortoiseHybridArmor;
-import net.voidkin.voidkin.item.armor.WarTurtleArmor;
+import net.voidkin.voidkin.item.armor.*;
 import net.voidkin.voidkin.item.custom.*;
 import net.voidkin.voidkin.item.projectiles.Anti_Cactus_Spine_Item;
 import net.voidkin.voidkin.item.projectiles.AresArrowItem;
@@ -42,6 +40,11 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_DARK_SHARD = ITEMS.register("raw_dark_shard", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DARK_SHARD = ITEMS.register("dark_shard", () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> VOID_GOBLET = ITEMS.register("void_goblet", ()-> new GobletItem(Fluids.EMPTY,new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_blood", ()->new GobletItem(ModFluids.SOURCE_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
+    public static final DeferredItem<Item> DEITY_BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_deity", ()->new GobletItem(ModFluids.SOURCE_DEITY_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
+    public static final DeferredItem<Item> ENDER_BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_abyss", ()->new GobletItem(ModFluids.SOURCE_ENDER_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
+
 //Weapons and Shields
     public static final DeferredItem<Item> TURTLESHIELD = ITEMS.register("turtle_shield", () -> new ShieldItem(new Item.Properties()));
 
@@ -62,8 +65,48 @@ public class ModItems {
     public static final DeferredItem<Item> ARESBOW = ITEMS.register("aresbow", ()-> new AresBowItem(new Item.Properties().fireResistant().stacksTo(1)));
     public static final DeferredItem<Item> ARESARROW = ITEMS.register("ares_arrow", ()-> new AresArrowItem(new Item.Properties().fireResistant().stacksTo(64)));
 
-    public static final DeferredItem<Item> REGROWTHAXE = ITEMS.register("regrowth_axe", () -> new AxeOfRegrowthItem(ModMaterials.CACTUS,0,3, new Item.Properties()));
+    public static final DeferredItem<Item> REGROWTHAXE = ITEMS.register("regrowth_axe", () -> new AxeOfRegrowthItem(Tiers.IRON,0,3, new Item.Properties()));
     public static final DeferredItem<Item> TOMAHAWK = ITEMS.register("tomahawk", () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
+
+
+
+    public static final DeferredItem<Item> QUIVER = ITEMS.register("quiver",
+            ()-> new QuiverItem(new Item.Properties().stacksTo(1), 9));
+    public static final DeferredItem<Item> BIG_QUIVER = ITEMS.register("big_quiver",
+            ()-> new QuiverItem(new Item.Properties().stacksTo(1), 27));
+    public static final DeferredItem<Item> VOID_QUIVER = ITEMS.register("void_quiver",
+            ()-> new QuiverItem(new Item.Properties().stacksTo(1), 54));
+
+
+    public static final DeferredItem<BackpackItem> BACKPACK = ITEMS.register("backpack",
+            () -> new BackpackItem(new Item.Properties(), 27));
+
+    public static final DeferredItem<BackpackItem> BIG_BACKPACK = ITEMS.register("big_backpack",
+            () -> new BackpackItem(new Item.Properties(), 54));
+
+
+
+
+    public static final DeferredItem<HammerItem> WOOD_HAMMER = ITEMS.register("wood_hammer",
+            ()-> new HammerItem(Tiers.WOOD, new Item.Properties()
+    .attributes(PickaxeItem.createAttributes(Tiers.WOOD,3f, -3.5F))
+            ,1));
+
+    public static final DeferredItem<HammerItem> DARKNESS_HAMMER = ITEMS.register("dark_hammer",
+            ()-> new HammerItem(ModMaterials.DARKNESS, new Item.Properties()
+    .attributes(PickaxeItem.createAttributes(ModMaterials.DARKNESS,7f, -3.5F))
+            ,5));
+    public static final DeferredItem<BigShovelItem> BIG_SHOVEL = ITEMS.register("big_shovel",
+            ()-> new BigShovelItem(ModMaterials.DARKNESS, new Item.Properties()
+    .attributes(ShovelItem.createAttributes(ModMaterials.DARKNESS,7f, -3.5F))
+            ,1));
+
+
+
+
+    public static final DeferredItem<Lightning_Bolt> BOLT = ITEMS.register("lightning_bolt",
+            ()-> new Lightning_Bolt(new Item.Properties()));
+
 
     public static final DeferredItem<Item> CHAINSAW =
             ITEMS.registerItem("chainsaw", ChainsawItem::new, new Item.Properties().durability(32));
@@ -75,6 +118,7 @@ public class ModItems {
 
 //Spawn Eggs
     public static final DeferredItem<Item> CACTUS_EGG = ITEMS.register("cactus_egg", () -> new DeferredSpawnEggItem(ModEntities.CACTUS_BUDDY,0x649832,0xbabf95,new Item.Properties()));
+    public static final DeferredItem<Item> CELESTIAL_TURTLE_EGG = ITEMS.register("celestial_turtle_egg", () -> new DeferredSpawnEggItem(ModEntities.CELESTIAL_TURTLE,0x150840, 0x001900, new Item.Properties()));
     public static final DeferredItem<Item> EYEBALL_MONSTER_EGG = ITEMS.register("eyeball_monster_egg", () -> new DeferredSpawnEggItem(ModEntities.EYEBALL_MONSTER,0xffffff,0xf5ffc4,new Item.Properties()));
     public static final DeferredItem<Item> SKULL_EGG = ITEMS.register("skull_egg", () -> new DeferredSpawnEggItem(ModEntities.SKULL,0xffffff,0xffffff,new Item.Properties()));
     public static final DeferredItem<Item> MINI_SKULL_EGG = ITEMS.register("mini_skull_egg", () -> new DeferredSpawnEggItem(ModEntities.MINI_SKULL,0x432f02,0xff24ff,new Item.Properties()));
@@ -83,6 +127,9 @@ public class ModItems {
     public static final DeferredItem<Item> OWL_EGG = ITEMS.register("owl_egg", () -> new DeferredSpawnEggItem(ModEntities.OWL,0x773d3d,0xcba5a5,new Item.Properties()));
     public static final DeferredItem<Item> HORNED_OWL_EGG = ITEMS.register("horned_owl_egg", () -> new DeferredSpawnEggItem(ModEntities.HORNED_OWL,0x773d3d,0xcba5a5,new Item.Properties()));
     public static final DeferredItem<Item> PENGUIN_EGG = ITEMS.register("penguin_egg", () -> new DeferredSpawnEggItem(ModEntities.PENGUIN,0x473d77,0x756aa9,new Item.Properties()));
+    public static final DeferredItem<Item> WAR_TURTLE_EGG = ITEMS.register("war_turtle_egg",()-> new DeferredSpawnEggItem(ModEntities.WAR_TURTLE, 0x223f1e, 0x2e7f31, new Item.Properties()));
+    public static final DeferredItem<Item> WAR_TORTOISE_EGG = ITEMS.register("war_tortoise_egg", () -> new DeferredSpawnEggItem(ModEntities.WAR_TORTOISE,0x473d77,0x756aa9,new Item.Properties()));
+    public static final DeferredItem<Item> WAR_TORTOISE_HYBRID_EGG = ITEMS.register("war_tortoise_hybrid_egg", () -> new DeferredSpawnEggItem(ModEntities.WAR_TORTOISE_HYBRID,0x473d77,0x756aa9,new Item.Properties()));
 
 
 //Buckets
@@ -101,6 +148,12 @@ public class ModItems {
     public static final DeferredItem<Item> DARK_ESSENCE_BUCKET = ITEMS.register("dark_essense_bucket",
             () -> new BucketItem(ModFluids.SOURCE_DARK_ESSENCE.get(),
                     new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final DeferredItem<Item> VOID_LAVA_BUCKET = ITEMS.register("void_lava_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_VOID_LAVA.get(),
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
+    public static final DeferredItem<Item> SHIMMER_BUCKET = ITEMS.register("shimmer_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_SHIMMER.get(),
+                    new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
 
 //Armor
@@ -113,18 +166,32 @@ public class ModItems {
     public static final DeferredItem<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
             () -> new ArmorItem(ModArmorMaterials.AMETHYST, ArmorItem.Type.BOOTS, new Item.Properties()));
 
+    public static final DeferredItem<Item> ABYSS_HELMET = ITEMS.register("abyss_helmet",
+            () -> new AbyssArmorItem(ArmorItem.Type.HELMET));
+    public static final DeferredItem<Item> ABYSS_CHESTPLATE = ITEMS.register("abyss_chestplate",
+            () -> new AbyssArmorItem(ArmorItem.Type.CHESTPLATE));
+    public static final DeferredItem<Item> ABYSS_LEGGINGS = ITEMS.register("abyss_leggings",
+            () -> new AbyssArmorItem(ArmorItem.Type.LEGGINGS));
     public static final DeferredItem<Item> ABYSS_BOOTS = ITEMS.register("abyss_boots",
-            () -> new ArmorItem(ModArmorMaterials.DARK, ArmorItem.Type.BOOTS, new Item.Properties()));
+            () -> new AbyssArmorItem(ArmorItem.Type.BOOTS));
+
+    public static final DeferredItem<Item> CACTUS_HELMET = ITEMS.register("cactus_helmet",
+            ()-> new CactusArmor(ModArmorMaterials.CACTUS.value(), ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final DeferredItem<Item> CACTUS_CHESTPLATE = ITEMS.register("cactus_chestplate",
+            ()-> new CactusArmor(ModArmorMaterials.CACTUS.value(), ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final DeferredItem<Item> CACTUS_LEGGINGS = ITEMS.register("cactus_leggings",
+            ()-> new CactusArmor(ModArmorMaterials.CACTUS.value(), ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final DeferredItem<Item> CACTUS_BOOTS = ITEMS.register("cactus_boots",
+            ()-> new CactusArmor(ModArmorMaterials.CACTUS.value(), ArmorItem.Type.BOOTS, new Item.Properties()));
+
+            //() -> new AbyssArmorItem(ArmorItem.Type.BOOTS));
+    //public static Map<ArmorItem.Type, DeferredItem<AbyssArmorItem>> ABYSS_ARMOR = AbstractArmorItem.createRegistry(ITEMS, "abyss", AbyssArmorItem::new);
 
     public static final DeferredItem<Item> BLOOD_BOOTS = ITEMS.register("blood_boots",
             () -> new HemogenesisBoots(ModArmorMaterials.BLOOD, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final DeferredItem<Item> FROSTBOOTS = ITEMS.register("frost_boots",
             ()-> new ArmorItem(ArmorMaterials.IRON,ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
-
-    public static final DeferredItem<Item> CACTUS_BOOTS = ITEMS.register("cactus_boots",
-            () -> new ArmorItem(ModArmorMaterials.CACTUS, ArmorItem.Type.BOOTS, new Item.Properties()));
-
 //Boats
     public static final DeferredItem<Item> DARK_BOAT = ITEMS.register("dark_boat",
             () -> new ModBoatItem(false, ModBoatEntity.Type.DARK, new Item.Properties()));
@@ -175,7 +242,7 @@ public class ModItems {
             ()-> new HangingSignItem(ModBlocks.VOID_HANGING_SIGN.get(),ModBlocks.VOID_WALL_HANGING_SIGN.get(),new Item.Properties().stacksTo(16)));
 
 
-
+//War Tortoise/Turtle Armor
     public static final DeferredItem<Item> WAR_TORTOISE_ARMOR = ITEMS.register("war_tortoise_armor",
             ()-> new WarTortoiseArmor(ArmorMaterials.TURTLE, ArmorItem.Type.BODY, new Item.Properties()));
     public static final DeferredItem<Item> WAR_TORTOISE_HYBRID_ARMOR = ITEMS.register("war_tortoise_hybrid_armor",
@@ -186,7 +253,6 @@ public class ModItems {
             ()-> new WarTurtleArmor(ArmorMaterials.TURTLE, ArmorItem.Type.BODY, new Item.Properties()));
     public static final DeferredItem<Item> NETHERITE_WAR_TURTLE_ARMOR = ITEMS.register("netherite_war_turtle_armor",
             ()-> new WarTurtleArmor(ArmorMaterials.NETHERITE, ArmorItem.Type.BODY, new Item.Properties()));
-
 
 
 

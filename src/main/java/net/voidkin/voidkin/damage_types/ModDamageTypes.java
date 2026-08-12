@@ -19,11 +19,13 @@ import javax.annotation.Nullable;
 public interface ModDamageTypes {
 
     /*
-     * Store the RegistryKey of our DamageType into a new constant called CUSTOM_DAMAGE_TYPE
-     * The Identifier in use here points to our JSON file we created earlier.
+      Store the RegistryKey of our DamageType into a new constant called CUSTOM_DAMAGE_TYPE
+      The Identifier in use here points to our JSON file we created earlier.
      */
-    public static final ResourceKey<DamageType> LIFE_STEALS = register("life_steals");
-    public static final ResourceKey<DamageType> CHAKRAMS = register("chakrams");
+
+    static final ResourceKey<DamageType> LIFE_STEALS = register("life_steal");
+    static final ResourceKey<DamageType> CHAKRAMS = register("chakrams");
+
 
     private static ResourceKey<DamageType> register(String name) {
         return ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, name));
@@ -40,11 +42,11 @@ public interface ModDamageTypes {
         return toIgnore.length > 0 ? new EntityExcludedDamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(type), toIgnore) : new DamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(type), attacker, indirectAttacker);
     }
     static void bootstrap(BootstrapContext<DamageType> pContext) {
-        pContext.register(LIFE_STEALS, new DamageType("voidkin.life_steals", DamageScaling.ALWAYS, 2.0F, DamageEffects.HURT));
-        pContext.register(CHAKRAMS, new DamageType(Voidkin.MODID + "chakrams", DamageScaling.ALWAYS, 13F, DamageEffects.BURNING));
+        pContext.register(LIFE_STEALS, new DamageType("voidkin.life_steal.message", DamageScaling.ALWAYS, 2.0F, DamageEffects.HURT));
+        pContext.register(CHAKRAMS, new DamageType("voidkin.chakrams", DamageScaling.ALWAYS, 13F, DamageEffects.BURNING));
     }
 
-    }
+}
 
 /*
     public static DamageSource of(Level world, ResourceKey<DamageType> key) {

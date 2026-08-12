@@ -13,28 +13,7 @@ import net.minecraft.world.phys.Vec3;
 
 public record LightningStrikerEnchantment() implements EnchantmentEntityEffect {
     public static final MapCodec<LightningStrikerEnchantment> CODEC = MapCodec.unit(LightningStrikerEnchantment::new);
-    /*
 
-    @Override
-    public boolean isDiscoverable() {
-        return true;
-    }
-
-    @Override
-    public boolean canApplyAtEnchantingTable(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-        return true;
-    }
-
-    @Override
-    public int getMaxLevel() {
-        return 4;
-    }
-*/
     @Override
     public void apply(ServerLevel pLevel, int pEnchantmentLevel, EnchantedItemInUse pItem, Entity pEntity, Vec3 pOrigin) {
         BlockPos position = pEntity.blockPosition();
