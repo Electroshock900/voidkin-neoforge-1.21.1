@@ -31,8 +31,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/crystallizer_front"),
                 mcLoc("block/blast_furnace_top")));*/
         blockWithItem(ModBlocks.BLEEDING_DEITY_BLOCK);
+        //blockWithItem(ModBlocks.VOID_LANTERN);
 
-        blockItem(ModBlocks.CRYSTALLIZER);
+        //blockItem(ModBlocks.CRYSTALLIZER);
 
         /**blockWithItem(ModBlocks.DEATH_BLOCK);
         blockWithItem(ModBlocks.DEATH_PORTAL);**/

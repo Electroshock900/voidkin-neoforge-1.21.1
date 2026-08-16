@@ -2,6 +2,7 @@ package net.voidkin.voidkin.datagen;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.neoforged.fml.common.Mod;
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -186,6 +187,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.VOID_WALL_TORCH.get(), block-> createSingleItemTable(ModBlocks.VOID_TORCH.get()));
         dropSelf(ModBlocks.D_TORCH.get());
         add(ModBlocks.D_WALL_TORCH.get(), block-> createSingleItemTable(ModBlocks.D_TORCH.get()));
+
+        dropSelf(ModBlocks.VOID_LANTERN.get());
+        //add(ModBlocks.VOID_LANTERN.get(), block -> createSingleItemTable(ModBlocks.VOID_LANTERN.get()));
 
 //dropSelf(ModBlocks.DEATH_PORTAL.get());
 

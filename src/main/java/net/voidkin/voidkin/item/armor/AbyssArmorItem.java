@@ -1,12 +1,16 @@
 package net.voidkin.voidkin.item.armor;
 
 import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.item.armor.model.AbyssArmorModel;
 import net.voidkin.voidkin.item.armor.model.provider.ArmorModelProvider;
@@ -20,6 +24,13 @@ public class AbyssArmorItem extends AbstractArmorItem{
     private static final ResourceLocation TEXTURE_LOCATION = makeCustomTextureLocation(Voidkin.MODID, "abyss_armor");
     public AbyssArmorItem(Type pType) {
         super(ModArmorMaterials.DARK, pType, new Properties().rarity(Rarity.RARE));
+    }
+
+    @Override
+    public ItemEnchantments getAllEnchantments(ItemStack stack, HolderLookup.RegistryLookup<Enchantment> lookup) {
+        stack.enchant(lookup.get(Enchantments.THORNS).get(),5);
+        stack.enchant(lookup.get(Enchantments.PROJECTILE_PROTECTION).get(),5);
+        return super.getAllEnchantments(stack, lookup);
     }
 
     @Override

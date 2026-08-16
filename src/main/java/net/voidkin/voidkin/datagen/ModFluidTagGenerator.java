@@ -18,11 +18,16 @@ public class ModFluidTagGenerator extends FluidTagsProvider {
     public ModFluidTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, provider, Voidkin.MOD_ID, existingFileHelper);
     }
+    public ModFluidTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, provider, Voidkin.MOD_ID, existingFileHelper);
+    }
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        this.tag(ModTags.Fluids.VOID_FLUIDS).add(new Fluid[]{ModFluids.SOURCE_DEITY_BLOOD.get(), ModFluids.FLOWING_DEITY_BLOOD.get()});
+        this.tag(ModTags.Fluids.VOID_FLUIDS).add(new Fluid[]{ModFluids.SOURCE_ENDER_BLOOD.get(), ModFluids.FLOWING_ENDER_BLOOD.get()});
+        this.tag(ModTags.Fluids.DEITY_FLUIDS).add(new Fluid[]{ModFluids.SOURCE_DEITY_BLOOD.get(), ModFluids.FLOWING_DEITY_BLOOD.get()});
+        this.tag(ModTags.Fluids.BLOOD_FLUIDS).add(new Fluid[]{ModFluids.SOURCE_BLOOD.get(), ModFluids.FLOWING_BLOOD.get()});
         //this.tag(FluidTags.LAVA).add(new Fluid[]{Fluids.LAVA, Fluids.FLOWING_LAVA});
     }
 }

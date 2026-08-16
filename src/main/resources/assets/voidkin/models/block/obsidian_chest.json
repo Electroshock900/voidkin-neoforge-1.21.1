@@ -1,0 +1,9 @@
+{
+  "textures": {
+    "particle": "minecraft:block/obsidian",
+    "0": "voidkin:block/chests/obsidian_chest",
+    "iron_lid": "voidkin:block/chests/obsidian_chest",
+    "iron_lock": "voidkin:block/chests/obsidian_chest",
+    "iron_bottom": "voidkin:block/chests/obsidian_chest"
+  }
+}

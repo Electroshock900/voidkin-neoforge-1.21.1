@@ -40,10 +40,13 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_DARK_SHARD = ITEMS.register("raw_dark_shard", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> DARK_SHARD = ITEMS.register("dark_shard", () -> new Item(new Item.Properties()));
 
-    public static final DeferredItem<Item> VOID_GOBLET = ITEMS.register("void_goblet", ()-> new GobletItem(Fluids.EMPTY,new Item.Properties().stacksTo(13)));
-    public static final DeferredItem<Item> BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_blood", ()->new GobletItem(ModFluids.SOURCE_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
-    public static final DeferredItem<Item> DEITY_BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_deity", ()->new GobletItem(ModFluids.SOURCE_DEITY_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
-    public static final DeferredItem<Item> ENDER_BLOOD_FILLED_VOID_GOBLET = ITEMS.register("filled_void_goblet_abyss", ()->new GobletItem(ModFluids.SOURCE_ENDER_BLOOD.get(), new Item.Properties().craftRemainder(ModItems.VOID_GOBLET.get()).stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET = ITEMS.register("eternal_goblet", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET_ABYSS = ITEMS.register("eternal_goblet_abyss", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET_WATER = ITEMS.register("eternal_goblet_water", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET_BLOOD = ITEMS.register("eternal_goblet_blood", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET_DEITY = ITEMS.register("eternal_goblet_deity", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+    public static final DeferredItem<Item> ETERNAL_GOBLET_DRAGON_BREATH = ITEMS.register("eternal_goblet_dragon_breath", ()-> new EternalGobletItem(new Item.Properties().stacksTo(13)));
+
 
 //Weapons and Shields
     public static final DeferredItem<Item> TURTLESHIELD = ITEMS.register("turtle_shield", () -> new ShieldItem(new Item.Properties()));
@@ -191,7 +194,9 @@ public class ModItems {
             () -> new HemogenesisBoots(ModArmorMaterials.BLOOD, ArmorItem.Type.BOOTS, new Item.Properties()));
 
     public static final DeferredItem<Item> FROSTBOOTS = ITEMS.register("frost_boots",
-            ()-> new ArmorItem(ArmorMaterials.IRON,ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+            ()-> new ArmorItem(ArmorMaterials.IRON, ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+
+
 //Boats
     public static final DeferredItem<Item> DARK_BOAT = ITEMS.register("dark_boat",
             () -> new ModBoatItem(false, ModBoatEntity.Type.DARK, new Item.Properties()));

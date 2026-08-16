@@ -44,10 +44,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels(){
-        simpleItem(ModItems.VOID_GOBLET);
-        simpleItem(ModItems.BLOOD_FILLED_VOID_GOBLET);
-        simpleItem(ModItems.ENDER_BLOOD_FILLED_VOID_GOBLET);
-        simpleItem(ModItems.DEITY_BLOOD_FILLED_VOID_GOBLET);
+        simpleItem(ModItems.ETERNAL_GOBLET);
+        simpleItem(ModItems.ETERNAL_GOBLET_ABYSS);
+        simpleItem(ModItems.ETERNAL_GOBLET_BLOOD);
+        simpleItem(ModItems.ETERNAL_GOBLET_DEITY);
+        simpleItem(ModItems.ETERNAL_GOBLET_DRAGON_BREATH);
 
         //spawnEggItem(ModItems.CELESTIAL_TURTLE_EGG.get());
 
@@ -55,6 +56,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModItems.BRIGHTER_MUSIC_DISC);
         //simpleItem(_);
     }
+
     protected void registerModels2() {
         //simpleItem(ModItems.DARK_SHARD);
         //withExistingParent(ModItems.PSE.getId().getPath(), mcLoc("item/template_spawn_egg"));

@@ -47,7 +47,9 @@ public class ModTags {
         }
     }
     public static class Fluids {
+        public static final TagKey<Fluid>BLOOD_FLUIDS = tag("blood_fluids");
         public static final TagKey<Fluid>VOID_FLUIDS = tag("void_fluids");
+        public static final TagKey<Fluid>DEITY_FLUIDS = tag("deity_fluids");
         private static TagKey<Fluid> tag(String name) {
             return FluidTags.create(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,name));
         }

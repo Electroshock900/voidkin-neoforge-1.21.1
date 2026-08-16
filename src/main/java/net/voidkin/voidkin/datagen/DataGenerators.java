@@ -33,7 +33,7 @@ public class DataGenerators {
         //generator.addProvider(event.includeServer(), new ZModRecipeProvider(packOutput));
         generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput, lookupProvider));
 
-        //generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, existingFileHelper));
 
         /*BlockTagsProvider blockTagsProvider = new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper);
@@ -42,8 +42,7 @@ public class DataGenerators {
 
 */
 
-        FluidTagsProvider fluidTagsProvider = new FluidTagsProvider(packOutput,lookupProvider);
-        generator.addProvider(event.includeServer(), fluidTagsProvider);
+        generator.addProvider(event.includeServer(), new ModFluidTagGenerator(packOutput,lookupProvider,existingFileHelper));
         //generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
         //generator.addProvider(event.includeServer(), new ModPoiTypeTagsProvider(packOutput, lookupProvider, existingFileHelper));
 

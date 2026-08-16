@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "voidkin:block/bleeding_deity_block"
-  }
-}

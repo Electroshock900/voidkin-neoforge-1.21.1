@@ -180,10 +180,10 @@
   "item.voidkin.dark_essense_bucket": "Bucket of Dark Essense",
   "item.voidkin.soap_water_bucket": "Soapy Water Bucket",
 
-  "item.voidkin.void_goblet": "Void Goblet",
-  "item.voidkin.filled_void_goblet_blood": "Blood filled Void Goblet",
-  "item.voidkin.filled_void_goblet_deity": "Deity blood filled Void Goblet",
-  "item.voidkin.filled_void_goblet_abyss": "Abyssal blood filled Void Goblet",
+  "item.voidkin.eternal_goblet": "Void Goblet",
+  "item.voidkin.eternal_goblet_blood": "Bloodied Void Goblet",
+  "item.voidkin.eternal_goblet_deity": "Deity Essence filled Void Goblet",
+  "item.voidkin.eternal_goblet_abyss": "Abysmal Void Goblet",
 
   "fluid_type.voidkin.blood_fluid": "Blood",
   "fluid_type.voidkin.ender_fluid": "Ender Blood",
@@ -195,6 +195,9 @@
   "item.voidkin.wood_hammer": "Wood Hammer",
   "item.voidkin.dark_hammer": "Void-touched Hammer",
   "item.voidkin.big_shovel": "Big Shovel",
+  "item.voidkin.quiver": "Quiver",
+  "item.voidkin.big_quiver": "Big Quiver",
+  "item.voidkin.void_quiver": "Void Quiver",
 
 
   "item.voidkin.dark_boat": "Dark Boat",

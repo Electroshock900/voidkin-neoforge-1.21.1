@@ -22,7 +22,7 @@ import java.util.function.IntFunction;
 public class ModChestBoatEntity extends ChestBoat {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModChestBoatEntity.class, EntityDataSerializers.INT);
 
-    public ModChestBoatEntity(EntityType<? extends ChestBoat> pEntityType, Level pLevel) {
+    public ModChestBoatEntity(EntityType<? extends ModChestBoatEntity> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 

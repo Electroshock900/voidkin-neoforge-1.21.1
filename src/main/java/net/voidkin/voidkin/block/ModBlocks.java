@@ -250,6 +250,8 @@ public class ModBlocks {
             () -> new LiquidBlock(ModFluids.SOURCE_ESSENCE, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER).noLootTable()));*/
 
 
+    public static final DeferredBlock<Block> VOID_LANTERN = registerBlock("void_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.of()));
 
 
     public static final DeferredBlock<Block> BLOOD_COAGULATED = registerBlock("blood_coagulated",

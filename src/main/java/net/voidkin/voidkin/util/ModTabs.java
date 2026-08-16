@@ -267,10 +267,14 @@ public class ModTabs {
                         pOutput.accept(ModItems.DEITY_BLOOD_BUCKET.get());
                         pOutput.accept(ModItems.ENDER_BLOOD_BUCKET.get());
                         pOutput.accept(ModItems.DARK_ESSENCE_BUCKET.get());
-                        pOutput.accept(ModItems.VOID_GOBLET.get());
-                        pOutput.accept(ModItems.BLOOD_FILLED_VOID_GOBLET.get());
-                        pOutput.accept(ModItems.ENDER_BLOOD_FILLED_VOID_GOBLET.get());
-                        pOutput.accept(ModItems.DEITY_BLOOD_FILLED_VOID_GOBLET.get());
+
+                        pOutput.accept(ModItems.ETERNAL_GOBLET);
+                        pOutput.accept(ModItems.ETERNAL_GOBLET_ABYSS);
+                        pOutput.accept(ModItems.ETERNAL_GOBLET_BLOOD);
+                        pOutput.accept(ModItems.ETERNAL_GOBLET_DEITY);
+                        pOutput.accept(ModItems.ETERNAL_GOBLET_DRAGON_BREATH);
+
+                        pOutput.accept(ModBlocks.VOID_LANTERN);
 
                         pOutput.accept(ModItems.VOID_TORCH.get());
                         pOutput.accept(ModItems.D_TORCH.get());
@@ -287,6 +291,7 @@ public class ModTabs {
                     }).build());
     public static final Supplier<CreativeModeTab> BIOMECHANICAL_TAB = CREATIVE_MODE_TABS.register("biomechanical_tab",
             ()-> CreativeModeTab.builder()
+                    .title(Component.literal("Biomechanical Tab"))
                     .displayItems((pParameters, pOutput) ->
                     {
                         pOutput.accept(ModBlocks.BLOOD_COAGULATED.get());
