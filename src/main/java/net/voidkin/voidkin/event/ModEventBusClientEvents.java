@@ -1,6 +1,5 @@
 package net.voidkin.voidkin.event;
 
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -14,17 +13,15 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.voidkin.voidkin.Voidkin;
-import net.voidkin.voidkin.block.blockentity.CrystallizerBlockEntity;
 import net.voidkin.voidkin.block.blockentity.renderer.*;
 import net.voidkin.voidkin.entity.ModModelLayers;
 import net.voidkin.voidkin.entity.boats.ModBoatRenderer;
+import net.voidkin.voidkin.entity.custom.cheesehorse.HoagieMuleRenderer;
+import net.voidkin.voidkin.entity.custom.cheesehorse.MeatDonkeyRenderer;
 import net.voidkin.voidkin.entity.model.*;
 import net.voidkin.voidkin.entity.render.*;
+import net.voidkin.voidkin.entity.custom.cheesehorse.CheeseHorseRenderer;
 import net.voidkin.voidkin.item.ModItems;
-import net.voidkin.voidkin.menu.ModMenuTypes;
-import net.voidkin.voidkin.menu.screens.CrystallizerScreen;
-import net.voidkin.voidkin.menu.screens.PedestalScreen;
-import net.voidkin.voidkin.menu.screens.PolisherScreen;
 import net.voidkin.voidkin.particles.*;
 import net.voidkin.voidkin.block.ModBlockEntities;
 import net.voidkin.voidkin.entity.ModEntities;
@@ -41,6 +38,9 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.LION_THING_LAYER, Lion_Thing_Model::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.MINI_SKULL_LAYER, Mini_Skull_Entity_Model::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.EYEBALL_LAYER, Eyeball_Monster_Model::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.CHEESE_HORSE_LAYER, CheeseHorseModel::createBodyMesh);
+        event.registerLayerDefinition(ModModelLayers.MEAT_DONKEY_LAYER, ChestedCheeseHorseModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.HOAGIE_MULE_LAYER, ChestedCheeseHorseModel::createBodyLayer);
 
         event.registerLayerDefinition(Thrown_Chakram_Model.LAYER_LOCATION, Thrown_Chakram_Model::createBodyLayer);
 
@@ -74,6 +74,10 @@ public class ModEventBusClientEvents {
         EntityRenderers.register(ModEntities.CACTUS_BUDDY.get(), Cactus_Buddy_Renderer::new);
 
         EntityRenderers.register(ModEntities.CELESTIAL_TURTLE.get(), CelestialTurtleRenderer::new);
+        EntityRenderers.register(ModEntities.CHEESE_HORSE.get(), CheeseHorseRenderer::new);
+        EntityRenderers.register(ModEntities.MEAT_DONKEY.get(), MeatDonkeyRenderer::new);
+        EntityRenderers.register(ModEntities.HOAGIE_MULE.get(), HoagieMuleRenderer::new);
+
 
         EntityRenderers.register(ModEntities.EYEBALL_MONSTER.get(), Eyeball_Monster_Renderer::new);
         EntityRenderers.register(ModEntities.SKULL.get(), Skull_Renderer::new);

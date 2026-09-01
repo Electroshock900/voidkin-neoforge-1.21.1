@@ -9,21 +9,21 @@ import org.jetbrains.annotations.NotNull;
 
 public class ModChestsModels {
 
-    public static final Material IRON_CHEST_LOCATION = chestMaterial(false, "block/chests/iron_chest");
+    public static final Material IRON_CHEST_LOCATION = chestMaterial(false, "iron_chest");
     public static final Material GOLD_CHEST_LOCATION = chestMaterial(false, "block/chests/gold_chest");
     public static final Material DIAMOND_CHEST_LOCATION = chestMaterial(false, "block/chests/diamond_chest");
     public static final Material COPPER_CHEST_LOCATION = chestMaterial(false, "block/chests/copper_chest");
     public static final Material CRYSTAL_CHEST_LOCATION = chestMaterial(false, "block/chests/crystal_chest");
-    public static final Material OBSIDIAN_CHEST_LOCATION = chestMaterial(false, "block/chests/obsidian_chest.png");
+    public static final Material OBSIDIAN_CHEST_LOCATION = chestMaterial(false, "obsidian_chest");
     public static final Material DIRT_CHEST_LOCATION = chestMaterial(false, "block/chests/dirt_chest");
     public static final Material VANILLA_CHEST_LOCATION = chestMaterial(true, "normal");
 
-    public static final Material TRAPPED_IRON_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_iron_chest");
+    public static final Material TRAPPED_IRON_CHEST_LOCATION = chestMaterial(false, "trapped_iron_chest");
     public static final Material TRAPPED_GOLD_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_gold_chest");
     public static final Material TRAPPED_DIAMOND_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_diamond_chest");
     public static final Material TRAPPED_COPPER_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_copper_chest");
     public static final Material TRAPPED_CRYSTAL_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_crystal_chest");
-    public static final Material TRAPPED_OBSIDIAN_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_obsidian_chest.png");
+    public static final Material TRAPPED_OBSIDIAN_CHEST_LOCATION = chestMaterial(false, "trapped_obsidian_chest");
     public static final Material TRAPPED_DIRT_CHEST_LOCATION = chestMaterial(false, "block/chests/trapped_dirt_chest");
     public static final Material TRAPPED_VANILLA_CHEST_LOCATION = chestMaterial(true, "trapped");
 

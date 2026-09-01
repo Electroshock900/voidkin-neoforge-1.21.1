@@ -25,9 +25,7 @@
     [],
     [],
     [
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
-    ]
+      ]
   ],
   "has_precipitation": true,
   "spawn_costs": {},
@@ -42,7 +40,7 @@
     "water_creature": [
       {
         "type": "voidkin:manta_ray",
-        "maxCount": 4,
+        "maxCount": 7,
         "minCount": 1,
         "weight": 1
       }

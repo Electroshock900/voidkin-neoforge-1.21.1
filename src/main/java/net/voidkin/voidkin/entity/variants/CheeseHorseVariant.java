@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public enum CheeseHorseVariant {
-    SHADOW(0),
-    BONE_VOID(1),
-    VOID(2);
+    PROVOLONE(0),
+    LIMBURGER(1),
+    CHEDDAR(2);
     private static final CheeseHorseVariant[] BY_ID = Arrays.stream(values()).sorted(
             Comparator.comparingInt(CheeseHorseVariant::getId)).toArray(CheeseHorseVariant[]::new);
     private final int id;

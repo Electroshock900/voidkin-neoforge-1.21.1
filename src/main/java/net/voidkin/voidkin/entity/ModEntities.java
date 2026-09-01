@@ -4,6 +4,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.animal.horse.Mule;
 import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.entity.vehicle.ChestBoat;
 import net.minecraft.world.item.Item;
@@ -91,6 +92,32 @@ public static Supplier<EntityType<AresArrow>> ARESARROW = ENTITY_TYPES.register(
                             .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"skull").toString())
             );
 
+    public static final Supplier<EntityType<CheeseHorse>> CHEESE_HORSE =
+            ENTITY_TYPES.register("cheese_horse",
+                    ()-> EntityType.Builder.of(CheeseHorse::new, MobCategory.CREATURE)
+                            .sized(1.3964844F, 1.6F)
+                            .eyeHeight(1.52F)
+                            .passengerAttachments(1.44375F)
+                            .clientTrackingRange(10)
+                            .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "cheese_horse").toString()));
+
+    public static final Supplier<EntityType<MeatDonkey>> MEAT_DONKEY =
+            ENTITY_TYPES.register("meat_donkey",
+                    ()-> EntityType.Builder.of(MeatDonkey::new, MobCategory.CREATURE)
+                            .sized(1.3964844F, 1.5F)
+                            .eyeHeight(1.425F)
+                            .passengerAttachments(1.1125F)
+                            .clientTrackingRange(10)
+                            .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "meat_donkey").toString()));
+
+    public static final Supplier<EntityType<HoagieMule>> HOAGIE_MULE =
+            ENTITY_TYPES.register("hoagie_mule",
+                    ()-> EntityType.Builder.of(HoagieMule::new, MobCategory.CREATURE)
+                            .sized(1.3964844F, 1.6F)
+                            .eyeHeight(1.52F)
+                            .passengerAttachments(1.2125F)
+                            .clientTrackingRange(8)
+                            .build(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "hoagie_mule").toString()));
 
     public static final Supplier<EntityType<Mini_Skull_Entity>> MINI_SKULL =
             ENTITY_TYPES.register("mini_skull",

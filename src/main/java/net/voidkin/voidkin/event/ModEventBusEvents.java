@@ -1,14 +1,10 @@
 package net.voidkin.voidkin.event;
 
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
-import net.minecraft.world.item.ArmorItem;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.entity.custom.*;
 import net.voidkin.voidkin.entity.ModEntities;
@@ -23,11 +19,10 @@ import net.voidkin.voidkin.menu.screens.CrystallizerScreen;
 import net.voidkin.voidkin.menu.screens.Pedestal2Screen;
 import net.voidkin.voidkin.menu.screens.PedestalScreen;
 import net.voidkin.voidkin.menu.screens.PolisherScreen;
+import net.voidkin.voidkin.menu.screens.custom.AbstractCheeseHorseScreen;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridScreen;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseScreen;
 import net.voidkin.voidkin.menu.screens.custom.WarTurtleScreen;
-
-import java.util.Map;
 
 @EventBusSubscriber(modid= Voidkin.MODID,bus=EventBusSubscriber.Bus.MOD)
 public class  ModEventBusEvents {
@@ -35,6 +30,9 @@ public class  ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event){
         event.put(ModEntities.CACTUS_BUDDY.get(), Cactus_Buddy.setAttributes());
         event.put(ModEntities.CELESTIAL_TURTLE.get(), CelestialTurtle.setAttributes());
+        event.put(ModEntities.CHEESE_HORSE.get(), CheeseHorse.createBaseAttributes().build());
+        event.put(ModEntities.MEAT_DONKEY.get(), MeatDonkey.createBaseAttributes().build());
+        event.put(ModEntities.HOAGIE_MULE.get(), HoagieMule.createBaseAttributes().build());
         event.put(ModEntities.EYEBALL_MONSTER.get(), Eyeball_Monster.setAttributes());
         event.put(ModEntities.LION_THING.get(), Lion_Thing.setAttributes());
         event.put(ModEntities.SKULL.get(), Skull_Entity.setAttributes());
@@ -57,6 +55,7 @@ public class  ModEventBusEvents {
         event.register(ModMenuTypes.WAR_TURTLE_MENU.get(), WarTurtleScreen::new);
         event.register(ModMenuTypes.WAR_TORTOISE_MENU.get(), WarTortoiseScreen::new);
         event.register(ModMenuTypes.WAR_TORTOISE_HYBRID_MENU.get(), WarTortoiseHybridScreen::new);
+        event.register(ModMenuTypes.CHEESE_HORSE_MENU.get(), AbstractCheeseHorseScreen::new);
     }
 
 

@@ -98,6 +98,9 @@ public class ModTabs {
                         pOutput.accept(ModItems.BEETLEWINGS.get());
 //SPAWN EGGS
                         pOutput.accept(ModItems.CACTUS_EGG.get());
+                        pOutput.accept(ModItems.CHEESE_HORSE_EGG.get());
+                        pOutput.accept(ModItems.MEAT_DONKEY_EGG.get());
+                        pOutput.accept(ModItems.HOAGIE_MULE_EGG.get());
                         pOutput.accept(ModItems.CELESTIAL_TURTLE_EGG.get());
                         pOutput.accept(ModItems.EYEBALL_MONSTER_EGG.get());
                         pOutput.accept(ModItems.SKULL_EGG.get());
@@ -156,11 +159,32 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.DARK_DIRT.get());
 
                         pOutput.accept(ModBlocks.DARK_STONE.get());
+                        pOutput.accept(ModBlocks.DARK_STONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.DARK_STONE_SLAB.get());
+                        pOutput.accept(ModBlocks.DARK_STONE_WALL.get());
                         pOutput.accept(ModBlocks.DARK_COBBLESTONE.get());
+                        pOutput.accept(ModBlocks.DARK_COBBLESTONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.DARK_COBBLESTONE_SLAB.get());
+                        pOutput.accept(ModBlocks.DARK_COBBLESTONE_WALL.get());
                         pOutput.accept(ModBlocks.BLOOD_STONE.get());
+                        pOutput.accept(ModBlocks.BLOOD_STONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.BLOOD_STONE_SLAB.get());
+                        pOutput.accept(ModBlocks.BLOOD_STONE_WALL.get());
                         pOutput.accept(ModBlocks.BLOOD_COBBLESTONE.get());
+                        pOutput.accept(ModBlocks.BLOOD_COBBLESTONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.BLOOD_COBBLESTONE_SLAB.get());
+                        pOutput.accept(ModBlocks.BLOOD_COBBLESTONE_WALL.get());
                         pOutput.accept(ModBlocks.VOID_STONE.get());
+                        pOutput.accept(ModBlocks.VOID_STONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.VOID_STONE_SLAB.get());
+                        pOutput.accept(ModBlocks.VOID_STONE_WALL.get());
                         pOutput.accept(ModBlocks.VOID_COBBLESTONE.get());
+                        pOutput.accept(ModBlocks.VOID_COBBLESTONE_STAIRS.get());
+                        pOutput.accept(ModBlocks.VOID_COBBLESTONE_SLAB.get());
+                        pOutput.accept(ModBlocks.VOID_COBBLESTONE_WALL.get());
+
+                        pOutput.accept(ModBlocks.BLACK_SAND);
+                        pOutput.accept(ModBlocks.BLACK_SANDSTONE);
 
                         pOutput.accept(ModItems.VOID_TORCH.get());
                         pOutput.accept(ModBlocks.BLOOD_CONGEALED.get());
@@ -207,6 +231,7 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.BLOOD_SIGN.get());
                         pOutput.accept(ModBlocks.BLOOD_HANGING_SIGN.get());
 
+
                         pOutput.accept(ModBlocks.VOID_SAPLING.get());
                         pOutput.accept(ModBlocks.VOID_LOG.get());
                         pOutput.accept(ModBlocks.VOID_WOOD.get());
@@ -226,18 +251,15 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.VOID_SIGN.get());
                         pOutput.accept(ModBlocks.VOID_HANGING_SIGN.get());
 
-                        pOutput.accept(ModBlocks.VOID_ROSE.get());
 
                         pOutput.accept(ModBlocks.ANTI_CACTUS.get());
                         pOutput.accept(ModBlocks.DARK_CACTUS.get());
                         pOutput.accept(ModBlocks.BLOOD_CACTUS.get());
                         pOutput.accept(ModBlocks.END_CACTUS.get());
 
-                        pOutput.accept(ModItems.BLOOD_BUCKET.get());
-                        pOutput.accept(ModItems.SHIMMER_BUCKET.get());
-                        pOutput.accept(ModItems.VOID_LAVA_BUCKET.get());
-                        pOutput.accept(ModBlocks.BLOOD_COAGULATED.get());
-                        pOutput.accept(ModBlocks.BLOOD_CONGEALED.get());
+                        pOutput.accept(ModBlocks.VOID_ROSE.get());
+                        pOutput.accept(ModBlocks.LOTUS.get());
+                        pOutput.accept(ModBlocks.CATMINT.get());
 
                     }).build());
     public static final Supplier<CreativeModeTab> ABYSS_TAB = CREATIVE_MODE_TABS.register("abyss_tab",
@@ -288,6 +310,12 @@ public class ModTabs {
                         pOutput.accept(ModItems.DARKNESS_HAMMER.get());
                         pOutput.accept(ModItems.BIG_SHOVEL.get());
                         //pOutput.acceptAll(ModItems.ABYSS_ARMOR.entrySet().iterator());
+
+                        pOutput.accept(ModItems.BLOOD_BUCKET.get());
+                        pOutput.accept(ModItems.SHIMMER_BUCKET.get());
+                        pOutput.accept(ModItems.VOID_LAVA_BUCKET.get());
+                        pOutput.accept(ModBlocks.BLOOD_COAGULATED.get());
+                        pOutput.accept(ModBlocks.BLOOD_CONGEALED.get());
                     }).build());
     public static final Supplier<CreativeModeTab> BIOMECHANICAL_TAB = CREATIVE_MODE_TABS.register("biomechanical_tab",
             ()-> CreativeModeTab.builder()

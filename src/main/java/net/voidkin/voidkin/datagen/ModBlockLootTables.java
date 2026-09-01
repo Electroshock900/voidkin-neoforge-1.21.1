@@ -55,6 +55,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //dropSelf(ModBlocks.CANDY_CANE_FURNACE.get());
         //dropSelf(ModBlocks.SPECIAL_FURNACE.get());
+        dropSelf(ModBlocks.BLACK_SAND.get());
+        dropSelf(ModBlocks.BLACK_SANDSTONE.get());
 
         //FOOD BLOCKS
         dropSelf(ModBlocks.BBC.get());
@@ -73,6 +75,26 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARK_COBBLESTONE.get());
         dropSelf(ModBlocks.BLOOD_COBBLESTONE.get());
         dropSelf(ModBlocks.VOID_COBBLESTONE.get());
+        dropSelf(ModBlocks.DARK_STONE_STAIRS.get());
+        dropSelf(ModBlocks.BLOOD_STONE_STAIRS.get());
+        dropSelf(ModBlocks.VOID_STONE_STAIRS.get());
+        dropSelf(ModBlocks.DARK_STONE_SLAB.get());
+        dropSelf(ModBlocks.BLOOD_STONE_SLAB.get());
+        dropSelf(ModBlocks.VOID_STONE_SLAB.get());
+        dropSelf(ModBlocks.DARK_COBBLESTONE_STAIRS.get());
+        dropSelf(ModBlocks.BLOOD_COBBLESTONE_STAIRS.get());
+        dropSelf(ModBlocks.VOID_COBBLESTONE_STAIRS.get());
+        dropSelf(ModBlocks.DARK_COBBLESTONE_SLAB.get());
+        dropSelf(ModBlocks.BLOOD_COBBLESTONE_SLAB.get());
+        dropSelf(ModBlocks.VOID_COBBLESTONE_SLAB.get());
+        dropSelf(ModBlocks.DARK_STONE_WALL.get());
+        dropSelf(ModBlocks.DARK_COBBLESTONE_WALL.get());
+        dropSelf(ModBlocks.BLOOD_STONE_WALL.get());
+        dropSelf(ModBlocks.BLOOD_COBBLESTONE_WALL.get());
+        dropSelf(ModBlocks.VOID_STONE_WALL.get());
+        dropSelf(ModBlocks.VOID_COBBLESTONE_WALL.get());
+
+
         dropSelf(ModBlocks.DARK_CACTUS.get());
         dropSelf(ModBlocks.BLOOD_CACTUS.get());
         dropSelf(ModBlocks.END_CACTUS.get());

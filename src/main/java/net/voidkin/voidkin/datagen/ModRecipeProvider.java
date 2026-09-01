@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
+import net.voidkin.voidkin.item.ModItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -23,6 +24,115 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_STONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.DARK_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_STONE_WALL.get()),has(ModBlocks.DARK_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_STONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.DARK_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_STONE_STAIRS.get()),has(ModBlocks.DARK_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_STONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.DARK_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_STONE_SLAB.get()),has(ModBlocks.DARK_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_COBBLESTONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define( 'S', ModBlocks.DARK_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_COBBLESTONE_WALL.get()),has(ModBlocks.DARK_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_COBBLESTONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.DARK_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_COBBLESTONE_STAIRS.get()),has(ModBlocks.DARK_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_COBBLESTONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.DARK_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_COBBLESTONE_SLAB.get()),has(ModBlocks.DARK_COBBLESTONE.get()))
+                .save(consumer);
+ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_STONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_STONE_WALL.get()),has(ModBlocks.BLOOD_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_STONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_STONE_STAIRS.get()),has(ModBlocks.BLOOD_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_STONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_STONE_SLAB.get()),has(ModBlocks.BLOOD_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_COBBLESTONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_COBBLESTONE_WALL.get()),has(ModBlocks.BLOOD_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_COBBLESTONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_COBBLESTONE_STAIRS.get()),has(ModBlocks.BLOOD_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOOD_COBBLESTONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.BLOOD_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.BLOOD_COBBLESTONE_SLAB.get()),has(ModBlocks.BLOOD_COBBLESTONE.get()))
+                .save(consumer);
+ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_STONE_WALL.get()),has(ModBlocks.VOID_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_STONE_STAIRS.get()),has(ModBlocks.VOID_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_STONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_STONE_SLAB.get()),has(ModBlocks.VOID_STONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_COBBLESTONE_WALL.get(),6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_COBBLESTONE_WALL.get()),has(ModBlocks.VOID_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_COBBLESTONE_STAIRS.get(),4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_COBBLESTONE_STAIRS.get()),has(ModBlocks.VOID_COBBLESTONE.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_COBBLESTONE_SLAB.get(),6)
+                .pattern("SSS")
+                .define('S', ModBlocks.VOID_COBBLESTONE.get())
+                .unlockedBy(getHasName(ModBlocks.VOID_COBBLESTONE_SLAB.get()),has(ModBlocks.VOID_COBBLESTONE.get()))
+                .save(consumer);
+
 /*
 //FOOD BLOCK COOKING
         oreSmelting(consumer, List.of(ModBlocks.BBR.get()), RecipeCategory.FOOD, ModBlocks.BBC.get(), 0.7F, 200, "bbr_bbc");

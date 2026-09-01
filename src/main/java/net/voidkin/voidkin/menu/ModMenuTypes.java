@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+import net.voidkin.voidkin.menu.screens.custom.AbstractCheeseHorseMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTurtleMenu;
@@ -40,6 +41,9 @@ public class ModMenuTypes {
     public static final Supplier<MenuType<Pedestal2Menu>> PEDESTAL2_MENU =
             registerMenuType("pedestal2_menu", Pedestal2Menu::new);
 
+    public static final Supplier<MenuType<AbstractCheeseHorseMenu>> CHEESE_HORSE_MENU =
+            registerMenuType("cheese_horse_menu", AbstractCheeseHorseMenu::create);
+
 
     public static final DeferredHolder<MenuType<?>, MenuType<WarTurtleMenu>> WAR_TURTLE_MENU =
             registerMenuType("war_turtle", WarTurtleMenu::create);
@@ -47,6 +51,7 @@ public class ModMenuTypes {
             registerMenuType("war_tortoise", WarTortoiseMenu::create);
     public static final DeferredHolder<MenuType<?>, MenuType<WarTortoiseHybridMenu>> WAR_TORTOISE_HYBRID_MENU =
             registerMenuType("war_tortoise_hybrid", WarTortoiseHybridMenu::create);
+
 
 /*    public static final DeferredHolder<MenuType<?>, MenuType<AltarBMenu>> ALTAR_B_MENU =
             registerMenuType("altar_b_menu", AltarBMenu::new);*/

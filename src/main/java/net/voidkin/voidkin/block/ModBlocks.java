@@ -1,5 +1,7 @@
 package net.voidkin.voidkin.block;
 
+import net.minecraft.util.ColorRGBA;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -37,6 +39,7 @@ import net.voidkin.voidkin.util.ModWoodTypes;
 import net.voidkin.voidkin.worldgen.tree.ModTreeGrowers;
 
 import java.util.Optional;
+import java.util.Properties;
 import java.util.function.Supplier;
 
 
@@ -205,7 +208,7 @@ public class ModBlocks {
     });
 
     public static final DeferredBlock<Block> VOID_STAIRS = registerBlock("void_stairs",
-            () -> new StairBlock(ModBlocks.VOID_PLANKS.get().defaultBlockState(),                    BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_STAIRS) ));
+            () -> new StairBlock(ModBlocks.VOID_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_STAIRS) ));
     public static final DeferredBlock<Block> VOID_SLAB = registerBlock("void_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_SLAB) ));
     public static final DeferredBlock<Block> VOID_DOOR = registerBlock("void_door",
@@ -265,21 +268,73 @@ public class ModBlocks {
 //DARK BIOME STUFF
     public static final DeferredBlock<Block> DARK_GRASS = registerBlock("dark_grass_block",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK)));
-
     public static final DeferredBlock<Block> DARK_DIRT = registerBlock("dark_dirt",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+
     public static final DeferredBlock<Block> DARK_STONE = registerBlock("dark_stone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> DARK_STONE_SLAB = registerBlock("dark_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL)));
+    public static final DeferredBlock<Block> DARK_STONE_STAIRS = registerBlock("dark_stone_stairs",
+            () -> new StairBlock(ModBlocks.DARK_STONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> DARK_STONE_WALL = registerBlock("dark_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
     public static final DeferredBlock<Block> DARK_COBBLESTONE = registerBlock("dark_cobblestone",
-            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> DARK_COBBLESTONE_SLAB = registerBlock("dark_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> DARK_COBBLESTONE_STAIRS = registerBlock("dark_cobblestone_stairs",
+            () -> new StairBlock(ModBlocks.DARK_COBBLESTONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> DARK_COBBLESTONE_WALL = registerBlock("dark_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
     public static final DeferredBlock<Block> BLOOD_STONE = registerBlock("blood_stone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> BLOOD_STONE_SLAB = registerBlock("blood_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL)));
+    public static final DeferredBlock<Block> BLOOD_STONE_STAIRS = registerBlock("blood_stone_stairs",
+            () -> new StairBlock(ModBlocks.BLOOD_STONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> BLOOD_STONE_WALL = registerBlock("blood_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
     public static final DeferredBlock<Block> BLOOD_COBBLESTONE = registerBlock("blood_cobblestone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> BLOOD_COBBLESTONE_SLAB = registerBlock("blood_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> BLOOD_COBBLESTONE_STAIRS = registerBlock("blood_cobblestone_stairs",
+            () -> new StairBlock(ModBlocks.BLOOD_COBBLESTONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> BLOOD_COBBLESTONE_WALL = registerBlock("blood_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
     public static final DeferredBlock<Block> VOID_STONE = registerBlock("void_stone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> VOID_STONE_SLAB = registerBlock("void_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL)));
+    public static final DeferredBlock<Block> VOID_STONE_STAIRS = registerBlock("void_stone_stairs",
+            () -> new StairBlock(ModBlocks.VOID_STONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> VOID_STONE_WALL = registerBlock("void_stone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
     public static final DeferredBlock<Block> VOID_COBBLESTONE = registerBlock("void_cobblestone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> VOID_COBBLESTONE_SLAB = registerBlock("void_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> VOID_COBBLESTONE_STAIRS = registerBlock("void_cobblestone_stairs",
+            () -> new StairBlock(ModBlocks.VOID_COBBLESTONE.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB)));
+    public static final DeferredBlock<Block> VOID_COBBLESTONE_WALL = registerBlock("void_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+
+    public static final DeferredBlock<Block> BLACK_SAND = registerBlock("black_sand",
+            ()-> new ColoredFallingBlock(new ColorRGBA(-8356741), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).sound(SoundType.SAND)));
+    public static final DeferredBlock<Block> BLACK_SANDSTONE = registerBlock("black_sandstone",
+            ()-> new Block(BlockBehaviour.Properties.of()));
 
 
 
@@ -429,7 +484,7 @@ public class ModBlocks {
 
 //FUNCTIONAL BLOCKS
     //public static final DeferredBlock<Block> CANDY_CANE_FURNACE = registerBlock("candy_cane_furnace", () -> new CandyCaneFurnaceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> SBLOCK = registerBlock("sblock",() -> new BlockS(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> SBLOCK = registerBlock("s",() -> new BlockS(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> POLISHER = registerBlock("polisher",() -> new PolisherBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 
     //public static final DeferredBlock<Block> DOM_BLOCK = registerBlock("dom_block",() -> new DomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));

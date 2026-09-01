@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.portal.DimensionTransition;
 import net.voidkin.voidkin.particles.ModParticles;
 
 public class HeadlessEffect extends MobEffect {
@@ -39,6 +40,7 @@ public class HeadlessEffect extends MobEffect {
            if(amplifier>0) {
 
                livingEntity.level().explode(livingEntity, livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), amplifier * 15, Level.ExplosionInteraction.MOB);
+
            }
         }
 

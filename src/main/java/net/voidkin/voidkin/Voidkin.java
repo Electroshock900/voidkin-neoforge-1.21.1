@@ -180,6 +180,24 @@ public class Voidkin {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(EXAMPLE_BLOCK_ITEM);
         }
+        if (event.getTabKey() == CreativeModeTabs.SPAWN_EGGS){
+            event.accept(ModItems.CACTUS_EGG.get());
+            event.accept(ModItems.CHEESE_HORSE_EGG.get());
+            event.accept(ModItems.MEAT_DONKEY_EGG.get());
+            event.accept(ModItems.HOAGIE_MULE_EGG.get());
+            event.accept(ModItems.CELESTIAL_TURTLE_EGG.get());
+            event.accept(ModItems.EYEBALL_MONSTER_EGG.get());
+            event.accept(ModItems.SKULL_EGG.get());
+            event.accept(ModItems.MINI_SKULL_EGG.get());
+            event.accept(ModItems.LION_THING_EGG.get());
+            event.accept(ModItems.MANTA_RAY_EGG.get());
+            event.accept(ModItems.HORNED_OWL_EGG.get());
+            event.accept(ModItems.OWL_EGG.get());
+            event.accept(ModItems.PENGUIN_EGG.get());
+            event.accept(ModItems.WAR_TURTLE_EGG);
+            event.accept(ModItems.WAR_TORTOISE_EGG);
+            event.accept(ModItems.WAR_TORTOISE_HYBRID_EGG);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

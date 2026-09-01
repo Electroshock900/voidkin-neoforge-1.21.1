@@ -44,11 +44,23 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels(){
+        simpleItem(ModItems.BOLT);
         simpleItem(ModItems.ETERNAL_GOBLET);
         simpleItem(ModItems.ETERNAL_GOBLET_ABYSS);
         simpleItem(ModItems.ETERNAL_GOBLET_BLOOD);
         simpleItem(ModItems.ETERNAL_GOBLET_DEITY);
         simpleItem(ModItems.ETERNAL_GOBLET_DRAGON_BREATH);
+        spawnEggItem(ModItems.CHEESE_HORSE_EGG.get());
+        spawnEggItem(ModItems.MEAT_DONKEY_EGG.get());
+        spawnEggItem(ModItems.HOAGIE_MULE_EGG.get());
+        simpleItem(ModItems.AMETHYST_HELMET);
+        simpleItem(ModItems.AMETHYST_CHESTPLATE);
+        simpleItem(ModItems.AMETHYST_LEGGINGS);
+        simpleItem(ModItems.AMETHYST_BOOTS);
+        spawnEggItem(ModItems.WAR_TURTLE_EGG.get());
+        spawnEggItem(ModItems.WAR_TORTOISE_EGG.get());
+        spawnEggItem(ModItems.WAR_TORTOISE_HYBRID_EGG.get());
+        simpleBlockItem(ModBlocks.VOID_LANTERN.get());
 
         //spawnEggItem(ModItems.CELESTIAL_TURTLE_EGG.get());
 

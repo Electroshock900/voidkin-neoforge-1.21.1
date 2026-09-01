@@ -30,10 +30,23 @@
   "block.voidkin.bmuttoncooked":"Cooked Mutton Block",
 
 
+  "block.voidkin.blood_congealed": "Congealed Blood Block",
+  "block.voidkin.blood_coagulated": "Coagulated Blood Block",
+
   "block.voidkin.dark_grass_block":"Dark Grass",
   "block.voidkin.dark_dirt":"Dark Dirt",
+
   "block.voidkin.dark_stone":"Dark Stone",
+  "block.voidkin.dark_stone_stairs":"Dark Stone Stairs",
+  "block.voidkin.dark_stone_slab":"Dark Stone Slab",
+  "block.voidkin.dark_stone_wall":"Dark Stone Wall",
   "block.voidkin.dark_cobblestone":"Dark Cobblestone",
+  "block.voidkin.dark_cobblestone_stairs":"Dark Cobblestone Stairs",
+  "block.voidkin.dark_cobblestone_slab":"Dark Cobblestone Slab",
+  "block.voidkin.dark_cobblestone_wall":"Dark Cobblestone Wall",
+
+  "block.voidkin.black_sand": "Black Sand",
+  "block.voidkin.black_sandstone": "Black Sandstone",
 
   "block.voidkin.dark_sapling": "Darkness Sapling",
   "block.voidkin.dark_log": "Darkness Log",
@@ -55,11 +68,15 @@
   "block.voidkin.dark_sign": "Dark Sign",
   "block.voidkin.dark_hanging_sign": "Dark Hanging Sign",
 
-  "block.voidkin.blood_stone": "Blood Stone",
-  "block.voidkin.blood_cobblestone": "Blood Cobblestone",
 
-  "block.voidkin.blood_congealed": "Congealed Blood Block",
-  "block.voidkin.blood_coagulated": "Coagulated Blood Block",
+  "block.voidkin.blood_stone":"Blood Stone",
+  "block.voidkin.blood_stone_stairs":"Blood Stone Stairs",
+  "block.voidkin.blood_stone_slab":"Blood Stone Slab",
+  "block.voidkin.blood_stone_wall":"Blood Stone Wall",
+  "block.voidkin.blood_cobblestone":"Blood Cobblestone",
+  "block.voidkin.blood_cobblestone_stairs":"Blood Cobblestone Stairs",
+  "block.voidkin.blood_cobblestone_slab":"Blood Cobblestone Slab",
+  "block.voidkin.blood_cobblestone_wall":"Blood Cobblestone Wall",
 
   "block.voidkin.blood_sapling": "Blood Sapling",
   "block.voidkin.blood_log": "Blood Log",
@@ -83,7 +100,13 @@
 
 
   "block.voidkin.void_stone": "Abyssal Stone",
+  "block.voidkin.void_stone_stairs": "Abyssal Stone Stairs",
+  "block.voidkin.void_stone_slab": "Abyssal Stone Slab",
+  "block.voidkin.void_stone_wall": "Abyssal Stone Wall",
   "block.voidkin.void_cobblestone": "Abyssal Cobblestone",
+  "block.voidkin.void_cobblestone_stairs": "Abyssal Cobblestone Stairs",
+  "block.voidkin.void_cobblestone_slab": "Abyssal Cobblestone Slab",
+  "block.voidkin.void_cobblestone_wall": "Abyssal Cobblestone Wall",
 
   "block.voidkin.void_sapling": "Abyssal Sapling",
   "block.voidkin.void_log": "Abyssal Log",
@@ -104,6 +127,7 @@
   "block.voidkin.void_chest": "Abyssal Chest",
   "block.voidkin.void_sign": "Abyssal Sign",
   "block.voidkin.void_hanging_sign": "Abyssal Hanging Sign",
+  "block.voidkin.void_lantern": "Abyssal Lantern",
 
 
   "block.voidkin.dark_cactus": "Dark Cactus",
@@ -131,13 +155,15 @@
   "block.voidkin.trapped_obsidian_chest": "Trapped Obsidian Chest",
   "item.voidkin.iron_to_obsidian_chest_upgrade": "Iron to Obsidian Chest Upgrade",
 
-  "item.voidkin.void_torch": "Void Torch",
-  "item.voidkin.d_torch": "D Torch",
+
+  "block.voidkin.void_torch": "Void Torch",
+  "block.voidkin.d_torch": "D Torch",
   "item.voidkin.smile":"§0§kXXX §r§0Smile!!! §kXXX",
   "item.voidkin.cactus_bow": "Cactus Bow",
   "item.voidkin.blood_cactus_bow": "Blood Cactus Bow",
 
-  "item.voidkin.spine":"Cactus Spine",
+
+  "item.voidkin.cactus_spine":"Cactus Spine",
   "item.voidkin.blood_spine":"Blood Cactus Spine",
   "item.voidkin.anti_spine":"Anti Cactus Spine",
 
@@ -158,6 +184,9 @@
 
   "item.voidkin.cactus_egg": "Cactus Buddy Spawn Egg",
   "item.voidkin.celestial_turtle_egg": "Celestial Turtle Spawn Egg",
+  "item.voidkin.cheese_horse_egg": "Cheese Horse Spawn Egg",
+  "item.voidkin.meat_donkey_egg": "Meat Donkey Spawn Egg",
+  "item.voidkin.hoagie_mule_egg": "Hoagie Mule Spawn Egg",
   "item.voidkin.eyeball_monster_egg": "Eyeball Monster Spawn Egg",
   "item.voidkin.skull_egg": "Skull Monster Spawn Egg",
   "item.voidkin.mini_skull_egg": "Skull Monster Spawn Egg",
@@ -180,15 +209,18 @@
   "item.voidkin.dark_essense_bucket": "Bucket of Dark Essense",
   "item.voidkin.soap_water_bucket": "Soapy Water Bucket",
 
+
   "item.voidkin.eternal_goblet": "Void Goblet",
   "item.voidkin.eternal_goblet_blood": "Bloodied Void Goblet",
   "item.voidkin.eternal_goblet_deity": "Deity Essence filled Void Goblet",
   "item.voidkin.eternal_goblet_abyss": "Abysmal Void Goblet",
 
+
   "fluid_type.voidkin.blood_fluid": "Blood",
   "fluid_type.voidkin.ender_fluid": "Ender Blood",
   "fluid_type.voidkin.deity_blood_fluid": "Deity Blood",
   "fluid_type.voidkin.dark_essence_fluid": "Dark Essence",
+
 
   "item.voidkin.regrowth_axe": "Axe of Regrowth",
   "item.voidkin.lightning_bolt": "Lightning Bolt",
@@ -208,13 +240,18 @@
   "item.voidkin.void_chest_boat": "Abyssal Chest Boat",
 
 
+  "voidkin.container.obsidian_chest": "Obsidian Chest",
+  "voidkin.container.trapped_obsidian_chest": "Trapped Obsidian Chest",
+  "voidkin.container.iron_chest": "Iron Chest",
+  "voidkin.container.trapped_iron_chest": "Trapped Iron Chest",
+
+
+  "item.voidkin.beetlewings": "Beetle Wings",
 
   "item.voidkin.amethyst_helmet": "Amethyst Helmet",
   "item.voidkin.amethyst_chestplate": "Amethyst Chestplate",
   "item.voidkin.amethyst_leggings": "Amethyst Leggings",
   "item.voidkin.amethyst_boots": "Amethyst Boots",
-
-  "item.voidkin.beetlewings": "Beetle Wings",
 
 
   "item.voidkin.abyss_helmet": "Abyss Helmet",
@@ -234,6 +271,11 @@
   "item.voidkin.wbr": "Water Breathing Ring",
 
   "entity.voidkin.cactus_buddy": "Cactus Buddy",
+  "entity.voidkin.celestial_turtle": "Celestial Turtle",
+
+  "entity.voidkin.cheese_horse": "Cheese Horse",
+  "entity.voidkin.meat_donkey" : "Meat Donkey",
+  "entity.voidkin.hoagie_mule": "Hoagie Mule",
   "entity.voidkin.eyeball_monster": "Eyeball Monster",
   "entity.voidkin.lion_thing": "Lion Thing",
   "entity.voidkin.skull": "Skull",
@@ -297,8 +339,8 @@
   "item.minecraft.tipped_arrow.effect.spider_potion": "Arrow of Wall Cling",
 
   "item.minecraft.potion.effect.headless_potion": "Voidheaded Potion",
-  "item.minecraft.splash_potion.effect.headless_potion": "Voidheaded Potion",
-  "item.minecraft.lingering_potion.effect.headless_potion": "Voidheaded Potion",
+  "item.minecraft.splash_potion.effect.headless_potion": "Splash Voidheaded Potion",
+  "item.minecraft.lingering_potion.effect.headless_potion": "Lingering Voidheaded Potion",
   "item.minecraft.tipped_arrow.effect.headless_potion": "Arrow of the Void Head",
 
   "item.minecraft.potion.effect.headless_potion2": "Voidheaded II Potion",
@@ -327,6 +369,8 @@
 
   "curios.identifier.backpack": "Backpack",
   "curios.identifier.big_backpack": "Big Backpack",
+  "item.voidkin.backpack": "Backpack",
+  "item.voidkin.big_backpack": "Big Backpack",
 
 
   "tooltip.voidkin.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",

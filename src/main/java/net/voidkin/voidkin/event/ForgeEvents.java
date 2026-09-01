@@ -24,6 +24,7 @@ import net.neoforged.neoforge.event.level.BlockEvent;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.block.custom.CongealedBloodBlock;
 import net.voidkin.voidkin.enchantments.ModEnchantments;
+import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.item.custom.BigShovelItem;
 import net.voidkin.voidkin.item.custom.HammerItem;
 import net.voidkin.voidkin.util.ModPotions;
@@ -124,7 +125,7 @@ public class ForgeEvents {
     @SubscribeEvent
     public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event){
         PotionBrewing.Builder builder = event.getBuilder();
-        builder.addMix(Potions.AWKWARD, Items.FERMENTED_SPIDER_EYE, ModPotions.SPIDER_POTION);
+        builder.addMix(Potions.WATER, ModItems.DARK_SHARD.get(), ModPotions.SPIDER_POTION);
         builder.addMix(Potions.NIGHT_VISION, Items.FERMENTED_SPIDER_EYE, ModPotions.HEADLESS_POTION);
         builder.addMix(ModPotions.HEADLESS_POTION, Items.FERMENTED_SPIDER_EYE, ModPotions.HEADLESS_POTION2);
     }

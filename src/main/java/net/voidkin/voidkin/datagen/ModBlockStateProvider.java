@@ -31,6 +31,62 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 modLoc("block/crystallizer_front"),
                 mcLoc("block/blast_furnace_top")));*/
         blockWithItem(ModBlocks.BLEEDING_DEITY_BLOCK);
+        blockWithItem(ModBlocks.BLACK_SAND);
+        simpleBlockWithItem(ModBlocks.BLACK_SANDSTONE.get(), models().cubeBottomTop("black_sandstone",
+                modLoc("block/black_sandstone"),
+                modLoc("block/black_sandstone_bottom"),
+                modLoc("block/black_sandstone_top")
+                ));
+
+
+        stairsBlock(((StairBlock) ModBlocks.DARK_STONE_STAIRS.get()), blockTexture(ModBlocks.DARK_STONE.get()));
+        blockItem(ModBlocks.DARK_STONE_STAIRS);
+        stairsBlock(((StairBlock) ModBlocks.DARK_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.DARK_COBBLESTONE.get()));
+        blockItem(ModBlocks.DARK_COBBLESTONE_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.DARK_STONE_SLAB.get()), blockTexture(ModBlocks.DARK_STONE.get()), blockTexture(ModBlocks.DARK_STONE.get()));
+        blockItem(ModBlocks.DARK_STONE_SLAB);
+        slabBlock(((SlabBlock) ModBlocks.DARK_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.DARK_COBBLESTONE.get()), blockTexture(ModBlocks.DARK_COBBLESTONE.get()));
+        blockItem(ModBlocks.DARK_COBBLESTONE_SLAB);
+        wallBlock(((WallBlock) ModBlocks.DARK_STONE_WALL.get()), blockTexture(ModBlocks.DARK_STONE.get()));
+        //blockItem(ModBlocks.DARK_STONE_WALL);
+        wallBlock(((WallBlock) ModBlocks.DARK_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.DARK_COBBLESTONE.get()));
+        //blockItem(ModBlocks.DARK_COBBLESTONE_WALL);
+
+
+        stairsBlock(((StairBlock) ModBlocks.BLOOD_STONE_STAIRS.get()), blockTexture(ModBlocks.BLOOD_STONE.get()));
+        blockItem(ModBlocks.BLOOD_STONE_STAIRS);
+        stairsBlock(((StairBlock) ModBlocks.BLOOD_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.BLOOD_COBBLESTONE.get()));
+        blockItem(ModBlocks.BLOOD_COBBLESTONE_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.BLOOD_STONE_SLAB.get()), blockTexture(ModBlocks.BLOOD_STONE.get()), blockTexture(ModBlocks.BLOOD_STONE.get()));
+        blockItem(ModBlocks.BLOOD_STONE_SLAB);
+        slabBlock(((SlabBlock) ModBlocks.BLOOD_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.BLOOD_COBBLESTONE.get()), blockTexture(ModBlocks.BLOOD_COBBLESTONE.get()));
+        blockItem(ModBlocks.BLOOD_COBBLESTONE_SLAB);
+        wallBlock(((WallBlock) ModBlocks.BLOOD_STONE_WALL.get()), blockTexture(ModBlocks.BLOOD_STONE.get()));
+        //blockItem(ModBlocks.BLOOD_STONE_WALL);
+        wallBlock(((WallBlock) ModBlocks.BLOOD_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.BLOOD_COBBLESTONE.get()));
+        //blockItem(ModBlocks.BLOOD_COBBLESTONE_WALL);
+
+
+        stairsBlock(((StairBlock) ModBlocks.VOID_STONE_STAIRS.get()), blockTexture(ModBlocks.VOID_STONE.get()));
+        blockItem(ModBlocks.VOID_STONE_STAIRS);
+        stairsBlock(((StairBlock) ModBlocks.VOID_COBBLESTONE_STAIRS.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()));
+        blockItem(ModBlocks.VOID_COBBLESTONE_STAIRS);
+        slabBlock(((SlabBlock) ModBlocks.VOID_STONE_SLAB.get()), blockTexture(ModBlocks.VOID_STONE.get()), blockTexture(ModBlocks.VOID_STONE.get()));
+        blockItem(ModBlocks.VOID_STONE_SLAB);
+        slabBlock(((SlabBlock) ModBlocks.VOID_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()));
+        blockItem(ModBlocks.VOID_COBBLESTONE_SLAB);
+        wallBlock(((WallBlock) ModBlocks.VOID_STONE_WALL.get()), blockTexture(ModBlocks.VOID_STONE.get()));
+        //blockItem(ModBlocks.VOID_STONE_WALL);
+        wallBlock(((WallBlock) ModBlocks.VOID_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()));
+        //blockItem(ModBlocks.VOID_COBBLESTONE_WALL);
+
+
+        blockWithItem(ModBlocks.SBLOCK);
+
+
+
+
+
         //blockWithItem(ModBlocks.VOID_LANTERN);
 
         //blockItem(ModBlocks.CRYSTALLIZER);

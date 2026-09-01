@@ -15,13 +15,13 @@ import net.voidkin.voidkin.menu.screens.custom.WarTurtleMenu;
 
 public class WarTurtleScreen extends AbstractContainerScreen<WarTurtleMenu> {
     private static final ResourceLocation GUI_TEXTURE_T0 =
-            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/entity/warturtle/gui/warturtle_gui_tier0.png");
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/gui/warturtle_gui_tier0.png");
     private static final ResourceLocation GUI_TEXTURE_T1 =
-            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/entity/warturtle/gui/warturtle_gui_tier1.png");
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/gui/warturtle_gui_tier1.png");
     private static final ResourceLocation GUI_TEXTURE_T2 =
-            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/entity/warturtle/gui/warturtle_gui_tier2.png");
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/gui/warturtle_gui_tier2.png");
     private static final ResourceLocation GUI_TEXTURE_T3 =
-            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/entity/warturtle/gui/warturtle_gui_tier3.png");
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"textures/gui/warturtle_gui_tier3.png");
     private final WarTurtle warturtle;
     private float xMouse;
     private float yMouse;

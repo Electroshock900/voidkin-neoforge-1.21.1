@@ -107,7 +107,7 @@ public class ModItems {
 
 
 
-    public static final DeferredItem<Lightning_Bolt> BOLT = ITEMS.register("lightning_bolt",
+    public static final DeferredItem<Item> BOLT = ITEMS.register("lightning_bolt",
             ()-> new Lightning_Bolt(new Item.Properties()));
 
 
@@ -122,6 +122,9 @@ public class ModItems {
 //Spawn Eggs
     public static final DeferredItem<Item> CACTUS_EGG = ITEMS.register("cactus_egg", () -> new DeferredSpawnEggItem(ModEntities.CACTUS_BUDDY,0x649832,0xbabf95,new Item.Properties()));
     public static final DeferredItem<Item> CELESTIAL_TURTLE_EGG = ITEMS.register("celestial_turtle_egg", () -> new DeferredSpawnEggItem(ModEntities.CELESTIAL_TURTLE,0x150840, 0x001900, new Item.Properties()));
+    public static final DeferredItem<Item> CHEESE_HORSE_EGG = ITEMS.register("cheese_horse_egg", () -> new DeferredSpawnEggItem(ModEntities.CHEESE_HORSE,0xe6ca7c, 0xd9ac2c, new Item.Properties()));
+    public static final DeferredItem<Item> MEAT_DONKEY_EGG = ITEMS.register("meat_donkey_egg", () -> new DeferredSpawnEggItem(ModEntities.MEAT_DONKEY,0xe67a7c, 0xd92c2c, new Item.Properties()));
+    public static final DeferredItem<Item> HOAGIE_MULE_EGG = ITEMS.register("hoagie_mule_egg", () -> new DeferredSpawnEggItem(ModEntities.HOAGIE_MULE,0xe6ca7c, 0xd9ac2c, new Item.Properties()));
     public static final DeferredItem<Item> EYEBALL_MONSTER_EGG = ITEMS.register("eyeball_monster_egg", () -> new DeferredSpawnEggItem(ModEntities.EYEBALL_MONSTER,0xffffff,0xf5ffc4,new Item.Properties()));
     public static final DeferredItem<Item> SKULL_EGG = ITEMS.register("skull_egg", () -> new DeferredSpawnEggItem(ModEntities.SKULL,0xffffff,0xffffff,new Item.Properties()));
     public static final DeferredItem<Item> MINI_SKULL_EGG = ITEMS.register("mini_skull_egg", () -> new DeferredSpawnEggItem(ModEntities.MINI_SKULL,0x432f02,0xff24ff,new Item.Properties()));

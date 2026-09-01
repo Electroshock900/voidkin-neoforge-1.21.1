@@ -17,6 +17,13 @@ public class ModModelLayers {
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"lion_thing_layer"),"main");
     public static final ModelLayerLocation MANTA_RAY_LAYER = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"manta_ray_layer"),"main");
+    public static final ModelLayerLocation CHEESE_HORSE_LAYER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"cheese_horse_layer"), "main");
+    public static final ModelLayerLocation MEAT_DONKEY_LAYER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"meat_donkey_layer"), "main");
+    public static final ModelLayerLocation HOAGIE_MULE_LAYER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,"hoagie_mule_layer"), "main");
+
 
     public static final ModelLayerLocation DARK_BOAT_LAYER = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "boat/dark"), "main");

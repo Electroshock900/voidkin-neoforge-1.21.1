@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "voidkin:dark_cobblestone"
   },
-  "result": "voidkin:dark_stone"
+  "result": {
+    "id": "voidkin:dark_stone"
+  }
 }
