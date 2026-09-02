@@ -78,22 +78,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.DARK_STONE_STAIRS.get());
         dropSelf(ModBlocks.BLOOD_STONE_STAIRS.get());
         dropSelf(ModBlocks.VOID_STONE_STAIRS.get());
-        dropSelf(ModBlocks.DARK_STONE_SLAB.get());
-        dropSelf(ModBlocks.BLOOD_STONE_SLAB.get());
-        dropSelf(ModBlocks.VOID_STONE_SLAB.get());
         dropSelf(ModBlocks.DARK_COBBLESTONE_STAIRS.get());
         dropSelf(ModBlocks.BLOOD_COBBLESTONE_STAIRS.get());
         dropSelf(ModBlocks.VOID_COBBLESTONE_STAIRS.get());
-        dropSelf(ModBlocks.DARK_COBBLESTONE_SLAB.get());
-        dropSelf(ModBlocks.BLOOD_COBBLESTONE_SLAB.get());
-        dropSelf(ModBlocks.VOID_COBBLESTONE_SLAB.get());
+        add(ModBlocks.DARK_STONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.DARK_STONE_SLAB.get()));
+        add(ModBlocks.BLOOD_STONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.BLOOD_STONE_SLAB.get()));
+        add(ModBlocks.VOID_STONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.VOID_STONE_SLAB.get()));
+        add(ModBlocks.DARK_COBBLESTONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.DARK_COBBLESTONE_SLAB.get()));
+        add(ModBlocks.BLOOD_COBBLESTONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.BLOOD_COBBLESTONE_SLAB.get()));
+        add(ModBlocks.VOID_COBBLESTONE_SLAB.get(), block -> createSlabItemTable(ModBlocks.VOID_COBBLESTONE_SLAB.get()));
         dropSelf(ModBlocks.DARK_STONE_WALL.get());
         dropSelf(ModBlocks.DARK_COBBLESTONE_WALL.get());
         dropSelf(ModBlocks.BLOOD_STONE_WALL.get());
         dropSelf(ModBlocks.BLOOD_COBBLESTONE_WALL.get());
         dropSelf(ModBlocks.VOID_STONE_WALL.get());
         dropSelf(ModBlocks.VOID_COBBLESTONE_WALL.get());
-
 
         dropSelf(ModBlocks.DARK_CACTUS.get());
         dropSelf(ModBlocks.BLOOD_CACTUS.get());

@@ -133,6 +133,23 @@ ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_
                 .unlockedBy(getHasName(ModBlocks.VOID_COBBLESTONE_SLAB.get()),has(ModBlocks.VOID_COBBLESTONE.get()))
                 .save(consumer);
 
+        smeltingResultFromBase(consumer, ModBlocks.DARK_COBBLESTONE, ModBlocks.DARK_STONE);
+        smeltingResultFromBase(consumer, ModBlocks.BLOOD_COBBLESTONE, ModBlocks.BLOOD_STONE);
+        smeltingResultFromBase(consumer, ModBlocks.VOID_COBBLESTONE, ModBlocks.VOID_STONE);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.DARK_PLANKS,4)
+                .requires(ModBlocks.DARK_LOG)
+                .unlockedBy(getHasName(ModBlocks.DARK_LOG.asItem()), has(ModBlocks.DARK_PLANKS.asItem()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.BLOOD_PLANKS,4)
+                .requires(ModBlocks.BLOOD_LOG)
+                .unlockedBy(getHasName(ModBlocks.BLOOD_LOG.asItem()), has(ModBlocks.BLOOD_PLANKS.asItem()))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.VOID_PLANKS,4)
+                .requires(ModBlocks.VOID_LOG)
+                .unlockedBy(getHasName(ModBlocks.VOID_LOG.asItem()), has(ModBlocks.VOID_PLANKS.asItem()))
+                .save(consumer);
+
 /*
 //FOOD BLOCK COOKING
         oreSmelting(consumer, List.of(ModBlocks.BBR.get()), RecipeCategory.FOOD, ModBlocks.BBC.get(), 0.7F, 200, "bbr_bbc");
