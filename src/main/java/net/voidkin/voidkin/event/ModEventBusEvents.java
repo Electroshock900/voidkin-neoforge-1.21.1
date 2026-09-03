@@ -6,6 +6,8 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.voidkin.voidkin.Voidkin;
+import net.voidkin.voidkin.altar.VoidAltarScreen;
+import net.voidkin.voidkin.altar.VoidPedestalScreen;
 import net.voidkin.voidkin.entity.custom.*;
 import net.voidkin.voidkin.entity.ModEntities;
 import net.voidkin.voidkin.item.ModItems;
@@ -56,6 +58,9 @@ public class  ModEventBusEvents {
         event.register(ModMenuTypes.WAR_TORTOISE_MENU.get(), WarTortoiseScreen::new);
         event.register(ModMenuTypes.WAR_TORTOISE_HYBRID_MENU.get(), WarTortoiseHybridScreen::new);
         event.register(ModMenuTypes.CHEESE_HORSE_MENU.get(), AbstractCheeseHorseScreen::new);
+
+        event.register(ModMenuTypes.VOID_ALTAR_MENU.get(), VoidAltarScreen::new);
+        event.register(ModMenuTypes.VOID_PEDESTAL_MENU.get(), VoidPedestalScreen::new);
     }
 
 

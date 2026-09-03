@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.voidkin.voidkin.altar.AltarRecipe;
 
 
 public class ModRecipes {
@@ -27,13 +28,13 @@ public class ModRecipes {
             TYPES.register("polisher", () -> new RecipeType<PolisherRecipe>() {
                 public String toString() { return "polisher"; }
             });
-/**
+
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AltarRecipe>> ALTAR_SERIALIZER =
             SERIALIZERS.register("altar_crafting", AltarRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<AltarRecipe>> ALTAR_TYPE =
             TYPES.register("altar_crafting", () -> new RecipeType<AltarRecipe>() {
                 public String toString() { return "altar_crafting"; }
-            });**/
+            });
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<CrystallizerRecipe>> CRYSTALLIZER_SERIALIZER =
             SERIALIZERS.register("crystallizing", CrystallizerRecipe.Serializer::new);

@@ -9,6 +9,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
+import net.voidkin.voidkin.altar.VoidAltarMenu;
+import net.voidkin.voidkin.altar.VoidPedestalMenu;
 import net.voidkin.voidkin.menu.screens.custom.AbstractCheeseHorseMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseHybridMenu;
 import net.voidkin.voidkin.menu.screens.custom.WarTortoiseMenu;
@@ -29,12 +31,12 @@ public class ModMenuTypes {
             registerMenuType("dom_menu", DomMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<SubMenu>> SUB_MENU =
             registerMenuType("sub_menu", SubMenu::new);*/
-/**
-    /**public static final DeferredHolder<MenuType<?>, MenuType<VoidAltarMenu>> VOID_ALTAR_MENU =
+
+    public static final DeferredHolder<MenuType<?>, MenuType<VoidAltarMenu>> VOID_ALTAR_MENU =
             registerMenuType("void_altar_menu", VoidAltarMenu::new);
     public static final DeferredHolder<MenuType<?>, MenuType<VoidPedestalMenu>> VOID_PEDESTAL_MENU =
             registerMenuType("void_pedestal_menu", VoidPedestalMenu::new);
-**/
+
     public static final DeferredHolder<MenuType<?>, MenuType<PedestalMenu>> PEDESTAL_MENU =
             registerMenuType("pedestal_menu", PedestalMenu::new);
 

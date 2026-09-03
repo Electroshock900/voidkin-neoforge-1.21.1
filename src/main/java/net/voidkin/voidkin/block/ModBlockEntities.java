@@ -8,6 +8,8 @@ import net.voidkin.voidkin.Voidkin;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
+import net.voidkin.voidkin.altar.VoidAltarBlockEntity;
+import net.voidkin.voidkin.altar.VoidPedestalBlockEntity;
 import net.voidkin.voidkin.block.blockentity.*;
 
 import java.util.function.Supplier;
@@ -48,8 +50,8 @@ public class ModBlockEntities {
                             ModBlocks.SUB_BLOCK.get()).build(null));
 */
 
-/**
-    /**public static final Supplier<BlockEntityType<VoidAltarBlockEntity>> VOID_ALTAR =
+
+    public static final Supplier<BlockEntityType<VoidAltarBlockEntity>> VOID_ALTAR =
             BLOCK_ENTITIES.register("void_altar", ()->
                     BlockEntityType.Builder.of(VoidAltarBlockEntity::new,
                             ModBlocks.VOID_ALTAR.get()).build(null));
@@ -58,7 +60,7 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("void_pedestal", ()->
                     BlockEntityType.Builder.of(VoidPedestalBlockEntity::new,
                             ModBlocks.VOID_PEDESTAL.get()).build(null));
-**/
+
     public static final Supplier<BlockEntityType<PedestalBlockEntity>> PEDESTAL =
             BLOCK_ENTITIES.register("pedestal", ()->
                     BlockEntityType.Builder.of(PedestalBlockEntity::new,

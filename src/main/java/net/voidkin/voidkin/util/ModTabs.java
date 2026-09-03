@@ -303,8 +303,8 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.CRYSTALLIZER.get());
                         pOutput.accept(ModBlocks.PEDESTAL.get());
 
-                        /**pOutput.accept(ModBlocks.VOID_ALTAR.get());
-                        pOutput.accept(ModBlocks.VOID_PEDESTAL.get());**/
+                        pOutput.accept(ModBlocks.VOID_ALTAR.get());
+                        pOutput.accept(ModBlocks.VOID_PEDESTAL.get());
 
                         pOutput.accept(ModItems.WOOD_HAMMER.get());
                         pOutput.accept(ModItems.DARKNESS_HAMMER.get());

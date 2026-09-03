@@ -6,6 +6,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
+import net.voidkin.voidkin.altar.VoidAltarBlock;
+import net.voidkin.voidkin.altar.VoidPedestalBlock;
 import net.voidkin.voidkin.block.custom.*;
 import net.voidkin.voidkin.block.custom.flowers.VoidRoseFlower;
 import net.voidkin.voidkin.block.custom.fluids.ShimmerFluidBlock;
@@ -489,10 +491,10 @@ public class ModBlocks {
 
     //public static final DeferredBlock<Block> DOM_BLOCK = registerBlock("dom_block",() -> new DomBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     //public static final DeferredBlock<Block> SUB_BLOCK = registerBlock("sub_block",() -> new SubBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    /**
-    //public static final DeferredBlock<Block> VOID_ALTAR = registerBlock("void_altar",() -> new VoidAltarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    //public static final DeferredBlock<Block> VOID_PEDESTAL = registerBlock("void_pedestal",() -> new VoidPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-**/
+
+    public static final DeferredBlock<Block> VOID_ALTAR = registerBlock("void_altar",() -> new VoidAltarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> VOID_PEDESTAL = registerBlock("void_pedestal",() -> new VoidPedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",() -> new PedestalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PEDESTAL2 = registerBlock("pedestal2",() -> new Pedestal2Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 
