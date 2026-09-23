@@ -18,6 +18,7 @@ public class ModPotions {
 
     public static final Holder<Potion> HEADLESS_POTION = POTIONS.register("headless_potion",
             () -> new Potion(new MobEffectInstance(ModEffects.HEADLESS, 1200)));
+
     public static final Holder<Potion> HEADLESS_POTION2 = POTIONS.register("headless_potion2",
             () -> new Potion(new MobEffectInstance(ModEffects.HEADLESS, 900, 1)));
 

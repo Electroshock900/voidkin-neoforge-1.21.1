@@ -6,7 +6,7 @@ import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.damage_types.ModDamageTypes;
 import net.voidkin.voidkin.worldgen.ModBiomeModifiers;
 import net.voidkin.voidkin.world.ModConfiguredFeatures;
-import net.voidkin.voidkin.worldgen.ModPlacedFeatures;
+import net.voidkin.voidkin.world.ModPlacedFeatures;
 //import net.voidkin.voidkin.worldgen.biomes.*;
 import net.voidkin.voidkin.worldgen.biomes.ModBiomes;
 import net.voidkin.voidkin.worldgen.dimension.ModDimensions;

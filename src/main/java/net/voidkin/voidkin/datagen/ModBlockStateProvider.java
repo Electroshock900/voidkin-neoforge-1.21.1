@@ -76,12 +76,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.VOID_COBBLESTONE_SLAB.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()));
         blockItem(ModBlocks.VOID_COBBLESTONE_SLAB);
         wallBlock(((WallBlock) ModBlocks.VOID_STONE_WALL.get()), blockTexture(ModBlocks.VOID_STONE.get()));
-        //blockItem(ModBlocks.VOID_STONE_WALL);
+
         wallBlock(((WallBlock) ModBlocks.VOID_COBBLESTONE_WALL.get()), blockTexture(ModBlocks.VOID_COBBLESTONE.get()));
-        //blockItem(ModBlocks.VOID_COBBLESTONE_WALL);
+
 
 
         blockWithItem(ModBlocks.SBLOCK);
+
+        blockWithItem(ModBlocks.VERAWOOD_PLANKS);
+        saplingBlock(ModBlocks.VERAWOOD_SAPLING);
+        blockItem(ModBlocks.VERAWOOD_LOG);
+        blockItem(ModBlocks.VERAWOOD_WOOD);
+        blockItem(ModBlocks.STRIPPED_VERAWOOD_LOG);
+        blockItem(ModBlocks.STRIPPED_VERAWOOD_WOOD);
+        leavesBlock(ModBlocks.VERAWOOD_LEAVES);
+        logBlock(((RotatedPillarBlock) ModBlocks.VERAWOOD_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.VERAWOOD_WOOD.get()), blockTexture(ModBlocks.VERAWOOD_LOG.get()), blockTexture(ModBlocks.VERAWOOD_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_VERAWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_VERAWOOD_LOG.get()),
+                ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "block/stripped_verawood_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_VERAWOOD_WOOD.get()), blockTexture(ModBlocks.STRIPPED_VERAWOOD_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_VERAWOOD_LOG.get()));
+
+        signBlock((StandingSignBlock) ModBlocks.VERAWOOD_SIGN.get(), (WallSignBlock) ModBlocks.VERAWOOD_WALL_SIGN.get(),
+                blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+        hangingSignBlock((CeilingHangingSignBlock) ModBlocks.VERAWOOD_HANGING_SIGN.get(), (WallHangingSignBlock) ModBlocks.VERAWOOD_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+
+
+        stairsBlock(((StairBlock) ModBlocks.VERAWOOD_STAIRS.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+        slabBlock(((SlabBlock) ModBlocks.VERAWOOD_SLAB.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+
+        buttonBlock(((ButtonBlock) ModBlocks.VERAWOOD_BUTTON.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.VERAWOOD_PRESSURE_PLATE.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+
+        fenceBlock(((FenceBlock) ModBlocks.VERAWOOD_FENCE.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.VERAWOOD_FENCE_GATE.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+        wallBlock(((WallBlock) ModBlocks.VERAWOOD_WALL.get()), blockTexture(ModBlocks.VERAWOOD_PLANKS.get()));
+
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.VERAWOOD_DOOR.get()), modLoc("block/verawood_door_bottom"), modLoc("block/verawood_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.VERAWOOD_TRAPDOOR.get()), modLoc("block/verawood_trapdoor"), true, "cutout");
 
 
 

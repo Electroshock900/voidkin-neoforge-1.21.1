@@ -52,6 +52,7 @@ public class  ModEventBusEvents {
     public static void registerScreens(RegisterMenuScreensEvent event){
         event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
         event.register(ModMenuTypes.PEDESTAL2_MENU.get(), Pedestal2Screen::new);
+
         event.register(ModMenuTypes.POLISHING_MENU.get(), PolisherScreen::new);
         event.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
         event.register(ModMenuTypes.WAR_TURTLE_MENU.get(), WarTurtleScreen::new);

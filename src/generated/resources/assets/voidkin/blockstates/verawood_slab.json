@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "voidkin:block/verawood_slab"
+    },
+    "type=double": {
+      "model": "voidkin:block/verawood_planks"
+    },
+    "type=top": {
+      "model": "voidkin:block/verawood_slab_top"
+    }
+  }
+}

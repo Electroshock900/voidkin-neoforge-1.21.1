@@ -87,8 +87,7 @@ public class ModItems {
     public static final DeferredItem<BackpackItem> BIG_BACKPACK = ITEMS.register("big_backpack",
             () -> new BackpackItem(new Item.Properties(), 54));
 
-
-
+    
 
     public static final DeferredItem<HammerItem> WOOD_HAMMER = ITEMS.register("wood_hammer",
             ()-> new HammerItem(Tiers.WOOD, new Item.Properties()
@@ -240,14 +239,21 @@ public class ModItems {
             ()-> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.DARK_SIGN.get(),ModBlocks.DARK_WALL_SIGN.get()));
     public static final DeferredItem<Item> DARK_HANGING_SIGN = ITEMS.register("dark_hanging_sign",
             ()-> new HangingSignItem(ModBlocks.DARK_HANGING_SIGN.get(),ModBlocks.DARK_WALL_HANGING_SIGN.get(),new Item.Properties().stacksTo(16)));
+
     public static final DeferredItem<Item> BLOOD_SIGN = ITEMS.register("blood_sign",
             ()-> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.BLOOD_SIGN.get(),ModBlocks.BLOOD_WALL_SIGN.get()));
     public static final DeferredItem<Item> BLOOD_HANGING_SIGN = ITEMS.register("blood_hanging_sign",
             ()-> new HangingSignItem(ModBlocks.BLOOD_HANGING_SIGN.get(),ModBlocks.BLOOD_WALL_HANGING_SIGN.get(),new Item.Properties().stacksTo(16)));
+
     public static final DeferredItem<Item> VOID_SIGN = ITEMS.register("void_sign",
             ()-> new SignItem(new Item.Properties().stacksTo(16),ModBlocks.VOID_SIGN.get(),ModBlocks.VOID_WALL_SIGN.get()));
     public static final DeferredItem<Item> VOID_HANGING_SIGN = ITEMS.register("void_hanging_sign",
             ()-> new HangingSignItem(ModBlocks.VOID_HANGING_SIGN.get(),ModBlocks.VOID_WALL_HANGING_SIGN.get(),new Item.Properties().stacksTo(16)));
+
+    public static final DeferredItem<Item> VERAWOOD_SIGN = ITEMS.register("verawood_sign",
+            ()-> new SignItem(new Item.Properties().stacksTo(16),ModBlocks.VERAWOOD_SIGN.get(),ModBlocks.VERAWOOD_WALL_SIGN.get()));
+    public static final DeferredItem<Item> VERAWOOD_HANGING_SIGN = ITEMS.register("verawood_hanging_sign",
+            ()-> new HangingSignItem(ModBlocks.VERAWOOD_HANGING_SIGN.get(),ModBlocks.VERAWOOD_WALL_HANGING_SIGN.get(),new Item.Properties().stacksTo(16)));
 
 
 //War Tortoise/Turtle Armor

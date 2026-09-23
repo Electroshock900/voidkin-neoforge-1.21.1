@@ -37,7 +37,7 @@ public class VoidAltarScreen extends AbstractContainerScreen<VoidAltarMenu> {
         int y = (height - imageHeight) / 2;
 
         guiGraphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
-        ItemStack stack = menu.getItemFromPedestals();
+        ItemStack stack = menu.getItemFromPedestals(menu.blockEntity2);
         if(!stack.isEmpty()) {
             guiGraphics.renderItem(stack, 0, 0);
         }

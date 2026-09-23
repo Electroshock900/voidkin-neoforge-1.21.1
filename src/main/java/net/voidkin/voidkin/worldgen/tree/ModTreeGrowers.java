@@ -13,4 +13,7 @@ public class ModTreeGrowers {
             Optional.empty(), Optional.of(ModConfiguredFeatures.BLOOD_TREE_KEY), Optional.empty());
     public static final TreeGrower VOID = new TreeGrower(Voidkin.MODID + ":void",
             Optional.empty(), Optional.of(ModConfiguredFeatures.VOID_TREE_KEY), Optional.empty());
+    public static final TreeGrower VERAWOOD = new TreeGrower(Voidkin.MODID + ":verawood",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.VERAWOOD_TREE_KEY), Optional.empty());
+
 }

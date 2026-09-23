@@ -6,7 +6,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.entity.ModEntities;
-import net.voidkin.voidkin.worldgen.ModPlacedFeatures;
+import net.voidkin.voidkin.world.ModPlacedFeatures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;

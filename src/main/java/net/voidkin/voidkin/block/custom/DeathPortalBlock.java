@@ -22,14 +22,10 @@ public class DeathPortalBlock extends Block {
     }
 
 
-
-
-
-
     @Override
     public void entityInside(BlockState pState, Level pLevel, BlockPos pPos, Entity pEntity) {
-        //if (pEntity.canChangeDimensions(pLevel, new Level)) {
-            //handleHerbMayfairPortal(pEntity,pPos);
+        //if (pEntity.canChangeDimensions(pLevel, new Level())) {
+          //  handleHerbMayfairPortal(pEntity,pPos);
         //}
 
     }

@@ -27,6 +27,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> DARK_TREE_KEY = registerKey("dark_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLOOD_TREE_KEY = registerKey("blood_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VOID_TREE_KEY = registerKey("void_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VERAWOOD_TREE_KEY = registerKey("verawood_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TRUE_VOID_TREE_KEY = registerKey("true_void_tree");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> DARK_ORE_KEY = registerKey("dark_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_DARK_ORE_KEY = registerKey("deepslate_dark_ore");
@@ -59,27 +61,36 @@ public class ModConfiguredFeatures {
                 new StraightTrunkPlacer(6, 6, 6),
 
                 BlockStateProvider.simple(ModBlocks.DARK_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(6), 4),
 
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new TwoLayersFeatureSize(2, 1, 2)).build());
 
         register(context, BLOOD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.BLOOD_LOG.get()),
-                new StraightTrunkPlacer(13, 13, 13),
+                new StraightTrunkPlacer(13, 2, 13),
 
                 BlockStateProvider.simple(ModBlocks.BLOOD_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
 
-                new TwoLayersFeatureSize(2, 0, 4)).build());
+                new TwoLayersFeatureSize(2, 1, 4)).build());
 
         register(context, VOID_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.VOID_LOG.get()),
                 new DarkOakTrunkPlacer(6, 6, 6),
 
                 BlockStateProvider.simple(ModBlocks.VOID_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 4),
 
-                new TwoLayersFeatureSize(1, 2, 2)).build());
+                new TwoLayersFeatureSize(3, 2, 4)).build());
+
+        register(context, VERAWOOD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.VERAWOOD_LOG.get()),
+                new DarkOakTrunkPlacer(4, 4,6),
+
+                BlockStateProvider.simple(ModBlocks.VERAWOOD_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(7),5),
+                new TwoLayersFeatureSize(3, 1, 6)).build());
+
 
         register(context, DARK_ORE_KEY,Feature.ORE,new OreConfiguration(overworldDarkOres,9));
         register(context, DEEPSLATE_DARK_ORE_KEY,Feature.ORE,new OreConfiguration(deepslatereplacables,ModBlocks.DEEPSLATE_DARK_SHARD_ORE.get().defaultBlockState(),13));

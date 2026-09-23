@@ -38,6 +38,7 @@ import net.voidkin.voidkin.recipe.ModRecipes;
 
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.item.ModItems;
+import net.voidkin.voidkin.util.ModTags;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector2i;
@@ -162,13 +163,12 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     @Override
-    public Component getDisplayName() {
-        return Component.translatable("block.voidkin.void_altar");
-    }
+    public Component getDisplayName() {return Component.translatable("block.voidkin.void_altar");}
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
+
         return new VoidAltarMenu(pContainerId, pPlayerInventory, this, this.data);
     }
 
@@ -188,6 +188,7 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
         progress = pTag.getInt("altar_main.progress");
         maxProgress = pTag.getInt("altar_main.max_progress");
     }
+
     private void clientTick(Level level, BlockPos pos, BlockState state) {
         int maxProgress2 = 78;
         if (this.progress > 0 && this.progress < maxProgress2) {
@@ -225,7 +226,10 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
             return;
         }
         // 1. Must have all pedestal blocks
-        if (!hasPedestals()) return;
+        if (!hasPedestals()) {
+            LogUtils.getLogger().warn("NO PEDESTALS");
+            return;
+        }
 
         // 2. Resolve recipe ONCE
         if(!hasRecipe()) return;
@@ -268,12 +272,7 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
         Optional<RecipeHolder<AltarRecipe>> recipe = getCurrentRecipe();
         Level level = this.getLevel();
         ItemStack result;
-        if (
-                //hasPedestals()
-        offsets.stream().allMatch(offset ->
-                level.getBlockState(this.getBlockPos().offset(offset.x, 0, offset.y))
-                        .is(ModBlocks.VOID_PEDESTAL.get())))
-
+        if (hasPedestals())
          {
             if (recipe.isEmpty()) {
                 return false;
@@ -291,8 +290,8 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
                 itemHandler.getStackInSlot(0),
                 offsets.stream().map(offset -> {
                     if(hasPedestals()){
-                        return((VoidPedestalBlockEntity) level.getBlockEntity(this.getBlockPos().offset(offset.x, 0, offset.y)))
-                            .inventory.getStackInSlot(0);
+                        return((VoidAltarBlockEntity) level.getBlockEntity(this.getBlockPos().offset(offset.x, 0, offset.y)))
+                            .itemHandler.getStackInSlot(0);
                 }else{
                     return null;}
                 }).toList()
@@ -440,16 +439,14 @@ public class VoidAltarBlockEntity extends BlockEntity implements MenuProvider {
     }
 
     public boolean hasPedestals(){
-        //Level level = this.getLevel();
-        //spawnParticleRing(ParticleTypes.DRAGON_BREATH);
-        //if(hasLevel())
+
         if(this.hasLevel()){
-        return offsets.stream().allMatch(offset ->
-                this.level.getBlockState(this.getBlockPos().offset(offset.x, 0, offset.y))
-                        .is(ModBlocks.VOID_PEDESTAL.get())
-        );
+            LogUtils.getLogger().warn("PEDESTAL");
+            return offsets.stream().allMatch(
+                    offset -> level.getBlockState(this.getBlockPos().offset(offset.x, 0, offset.y)).is(ModTags.Blocks.VOID_ELEVATIONS)
+            );
         }
-        return true;
+        return false;
     }
 
 

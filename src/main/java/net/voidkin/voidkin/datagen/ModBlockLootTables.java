@@ -35,6 +35,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.DEATH_BLOCK.get());
         dropSelf(ModBlocks.DARKNESS_BLOCK.get());
         dropSelf(ModBlocks.RAW_DARKNESS_BLOCK.get());
+        dropSelf(ModBlocks.VOID_ALTAR.get());
+        dropSelf(ModBlocks.VOID_PEDESTAL.get());
 
         dropSelf(ModBlocks.SBLOCK.get());
         dropSelf(ModBlocks.SOUND_BLOCK.get());
@@ -120,20 +122,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_DARK_WOOD.get());
         dropSelf(ModBlocks.DARK_SAPLING.get());
 
-        dropSelf(ModBlocks.BLOOD_LOG.get());
-        dropSelf(ModBlocks.BLOOD_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_BLOOD_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_BLOOD_WOOD.get());
-        dropSelf(ModBlocks.BLOOD_SAPLING.get());
-
-        dropSelf(ModBlocks.VOID_LOG.get());
-        dropSelf(ModBlocks.VOID_WOOD.get());
-        dropSelf(ModBlocks.STRIPPED_VOID_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_VOID_WOOD.get());
-        dropSelf(ModBlocks.VOID_SAPLING.get());
-
-
-
         dropSelf(ModBlocks.DARK_PLANKS.get());
         dropSelf(ModBlocks.DARK_STAIRS.get());
         dropSelf(ModBlocks.DARK_PRESSURE_PLATE.get());
@@ -156,6 +144,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.DARK_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.DARK_HANGING_SIGN.get()));
 
+        dropSelf(ModBlocks.BLOOD_LOG.get());
+        dropSelf(ModBlocks.BLOOD_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_BLOOD_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_BLOOD_WOOD.get());
+        dropSelf(ModBlocks.BLOOD_SAPLING.get());
 
         dropSelf(ModBlocks.BLOOD_PLANKS.get());
         dropSelf(ModBlocks.BLOOD_STAIRS.get());
@@ -178,6 +171,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.BLOOD_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.BLOOD_HANGING_SIGN.get()));
 
+
+        dropSelf(ModBlocks.VOID_LOG.get());
+        dropSelf(ModBlocks.VOID_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_VOID_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_VOID_WOOD.get());
+        dropSelf(ModBlocks.VOID_SAPLING.get());
+
         dropSelf(ModBlocks.VOID_PLANKS.get());
         dropSelf(ModBlocks.VOID_STAIRS.get());
         dropSelf(ModBlocks.VOID_PRESSURE_PLATE.get());
@@ -198,6 +198,34 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createSingleItemTable(ModItems.VOID_HANGING_SIGN.get()));
         add(ModBlocks.VOID_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.VOID_HANGING_SIGN.get()));
+
+
+        dropSelf(ModBlocks.VERAWOOD_LOG.get());
+        dropSelf(ModBlocks.VERAWOOD_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_VERAWOOD_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_VERAWOOD_WOOD.get());
+        dropSelf(ModBlocks.VERAWOOD_SAPLING.get());
+
+        dropSelf(ModBlocks.VERAWOOD_PLANKS.get());
+        dropSelf(ModBlocks.VERAWOOD_STAIRS.get());
+        dropSelf(ModBlocks.VERAWOOD_PRESSURE_PLATE.get());
+        add(ModBlocks.VERAWOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VERAWOOD_SLAB.get()));
+        add(ModBlocks.VERAWOOD_DOOR.get(),
+                block -> createDoorTable(ModBlocks.VERAWOOD_DOOR.get()));
+        dropSelf(ModBlocks.VERAWOOD_BUTTON.get());
+        dropSelf(ModBlocks.VERAWOOD_WALL.get());
+        dropSelf(ModBlocks.VERAWOOD_TRAPDOOR.get());
+        dropSelf(ModBlocks.VERAWOOD_FENCE.get());
+        dropSelf(ModBlocks.VERAWOOD_FENCE_GATE.get());
+        add(ModBlocks.VERAWOOD_SIGN.get(), block ->
+                createSingleItemTable(ModItems.VERAWOOD_SIGN.get()));
+        add(ModBlocks.VERAWOOD_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.VERAWOOD_SIGN.get()));
+        add(ModBlocks.VERAWOOD_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.VERAWOOD_HANGING_SIGN.get()));
+        add(ModBlocks.VERAWOOD_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.VERAWOOD_HANGING_SIGN.get()));
 
 
         //dropSelf(ModBlocks.VOID_ALTAR.get());
@@ -225,6 +253,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createLeavesDrops(block,ModBlocks.BLOOD_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
         add(ModBlocks.VOID_LEAVES.get(),(block)->
                 createLeavesDrops(block,ModBlocks.VOID_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.VERAWOOD_LEAVES.get(),(block)->
+                createLeavesDrops(block,ModBlocks.VERAWOOD_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
 
 dropSelf(ModBlocks.CRYSTALLIZER.get());
          }

@@ -45,7 +45,7 @@ public class VoidAltarMenu extends AbstractContainerMenu {
             this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 5, 106, 35));
             this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 6, 52, 62));
             this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 7, 80, 62));
-            this.addSlot(new SlotItemHandler(this.blockEntity2.inventory, 8, 106, 62));
+            this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 8, 106, 62));
                 //this.addSlot(new SlotItemHandler(this.blockEntity.itemHandler, 1, 64, 59));
             
         addDataSlots(data);
@@ -79,16 +79,16 @@ public class VoidAltarMenu extends AbstractContainerMenu {
             BlockPos neighborPos = pos.offset(offset[0], 0, offset[1]);
             BlockEntity be = level.getBlockEntity(neighborPos);
             if (be != null) {
-                //be.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
+                if (be instanceof VoidPedestalBlockEntity){
                     // Example: just grab slot 0
-                    ItemStack stack = getItemFromPedestals();   //handler.getStackInSlot(0);
+                    ItemStack stack = getItemFromPedestals(be);
                     stacks.add(stack);
-                //});
+                }
             }
         }
         return stacks;
     }
-    public ItemStack getItemFromPedestals(){
+    public ItemStack getItemFromPedestals(BlockEntity be){
         if(blockEntity2 instanceof VoidPedestalBlockEntity other){
             return other.getItem(0);
         }

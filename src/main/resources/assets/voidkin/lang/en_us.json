@@ -214,12 +214,15 @@
   "item.voidkin.eternal_goblet_blood": "Bloodied Void Goblet",
   "item.voidkin.eternal_goblet_deity": "Deity Essence filled Void Goblet",
   "item.voidkin.eternal_goblet_abyss": "Abysmal Void Goblet",
+  "item.voidkin.eternal_goblet_dragon_breath": "Dragon Breath Void Goblet",
 
 
   "fluid_type.voidkin.blood_fluid": "Blood",
   "fluid_type.voidkin.ender_fluid": "Ender Blood",
   "fluid_type.voidkin.deity_blood_fluid": "Deity Blood",
   "fluid_type.voidkin.dark_essence_fluid": "Dark Essence",
+  "fluid_type.voidkin.void_lava_fluid": "Void Lava",
+  "fluid_type.voidkin.shimmer_fluid": "Shimmer",
 
 
   "item.voidkin.regrowth_axe": "Axe of Regrowth",
@@ -329,8 +332,8 @@
   "item.voidkin.tomahawk": "Tomahawk",
 
 
-  "effect.voidkin.headless": "Voidheadedness",
   "effect.voidkin.spider": "Wall Cling",
+  "effect.voidkin.headless": "Voidheadedness",
 
 
   "item.minecraft.potion.effect.spider_potion": "Wall Cling Potion",

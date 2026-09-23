@@ -62,6 +62,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         spawnEggItem(ModItems.WAR_TORTOISE_HYBRID_EGG.get());
         simpleBlockItem(ModBlocks.VOID_LANTERN.get());
 
+
+        simpleBlockItem(ModBlocks.VERAWOOD_LOG.get());
+        simpleBlockItem(ModBlocks.VERAWOOD_WOOD.get());
+        simpleBlockItem(ModBlocks.STRIPPED_VERAWOOD_LOG.get());
+        simpleBlockItem(ModBlocks.STRIPPED_VERAWOOD_WOOD.get());
+        simpleBlockItem(ModBlocks.VERAWOOD_LEAVES.get());
+        //simpleBlockItem(ModBlocks.VERAWOOD_TRAPDOOR.get());
+
         //spawnEggItem(ModItems.CELESTIAL_TURTLE_EGG.get());
 
 

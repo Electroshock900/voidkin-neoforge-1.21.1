@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "voidkin:block/blood_stone_slab"
+    },
+    "type=double": {
+      "model": "voidkin:block/blood_stone"
+    },
+    "type=top": {
+      "model": "voidkin:block/blood_stone_slab_top"
+    }
+  }
+}

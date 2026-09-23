@@ -1,6 +1,8 @@
 package net.voidkin.voidkin.datagen;
 
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.voidkin.voidkin.Voidkin;
 //import net.voidkin.voidkin.recipe.providers.builder.AltarRecipeBuilder;
@@ -133,9 +135,9 @@ ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_
                 .unlockedBy(getHasName(ModBlocks.VOID_COBBLESTONE_SLAB.get()),has(ModBlocks.VOID_COBBLESTONE.get()))
                 .save(consumer);
 
-        smeltingResultFromBase(consumer, ModBlocks.DARK_COBBLESTONE, ModBlocks.DARK_STONE);
-        smeltingResultFromBase(consumer, ModBlocks.BLOOD_COBBLESTONE, ModBlocks.BLOOD_STONE);
-        smeltingResultFromBase(consumer, ModBlocks.VOID_COBBLESTONE, ModBlocks.VOID_STONE);
+        smeltingResultFromBase(consumer, ModBlocks.DARK_STONE, ModBlocks.DARK_COBBLESTONE);
+        smeltingResultFromBase(consumer, ModBlocks.BLOOD_STONE, ModBlocks.BLOOD_COBBLESTONE);
+        smeltingResultFromBase(consumer, ModBlocks.VOID_STONE, ModBlocks.VOID_COBBLESTONE);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.DARK_PLANKS,4)
                 .requires(ModBlocks.DARK_LOG)
@@ -149,6 +151,41 @@ ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOID_STONE_
                 .requires(ModBlocks.VOID_LOG)
                 .unlockedBy(getHasName(ModBlocks.VOID_LOG.asItem()), has(ModBlocks.VOID_PLANKS.asItem()))
                 .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS,ModBlocks.VERAWOOD_PLANKS,4)
+                .requires(ModBlocks.VERAWOOD_LOG)
+                .unlockedBy(getHasName(ModBlocks.VERAWOOD_LOG.asItem()), has(ModBlocks.VERAWOOD_PLANKS.asItem()))
+                .save(consumer);
+
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModBlocks.DARK_BUTTON.get())
+                .requires(ModBlocks.DARK_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.DARK_PLANKS.get()),has(ModBlocks.DARK_PLANKS.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS,ModItems.VERAWOOD_SIGN.get(),3)
+                .pattern("DDD")
+                .pattern("DDD")
+                .pattern(" 3 ")
+                .define('3', Items.STICK)
+                .define('D', ModBlocks.VERAWOOD_PLANKS.get())
+                .unlockedBy(getHasName(ModBlocks.VERAWOOD_PLANKS.get()),has(ModBlocks.VERAWOOD_PLANKS.get()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS,ModItems.VERAWOOD_HANGING_SIGN.get(),6)
+                .pattern("C C")
+                .pattern("DDD")
+                .pattern("DDD")
+                .define('C', Items.CHAIN)
+                .define('D', ModBlocks.STRIPPED_VERAWOOD_LOG.get())
+                .unlockedBy(getHasName(Blocks.CHAIN),has(Blocks.CHAIN))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS,ModBlocks.VERAWOOD_STAIRS.get(),6)
+                .pattern("C  ")
+                .pattern("CC ")
+                .pattern("CCC")
+                .define('C', ModBlocks.VERAWOOD_PLANKS.asItem())
+                .unlockedBy(getHasName(ModBlocks.VERAWOOD_STAIRS.get()),has(ModBlocks.VERAWOOD_PLANKS.get()))
+                .save(consumer);
+
 
 /*
 //FOOD BLOCK COOKING

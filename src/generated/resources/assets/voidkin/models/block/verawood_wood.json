@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "voidkin:block/verawood_log",
+    "side": "voidkin:block/verawood_log"
+  }
+}

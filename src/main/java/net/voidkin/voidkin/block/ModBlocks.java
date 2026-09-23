@@ -38,6 +38,7 @@ import net.voidkin.voidkin.fluid.ModFluids;
 import net.voidkin.voidkin.item.ModItems;
 import net.voidkin.voidkin.particles.ModParticles;
 import net.voidkin.voidkin.util.ModWoodTypes;
+import net.voidkin.voidkin.worldgen.portal.XionPortalBlock;
 import net.voidkin.voidkin.worldgen.tree.ModTreeGrowers;
 
 import java.util.Optional;
@@ -232,6 +233,38 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD).noOcclusion()));
 
 
+//VERAWOOD WOOD STUFF
+    public static final DeferredBlock<Block> VERAWOOD_SAPLING = registerBlock("verawood_sapling", () -> new SaplingBlock(ModTreeGrowers.VERAWOOD, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_SAPLING)));
+    public static final DeferredBlock<Block> VERAWOOD_LOG = registerBlock("verawood_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_LOG).requiresCorrectToolForDrops().strength(5.0F)));
+    public static final DeferredBlock<Block> VERAWOOD_WOOD = registerBlock("verawood_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_WOOD).requiresCorrectToolForDrops().strength(5.0F)));
+    public static final DeferredBlock<Block> STRIPPED_VERAWOOD_LOG = registerBlock("stripped_verawood_log", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_DARK_OAK_LOG).requiresCorrectToolForDrops().strength(5.0F)));
+    public static final DeferredBlock<Block> STRIPPED_VERAWOOD_WOOD = registerBlock("stripped_verawood_wood", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_DARK_OAK_WOOD).requiresCorrectToolForDrops().strength(5.0F)));
+    public static final DeferredBlock<Block> VERAWOOD_PLANKS = registerBlock("verawood_planks", () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).requiresCorrectToolForDrops().strength(5.0F)));
+    public static final DeferredBlock<Block> VERAWOOD_LEAVES = registerBlock("verawood_leaves", () -> new DeathLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_LEAVES)));
+
+    public static final DeferredBlock<Block> VERAWOOD_STAIRS = registerBlock("verawood_stairs",
+            () -> new StairBlock(ModBlocks.VERAWOOD_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_STAIRS) ));
+    public static final DeferredBlock<Block> VERAWOOD_SLAB = registerBlock("verawood_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_SLAB) ));
+    public static final DeferredBlock<Block> VERAWOOD_DOOR = registerBlock("verawood_door",
+            ()-> new DoorBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_DOOR)));
+
+    public static final DeferredBlock<Block> VERAWOOD_BUTTON = registerBlock("verawood_button",
+            () -> new ButtonBlock(BlockSetType.DARK_OAK, 10,BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON).sound(SoundType.WOOD)
+                    ));
+    public static final DeferredBlock<Block> VERAWOOD_PRESSURE_PLATE = registerBlock("verawood_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+
+    public static final DeferredBlock<Block> VERAWOOD_FENCE = registerBlock("verawood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_FENCE) ));
+    public static final DeferredBlock<Block> VERAWOOD_FENCE_GATE = registerBlock("verawood_fence_gate",
+            () -> new FenceGateBlock(Optional.ofNullable(ModWoodTypes.VERAWOOD),BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD), Optional.of(SoundEvents.ANVIL_PLACE), Optional.of(SoundEvents.ANVIL_BREAK)));
+    public static final DeferredBlock<Block> VERAWOOD_WALL = registerBlock("verawood_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> VERAWOOD_TRAPDOOR = registerBlock("verawood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.DARK_OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.WOOD).noOcclusion()));
+
+
 
 
 
@@ -367,6 +400,16 @@ public class ModBlocks {
             () -> new ModHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.BLOOD));
     public static final DeferredBlock<Block> VOID_WALL_HANGING_SIGN = BLOCKS.register("void_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BLOOD));
+
+    public static final DeferredBlock<Block> VERAWOOD_SIGN = BLOCKS.register("verawood_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN), ModWoodTypes.VERAWOOD));
+    public static final DeferredBlock<Block> VERAWOOD_WALL_SIGN = BLOCKS.register("verawood_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN), ModWoodTypes.VERAWOOD));
+    public static final DeferredBlock<Block> VERAWOOD_HANGING_SIGN = BLOCKS.register("verawood_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.VERAWOOD));
+    public static final DeferredBlock<Block> VERAWOOD_WALL_HANGING_SIGN = BLOCKS.register("verawood_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.VERAWOOD));
+
     /*public static final DeferredBlock<Block> VOID_CHEST = registerBlock("void_chest",
             ()-> new ModC2hestBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHEST),))
 */
@@ -503,6 +546,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> DEATH_PORTAL = registerBlock("deathportal",
             () -> new DeathPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_PORTAL).noLootTable().noOcclusion().noCollission()));
+
+    public static final DeferredBlock<Block> XION_PORTAL = registerBlock("xion_portal",
+            ()-> new XionPortalBlock(BlockBehaviour.Properties.of().noLootTable().noOcclusion().noCollission()));
 
     public static final DeferredBlock<Block> ANTI_CHEST = registerBlock("f0",
             () -> new Block(BlockBehaviour.Properties.of().ignitedByLava().noLootTable()));

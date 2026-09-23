@@ -21,8 +21,8 @@ import net.voidkin.voidkin.entity.custom.CheeseHorse;
 import net.voidkin.voidkin.entity.model.CheeseHorseModel;
 
 @OnlyIn(Dist.CLIENT)
-public class CheeseHorseArmorLayer extends RenderLayer<AbstractCheeseHorse, CheeseHorseModel<AbstractCheeseHorse>> {
-    private final CheeseHorseModel<AbstractCheeseHorse> model;
+public class CheeseHorseArmorLayer extends RenderLayer<CheeseHorse, CheeseHorseModel<CheeseHorse>> {
+    private final CheeseHorseModel<CheeseHorse> model;
 
     public CheeseHorseArmorLayer(RenderLayerParent<CheeseHorse, CheeseHorseModel<CheeseHorse>> renderer, EntityModelSet modelSet) {
         super(renderer);

@@ -8,6 +8,8 @@ import net.minecraft.world.item.enchantment.effects.ReplaceDisk;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
+import net.voidkin.voidkin.enchantments.components.ReplaceBloodDisk;
+import net.voidkin.voidkin.enchantments.components.ReplaceLavaDisk;
 
 import java.util.function.Supplier;
 
@@ -25,9 +27,9 @@ public class ModEnchantmentEffects {
             DeferredRegister.create(Registries.ENCHANTMENT_LOCATION_BASED_EFFECT_TYPE, Voidkin.MODID);
 
     public static final Supplier<MapCodec<? extends EnchantmentLocationBasedEffect>> BLOOD_WALKER =
-            LOCATION_BASED_ENCHANTMENT_EFFECTS.register("blood_walker", ()-> ReplaceDisk.CODEC);
+            LOCATION_BASED_ENCHANTMENT_EFFECTS.register("blood_walker", ()-> ReplaceBloodDisk.CODEC);
     public static final Supplier<MapCodec<? extends EnchantmentLocationBasedEffect>> LAVA_WALKER =
-            LOCATION_BASED_ENCHANTMENT_EFFECTS.register("lava_walker", ()-> ReplaceDisk.CODEC);
+            LOCATION_BASED_ENCHANTMENT_EFFECTS.register("lava_walker", ()-> ReplaceLavaDisk.CODEC);
 
 
 

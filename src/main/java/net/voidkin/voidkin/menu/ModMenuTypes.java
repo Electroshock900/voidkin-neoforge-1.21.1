@@ -55,9 +55,6 @@ public class ModMenuTypes {
             registerMenuType("war_tortoise_hybrid", WarTortoiseHybridMenu::create);
 
 
-/*    public static final DeferredHolder<MenuType<?>, MenuType<AltarBMenu>> ALTAR_B_MENU =
-            registerMenuType("altar_b_menu", AltarBMenu::new);*/
-
 
 
 

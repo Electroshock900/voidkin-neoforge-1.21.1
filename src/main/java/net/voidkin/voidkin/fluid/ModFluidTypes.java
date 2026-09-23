@@ -49,7 +49,7 @@ public class ModFluidTypes {
 
     public static final Supplier<FluidType> BLOOD_FLUID_TYPE = FLUID_TYPES.register("blood_fluid",() -> new BaseFluidType(WATER_STILL_RL, WATER_FLOWING_RL, SOAP_OVERLAY_RL,
             0xC0381015, new Vector3f(56f / 255f, 16f / 255f, 21f / 255f),
-            FluidType.Properties.create().density(15).viscosity(5).sound(SoundAction.get("drink"),
+            FluidType.Properties.create().density(15).viscosity(5).canConvertToSource(true).sound(SoundAction.get("drink"),
                     SoundEvents.HONEY_DRINK))
     );
 

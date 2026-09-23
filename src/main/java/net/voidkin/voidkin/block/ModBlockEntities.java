@@ -4,7 +4,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.voidkin.voidkin.Voidkin;
-//import net.voidkin.voidkin.block.custom.c.AltarBE;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
@@ -82,7 +81,8 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
                             ModBlocks.DARK_SIGN.get(), ModBlocks.DARK_WALL_SIGN.get(),
                             ModBlocks.BLOOD_SIGN.get(), ModBlocks.BLOOD_WALL_SIGN.get(),
-                            ModBlocks.VOID_SIGN.get(), ModBlocks.VOID_WALL_SIGN.get()
+                            ModBlocks.VOID_SIGN.get(), ModBlocks.VOID_WALL_SIGN.get(),
+                            ModBlocks.VERAWOOD_SIGN.get(), ModBlocks.VERAWOOD_WALL_SIGN.get()
                             ).build(null));
 
     public static final Supplier<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN =
@@ -90,7 +90,8 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
                             ModBlocks.DARK_HANGING_SIGN.get(), ModBlocks.DARK_WALL_HANGING_SIGN.get(),
                                 ModBlocks.BLOOD_HANGING_SIGN.get(), ModBlocks.BLOOD_WALL_HANGING_SIGN.get(),
-                            ModBlocks.VOID_HANGING_SIGN.get(), ModBlocks.VOID_WALL_HANGING_SIGN.get()
+                            ModBlocks.VOID_HANGING_SIGN.get(), ModBlocks.VOID_WALL_HANGING_SIGN.get(),
+                            ModBlocks.VERAWOOD_HANGING_SIGN.get(), ModBlocks.VERAWOOD_WALL_HANGING_SIGN.get()
                             ).build(null));
 
     //public static final Supplier<BlockEntityType<?>> CRATE_ABYSS = register("crate_abyss", ModBlocks.CRATE_ABYSS, AbyssalCrateEntity::new);

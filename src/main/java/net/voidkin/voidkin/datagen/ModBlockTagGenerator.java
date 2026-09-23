@@ -1,5 +1,6 @@
 package net.voidkin.voidkin.datagen;
 
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.voidkin.voidkin.Voidkin;
@@ -20,6 +21,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
+
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
                         ModBlocks.DARK_SHARD_ORE.get(),
@@ -36,17 +38,26 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(ModTags.Blocks.VOIDKIN_BLOCKS)
                 .add(ModBlocks.RAW_DARKNESS_BLOCK.get());
         this.tag(BlockTags.BUTTONS)
+                .add(ModBlocks.DARK_BUTTON.get())
                 .add(ModBlocks.BLOOD_BUTTON.get())
-                .add(ModBlocks.DARK_BUTTON.get());
+                .add(ModBlocks.VOID_BUTTON.get())
+                .add(ModBlocks.VERAWOOD_BUTTON.get());
         this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.DARK_FENCE_GATE.get())
                 .add(ModBlocks.BLOOD_FENCE_GATE.get())
-                .add(ModBlocks.DARK_FENCE_GATE.get());
+                .add(ModBlocks.VOID_FENCE_GATE.get())
+                .add(ModBlocks.VERAWOOD_FENCE_GATE.get());
+
         this.tag(BlockTags.FENCES)
+                .add(ModBlocks.DARK_FENCE.get())
                 .add(ModBlocks.BLOOD_FENCE.get())
-                .add(ModBlocks.DARK_FENCE.get());
+                .add(ModBlocks.VOID_FENCE.get())
+                .add(ModBlocks.VERAWOOD_FENCE.get());
         this.tag(BlockTags.WALLS)
+                .add(ModBlocks.DARK_WALL.get())
                 .add(ModBlocks.BLOOD_WALL.get())
-                .add(ModBlocks.DARK_WALL.get());
+                .add(ModBlocks.VOID_WALL.get())
+                .add(ModBlocks.VERAWOOD_WALL.get());
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.DARK_LOG.get())
                 .add(ModBlocks.DARK_WOOD.get())
@@ -60,6 +71,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.VOID_WOOD.get())
                 .add(ModBlocks.STRIPPED_VOID_LOG.get())
                 .add(ModBlocks.STRIPPED_VOID_WOOD.get())
+                .add(ModBlocks.VERAWOOD_LOG.get())
+                .add(ModBlocks.VERAWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_VERAWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_VERAWOOD_WOOD.get())
                 ;
         this.tag(BlockTags.LOGS)
                 .add(ModBlocks.DARK_LOG.get())
@@ -74,16 +89,53 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.VOID_WOOD.get())
                 .add(ModBlocks.STRIPPED_VOID_LOG.get())
                 .add(ModBlocks.STRIPPED_VOID_WOOD.get())
+                .add(ModBlocks.VERAWOOD_LOG.get())
+                .add(ModBlocks.VERAWOOD_WOOD.get())
+                .add(ModBlocks.STRIPPED_VERAWOOD_LOG.get())
+                .add(ModBlocks.STRIPPED_VERAWOOD_WOOD.get())
         ;
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.BLOOD_PLANKS.get())
                 .add(ModBlocks.DARK_PLANKS.get())
                 .add(ModBlocks.VOID_PLANKS.get())
+                .add(ModBlocks.VERAWOOD_PLANKS.get())
         ;
         this.tag(BlockTags.LEAVES)
-                .add(ModBlocks.DARK_LEAVES.get(),ModBlocks.BLOOD_LEAVES.get(),ModBlocks.VOID_LEAVES.get());
+                .add(ModBlocks.DARK_LEAVES.get(),ModBlocks.BLOOD_LEAVES.get(),ModBlocks.VOID_LEAVES.get(), ModBlocks.VERAWOOD_LEAVES.get());
+        
+        this.tag(BlockTags.SIGNS)
+                .add(ModBlocks.DARK_SIGN.get())
+                .add(ModBlocks.BLOOD_SIGN.get())
+                .add(ModBlocks.VOID_SIGN.get())
+                .add(ModBlocks.VERAWOOD_SIGN.get());
+        this.tag(BlockTags.WALL_SIGNS)
+                .add(ModBlocks.DARK_WALL_SIGN.get())
+                .add(ModBlocks.BLOOD_WALL_SIGN.get())
+                .add(ModBlocks.VOID_WALL_SIGN.get())
+                .add(ModBlocks.VERAWOOD_WALL_SIGN.get());
+        this.tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(ModBlocks.DARK_HANGING_SIGN.get())
+                .add(ModBlocks.BLOOD_HANGING_SIGN.get())
+                .add(ModBlocks.VOID_HANGING_SIGN.get())
+                .add(ModBlocks.VERAWOOD_HANGING_SIGN.get());
+        this.tag(BlockTags.WALL_HANGING_SIGNS)
+                .add(ModBlocks.DARK_WALL_HANGING_SIGN.get())
+                .add(ModBlocks.BLOOD_WALL_HANGING_SIGN.get())
+                .add(ModBlocks.VOID_WALL_HANGING_SIGN.get())
+                .add(ModBlocks.VERAWOOD_WALL_HANGING_SIGN.get());
+
+
         this.tag(BlockTags.FLOWERS)
                 .add(ModBlocks.CATMINT.get(),ModBlocks.LOTUS.get());
+        this.tag(ModTags.Blocks.VOID_ELEVATIONS)
+                .add(ModBlocks.VOID_ALTAR.get(),ModBlocks.VOID_PEDESTAL.get());
+        this.tag(ModTags.Blocks.VOIDKIN_BLOCKS)
+                .add(ModBlocks.VOID_ALTAR.get(),ModBlocks.VOID_PEDESTAL.get(),ModBlocks.BLOOD_WOOD.get());
+        this.tag(BlockTags.PORTALS)
+                .add(ModBlocks.DEATH_PORTAL.get(),ModBlocks.XION_PORTAL.get());
+        this.tag(ModTags.Blocks.PORTAL_POOL)
+                .add(Blocks.LAVA, ModBlocks.SHIMMER_BLOCK.get(), ModBlocks.BLOOD_BLOCK.get(),ModBlocks.DEITY_BLOOD_BLOCK.get());
+
 
     }
 }

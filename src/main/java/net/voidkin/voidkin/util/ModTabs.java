@@ -251,6 +251,25 @@ public class ModTabs {
                         pOutput.accept(ModBlocks.VOID_SIGN.get());
                         pOutput.accept(ModBlocks.VOID_HANGING_SIGN.get());
 
+                        pOutput.accept(ModBlocks.VERAWOOD_SAPLING.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_LOG.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_WOOD.get());
+                        pOutput.accept(ModBlocks.STRIPPED_VERAWOOD_LOG.get());
+                        pOutput.accept(ModBlocks.STRIPPED_VERAWOOD_WOOD.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_LEAVES.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_PLANKS.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_STAIRS.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_SLAB.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_BUTTON.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_FENCE.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_DOOR.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_TRAPDOOR.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_WALL.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_SIGN.get());
+                        pOutput.accept(ModBlocks.VERAWOOD_HANGING_SIGN.get());
+
 
                         pOutput.accept(ModBlocks.ANTI_CACTUS.get());
                         pOutput.accept(ModBlocks.DARK_CACTUS.get());

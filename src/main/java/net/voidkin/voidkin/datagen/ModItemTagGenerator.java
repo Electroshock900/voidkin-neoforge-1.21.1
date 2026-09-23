@@ -1,6 +1,7 @@
 package net.voidkin.voidkin.datagen;
 
 import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.voidkin.voidkin.Voidkin;
 import net.voidkin.voidkin.block.ModBlocks;
@@ -48,19 +49,28 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.BLOOD_WOOD.get().asItem())
                 .add(ModBlocks.VOID_LOG.get().asItem())
                 .add(ModBlocks.VOID_WOOD.get().asItem())
+                .add(ModBlocks.VERAWOOD_LOG.asItem())
+                .add(ModBlocks.VERAWOOD_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_DARK_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_DARK_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_BLOOD_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_BLOOD_WOOD.get().asItem())
                 .add(ModBlocks.STRIPPED_VOID_LOG.get().asItem())
                 .add(ModBlocks.STRIPPED_VOID_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_VERAWOOD_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_VERAWOOD_WOOD.get().asItem())
         ;
         this.tag(ItemTags.PLANKS)
                 .add(ModBlocks.DARK_PLANKS.get().asItem())
                 .add(ModBlocks.BLOOD_PLANKS.get().asItem())
                 .add(ModBlocks.VOID_PLANKS.get().asItem())
+                .add(ModBlocks.VERAWOOD_PLANKS.get().asItem())
         ;
 
+        this.tag(ModTags.Items.PORTAL_ACTIVATOR)
+                .addTag(Tags.Items.GEMS_DIAMOND)
+                .addTag(ModTags.Items.VOIDKIN_CHANGEABLE)
+                .add(Items.IRON_INGOT);
 
 
     }

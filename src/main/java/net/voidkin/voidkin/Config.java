@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.config.ModConfigEvent;
@@ -35,6 +36,21 @@ public class Config {
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);
 
     static final ModConfigSpec SPEC = BUILDER.build();
+
+    // -- Dimension --
+    public static boolean newPlayersSpawnInTF = false;
+    public static boolean portalForNewPlayerSpawn = true;
+
+    // -- Portal --
+    public static String originDimension = Level.OVERWORLD.location().toString();
+    public static boolean allowPortalsInOtherDimensions = true;
+    public static int portalCreationPermission = 0;
+    public static boolean disablePortalCreation = false;
+    public static boolean checkPortalPlacement = true;
+    public static boolean destructivePortalLightning = true;
+    public static boolean shouldReturnPortalBeUsable = true;
+    public static int maxPortalSize = 64;
+
 
     private static boolean validateItemName(final Object obj) {
         return obj instanceof String itemName && BuiltInRegistries.ITEM.containsKey(ResourceLocation.parse(itemName));

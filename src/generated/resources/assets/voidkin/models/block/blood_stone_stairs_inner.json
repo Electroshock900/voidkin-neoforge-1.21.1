@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "voidkin:block/blood_stone",
+    "side": "voidkin:block/blood_stone",
+    "top": "voidkin:block/blood_stone"
+  }
+}

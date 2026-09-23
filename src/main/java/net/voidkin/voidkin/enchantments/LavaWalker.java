@@ -1,19 +1,12 @@
 package net.voidkin.voidkin.enchantments;
 
 import com.mojang.serialization.MapCodec;
-import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.EnchantedItemInUse;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.effects.EnchantmentEntityEffect;
 import net.minecraft.world.item.enchantment.effects.EnchantmentLocationBasedEffect;
-import net.minecraft.world.item.enchantment.effects.ReplaceDisk;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.voidkin.voidkin.enchantments.components.ReplaceLavaDisk;
 
 
 public record LavaWalker() implements EnchantmentLocationBasedEffect {
@@ -39,7 +32,7 @@ public record LavaWalker() implements EnchantmentLocationBasedEffect {
 
     @Override
     public MapCodec<? extends EnchantmentLocationBasedEffect> codec() {
-        return ReplaceDisk.CODEC;
+        return ReplaceLavaDisk.CODEC;
     }
 
 /*

@@ -14,7 +14,8 @@ import net.minecraft.world.item.enchantment.effects.ReplaceDisk;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-
+import net.voidkin.voidkin.enchantments.components.ReplaceBloodDisk;
+import net.voidkin.voidkin.enchantments.components.ReplaceLavaDisk;
 
 
 import static net.voidkin.voidkin.block.ModBlocks.*;
@@ -41,7 +42,7 @@ public record BloodWalker() implements EnchantmentLocationBasedEffect {
 
     @Override
     public MapCodec<? extends EnchantmentLocationBasedEffect> codec() {
-        return ReplaceDisk.CODEC;
+        return ReplaceBloodDisk.CODEC;
     }
 /*
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)

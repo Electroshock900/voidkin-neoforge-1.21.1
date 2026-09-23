@@ -12,6 +12,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.voidkin.voidkin.Voidkin;
+import net.voidkin.voidkin.altar.AltarRecipe;
+import net.voidkin.voidkin.altar.VoidAltarRecipeCategory;
+import net.voidkin.voidkin.altar.VoidAltarScreen;
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.menu.screens.PedestalScreen;
 import net.voidkin.voidkin.menu.screens.*;
@@ -35,8 +38,8 @@ public class JEIVoidkinPlugin implements IModPlugin {
         registration.addRecipeCategories(new PolisherRecipeCategory(
                 registration.getJeiHelpers().getGuiHelper()));
 
-        /**registration.addRecipeCategories(new VoidAltarRecipeCategory(
-                registration.getJeiHelpers().getGuiHelper()));**/
+        registration.addRecipeCategories(new VoidAltarRecipeCategory(
+                registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -52,9 +55,9 @@ public class JEIVoidkinPlugin implements IModPlugin {
                 .getAllRecipesFor(ModRecipes.POLISHER_TYPE.get()).stream().map(RecipeHolder::value).toList();
         registration.addRecipes(PolisherRecipeCategory.POLISHER_RECIPE_RECIPE_TYPE, polisherRecipes);
 
-        /**List<AltarRecipe> altarRecipes = recipeManager
+        List<AltarRecipe> altarRecipes = recipeManager
                 .getAllRecipesFor(ModRecipes.ALTAR_TYPE.get()).stream().map(RecipeHolder::value).toList();
-        registration.addRecipes(VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE, altarRecipes);**/
+        registration.addRecipes(VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE, altarRecipes);
     }
 
     @Override
@@ -63,8 +66,8 @@ public class JEIVoidkinPlugin implements IModPlugin {
                 CrystallizerRecipeCategory.CRYSTALLIZER_RECIPE_RECIPE_TYPE);
         registration.addRecipeClickArea(PolisherScreen.class, 70, 30, 25, 20,
                 PolisherRecipeCategory.POLISHER_RECIPE_RECIPE_TYPE);
-        /**registration.addRecipeClickArea(VoidAltarScreen.class, 12, 30, 25, 20,
-                VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE);**/
+        registration.addRecipeClickArea(VoidAltarScreen.class, 12, 30, 25, 20,
+                VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE);
     }
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
@@ -72,7 +75,7 @@ public class JEIVoidkinPlugin implements IModPlugin {
                 CrystallizerRecipeCategory.CRYSTALLIZER_RECIPE_RECIPE_TYPE);
     registration.addRecipeCatalyst(new ItemStack(ModBlocks.POLISHER.get().asItem()),
                 PolisherRecipeCategory.POLISHER_RECIPE_RECIPE_TYPE);
-    /**registration.addRecipeCatalyst(new ItemStack(ModBlocks.VOID_ALTAR.get().asItem()),
-            VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE);**/
+    registration.addRecipeCatalyst(new ItemStack(ModBlocks.VOID_ALTAR.get().asItem()),
+            VoidAltarRecipeCategory.SACRIFICE_RECIPE_TYPE);
     }
 }

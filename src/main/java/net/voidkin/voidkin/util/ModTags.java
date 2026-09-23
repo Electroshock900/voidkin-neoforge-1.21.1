@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.material.Fluid;
 import net.voidkin.voidkin.Voidkin;
 
@@ -15,6 +16,8 @@ public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> VOIDKIN_BLOCKS = tag("voidkin_blocks");
         public static final TagKey<Block> ANTI_VOID_BLOCKS = tag("anti_void_blocks");
+        public static final TagKey<Block> VOID_ELEVATIONS = tag("void_elevations");
+        public static final TagKey<Block> PORTAL_POOL = tag("portal_pool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, name));
@@ -24,6 +27,7 @@ public class ModTags {
         public static final TagKey<Item> CHAKRAM_ENCHANTABLE = tag("chakram_enchantables");
         public static final TagKey<Item> S = tag("s");
         public static final TagKey<Item> VOIDKIN_CHANGEABLE = tag("voidkin_changeable");
+        public static final TagKey<Item> PORTAL_ACTIVATOR = tag("portal_activator");
 
 
         private static TagKey<Item> tag(String name) {
@@ -52,6 +56,14 @@ public class ModTags {
         public static final TagKey<Fluid>DEITY_FLUIDS = tag("deity_fluids");
         private static TagKey<Fluid> tag(String name) {
             return FluidTags.create(ResourceLocation.fromNamespaceAndPath(Voidkin.MODID,name));
+        }
+    }
+
+    public static class Structures{
+        public static final TagKey<Structure>VOID_STRUCTURES = tag("void_structures");
+        private static TagKey<Structure> tag(String name) {
+            return TagKey.create(Registries.STRUCTURE, ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, name));
+
         }
     }
 

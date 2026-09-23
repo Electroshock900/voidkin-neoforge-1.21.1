@@ -13,11 +13,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.voidkin.voidkin.util.ModTags;
+import net.voidkin.voidkin.world.ModPlacedFeatures;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_DARK_ORE = registerKey("add_dark_ore");
-    public static final ResourceKey<BiomeModifier> ADD_NETHER_DARK_ORE = registerKey("add_nether_dark_ore");
-    public static final ResourceKey<BiomeModifier> ADD_END_DARK_ORE = registerKey("add_end_dark_ore");
+    public static final ResourceKey<BiomeModifier> ADD_DARK_SHARD_ORE = registerKey("add_dark_shard_ore");
+    public static final ResourceKey<BiomeModifier> ADD_NETHER_DARK_SHARD_ORE = registerKey("add_nether_dark_shard_ore");
+    public static final ResourceKey<BiomeModifier> ADD_END_DARK_SHARD_ORE = registerKey("add_end_dark_shard_ore");
     public static final ResourceKey<BiomeModifier> ADD_DARK_TREE = registerKey("add_dark_tree");
     public static final ResourceKey<BiomeModifier> ADD_BLOOD_TREE = registerKey("add_blood_tree");
     public static final ResourceKey<BiomeModifier> ADD_BLOOD_SPIKES = registerKey("add_blood_spikes");
@@ -27,19 +28,19 @@ public class ModBiomeModifiers {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_DARK_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_DARK_SHARD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DARK_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DARK_SHARD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_NETHER_DARK_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_NETHER_DARK_SHARD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_NETHER),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_DARK_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.NETHER_DARK_SHARD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
-        context.register(ADD_END_DARK_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_END_DARK_SHARD_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_DARK_ORE_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_DARK_SHARD_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
         context.register(ADD_DARK_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
@@ -54,7 +55,7 @@ public class ModBiomeModifiers {
         context.register(ADD_BLOOD_SPIKES, new BiomeModifiers.AddFeaturesBiomeModifier(
                 //biomes.getOrThrow(ModTags.Biomes.VOID_BIOMES),
                 biomes.getOrThrow(BiomeTags.IS_OCEAN),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DARK_STONE_PILLAR)),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.DARK_STONE_PILLARS)),
                 GenerationStep.Decoration.SURFACE_STRUCTURES
         ));
     }

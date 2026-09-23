@@ -26,6 +26,7 @@ import net.voidkin.voidkin.particles.ModParticles;
 import net.voidkin.voidkin.recipe.ModRecipes;
 import net.voidkin.voidkin.sounds.ModSounds;
 import net.voidkin.voidkin.util.*;
+import net.voidkin.voidkin.worldgen.portal.ModDataAttachments;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 
@@ -112,6 +113,7 @@ public class Voidkin {
         modEventBus.addListener(this::setupPackets);
         modEventBus.addListener(this::registerCapabilities);
 
+
         // Register the Deferred Register to the mod event bus so blocks get registered
         BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
@@ -147,7 +149,8 @@ public class Voidkin {
         ModChestsMenuTypes.CONTAINERS.register(modEventBus);
 
         ModDataComponents.REGISTRY.register(modEventBus);
-
+        ModDataAttachments.ATTACHMENT_TYPES.register(modEventBus);
+        modEventBus.addListener(ModGameRules::register);
 
 
         // Register ourselves for server and other game events we are interested in.
