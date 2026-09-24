@@ -37,4 +37,8 @@ public class ModModelLayers {
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "boat/void"), "main");
     public static final ModelLayerLocation VOID_CHEST_BOAT_LAYER = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "chest_boat/void"), "main");
+    public static final ModelLayerLocation VERAWOOD_BOAT_LAYER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "boat/verawood"), "main");
+    public static final ModelLayerLocation VERAWOOD_CHEST_BOAT_LAYER = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(Voidkin.MODID, "chest_boat/verawood"), "main");
 }

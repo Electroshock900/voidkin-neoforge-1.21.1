@@ -117,7 +117,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.VERAWOOD_TRAPDOOR.get()), modLoc("block/verawood_trapdoor"), true, "cutout");
 
 
-
+        blockWithItem(ModBlocks.END_DARK_SHARD_ORE);
 
 
         //blockWithItem(ModBlocks.VOID_LANTERN);

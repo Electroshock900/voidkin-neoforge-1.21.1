@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blood_cobblestone_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidkin:blood_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidkin:blood_cobblestone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blood_cobblestone_stairs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidkin:blood_cobblestone_stairs"
+    ]
+  }
+}

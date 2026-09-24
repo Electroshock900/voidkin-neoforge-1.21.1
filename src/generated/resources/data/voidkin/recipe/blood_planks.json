@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "voidkin:blood_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "voidkin:blood_planks"
+  }
+}

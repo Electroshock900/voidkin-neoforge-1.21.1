@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class ModStandingSignBlock extends StandingSignBlock {
-    public ModStandingSignBlock(Properties pProperties, WoodType pType) {
+    public ModStandingSignBlock(Properties pProperties,WoodType pType) {
         super(pType, pProperties);
     }
 

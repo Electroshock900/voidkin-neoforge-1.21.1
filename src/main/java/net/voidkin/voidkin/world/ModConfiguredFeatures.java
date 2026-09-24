@@ -30,9 +30,10 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> VERAWOOD_TREE_KEY = registerKey("verawood_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TRUE_VOID_TREE_KEY = registerKey("true_void_tree");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DARK_ORE_KEY = registerKey("dark_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_DARK_ORE_KEY = registerKey("deepslate_dark_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_DARK_ORE_KEY = registerKey("nether_dark_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DARK_SHARD_ORE_KEY = registerKey("dark_shard_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DEEPSLATE_DARK_SHARD_ORE_KEY = registerKey("deepslate_dark_shard_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_DARK_SHARD_ORE_KEY = registerKey("nether_dark_shard_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_DARK_SHARD_ORE_KEY = registerKey("end_dark_shard_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> DARKNESS_CONSUMED = registerKey("darkness_consumed");
 
@@ -43,6 +44,7 @@ public class ModConfiguredFeatures {
         RuleTest stonereplacables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslatereplacables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest netherrackreplacables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endstonereplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> overworldDarkOres = List.of(
                 OreConfiguration.target(stonereplacables,ModBlocks.DARK_SHARD_ORE.get().defaultBlockState()),
@@ -51,10 +53,12 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> netherDarkOres = List.of(
                 OreConfiguration.target(netherrackreplacables,ModBlocks.NETHER_DARK_SHARD_ORE.get().defaultBlockState()));
 
-        List<OreConfiguration.TargetBlockState> darknessConsumed = List.of(
-                OreConfiguration.target(deepslatereplacables, ModBlocks.RAW_DARKNESS_BLOCK.get().defaultBlockState())
+        List<OreConfiguration.TargetBlockState> endDarkOres = List.of(
+                OreConfiguration.target(endstonereplaceables, ModBlocks.END_DARK_SHARD_ORE.get().defaultBlockState()));
 
-        );
+        List<OreConfiguration.TargetBlockState> darknessConsumed = List.of(
+                OreConfiguration.target(deepslatereplacables, ModBlocks.RAW_DARKNESS_BLOCK.get().defaultBlockState()));
+
 
         register(context, DARK_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.DARK_LOG.get()),
@@ -85,16 +89,17 @@ public class ModConfiguredFeatures {
 
         register(context, VERAWOOD_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.VERAWOOD_LOG.get()),
-                new DarkOakTrunkPlacer(4, 4,6),
+                new StraightTrunkPlacer(4, 4,6),
 
                 BlockStateProvider.simple(ModBlocks.VERAWOOD_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(7),5),
-                new TwoLayersFeatureSize(3, 1, 6)).build());
+                new BlobFoliagePlacer(ConstantInt.of(2),ConstantInt.of(2),5),
+                new TwoLayersFeatureSize(1, 0, 6)).build());
 
 
-        register(context, DARK_ORE_KEY,Feature.ORE,new OreConfiguration(overworldDarkOres,9));
-        register(context, DEEPSLATE_DARK_ORE_KEY,Feature.ORE,new OreConfiguration(deepslatereplacables,ModBlocks.DEEPSLATE_DARK_SHARD_ORE.get().defaultBlockState(),13));
-        register(context, NETHER_DARK_ORE_KEY,Feature.ORE,new OreConfiguration(netherrackreplacables,ModBlocks.NETHER_DARK_SHARD_ORE.get().defaultBlockState(),10));
+        register(context, DARK_SHARD_ORE_KEY,Feature.ORE,new OreConfiguration(overworldDarkOres,9));
+        register(context, DEEPSLATE_DARK_SHARD_ORE_KEY,Feature.ORE,new OreConfiguration(deepslatereplacables,ModBlocks.DEEPSLATE_DARK_SHARD_ORE.get().defaultBlockState(),13));
+        register(context, NETHER_DARK_SHARD_ORE_KEY,Feature.ORE,new OreConfiguration(netherrackreplacables,ModBlocks.NETHER_DARK_SHARD_ORE.get().defaultBlockState(),10));
+        register(context, END_DARK_SHARD_ORE_KEY,Feature.ORE,new OreConfiguration(endstonereplaceables,ModBlocks.END_DARK_SHARD_ORE.get().defaultBlockState(),7));
         register(context, DARKNESS_CONSUMED, Feature.ORE, new OreConfiguration(deepslatereplacables,ModBlocks.DARKNESS_BLOCK.get().defaultBlockState(), 5));
 
 

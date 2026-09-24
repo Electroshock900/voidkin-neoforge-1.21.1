@@ -46,7 +46,7 @@ public class DataGenerators {
         //generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
         //generator.addProvider(event.includeServer(), new ModPoiTypeTagsProvider(packOutput, lookupProvider, existingFileHelper));
 
-        //generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
         /*generator.addProvider(event.includeServer(), new RegistryDataGenerator(packOutput,lookupProvider));
         generator.addProvider(true, new PackMetadataGenerator(packOutput).add(PackMetadataSection.TYPE, new PackMetadataSection(
                 Component.literal("Resources for Iron Chests"),

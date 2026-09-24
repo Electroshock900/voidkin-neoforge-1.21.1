@@ -16,11 +16,11 @@ public record ModWoodTypes(String name, BlockSetType setType, SoundType soundTyp
 ) {
 public static final Map<String, WoodType> TYPES = new Object2ObjectArrayMap<>();
 public static final Codec<WoodType> CODEC = Codec.stringResolver(WoodType::name, TYPES::get);
-    public static final WoodType DARK = register(new WoodType(Voidkin.MODID + ":dark", BlockSetType.DARK_OAK));
-    public static final WoodType BLOOD = register(new WoodType(Voidkin.MODID + ":blood", BlockSetType.DARK_OAK));
-    public static final WoodType VOID = register(new WoodType(Voidkin.MODID + ":void", BlockSetType.DARK_OAK));
-    //public static final WoodType TRUE_VOID = register(new WoodType(Voidkin.MODID + ":true_void", BlockSetType.DARK_OAK));
-    public static final WoodType VERAWOOD = register(new WoodType(Voidkin.MODID + "verawood", BlockSetType.DARK_OAK));
+    public static final WoodType DARK = WoodType.register(new WoodType(Voidkin.MODID + ":dark", BlockSetType.DARK_OAK));
+    public static final WoodType BLOOD = WoodType.register(new WoodType(Voidkin.MODID + ":blood", BlockSetType.DARK_OAK));
+    public static final WoodType VOID = WoodType.register(new WoodType(Voidkin.MODID + ":void", BlockSetType.DARK_OAK));
+    public static final WoodType TRUE_VOID = WoodType.register(new WoodType(Voidkin.MODID + ":true_void", BlockSetType.DARK_OAK));
+    public static final WoodType VERAWOOD = WoodType.register(new WoodType(Voidkin.MODID + ":verawood", BlockSetType.DARK_OAK));
 
     public ModWoodTypes(String p_273766_, BlockSetType p_273104_) {
         this(p_273766_, p_273104_, SoundType.WOOD, SoundType.HANGING_SIGN, SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN);

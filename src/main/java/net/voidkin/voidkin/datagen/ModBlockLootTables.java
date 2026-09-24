@@ -2,6 +2,16 @@ package net.voidkin.voidkin.datagen;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.fml.common.Mod;
 import net.voidkin.voidkin.block.ModBlocks;
 import net.voidkin.voidkin.item.ModItems;
@@ -114,6 +124,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createOreDrop(ModBlocks.DEEPSLATE_DARK_SHARD_ORE.get(), ModItems.RAW_DARK_SHARD.get()));
         add(ModBlocks.NETHER_DARK_SHARD_ORE.get(),(block)->
                 createOreDrop(ModBlocks.NETHER_DARK_SHARD_ORE.get(), ModItems.RAW_DARK_SHARD.get()));
+        add(ModBlocks.END_DARK_SHARD_ORE.get(),(block)->
+                createOreDrops(ModBlocks.END_DARK_SHARD_ORE.get(), ModItems.RAW_DARK_SHARD.get()));
 
         //TREE STUFF
         dropSelf(ModBlocks.DARK_LOG.get());
@@ -256,9 +268,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         add(ModBlocks.VERAWOOD_LEAVES.get(),(block)->
                 createLeavesDrops(block,ModBlocks.VERAWOOD_SAPLING.get(),NORMAL_LEAVES_SAPLING_CHANCES));
 
-dropSelf(ModBlocks.CRYSTALLIZER.get());
+        dropSelf(ModBlocks.CRYSTALLIZER.get());
+
+
          }
 
+    protected LootTable.Builder createOreDrops(Block block, Item item) {
+        HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(block, (LootPoolEntryContainer.Builder)this.applyExplosionDecay(block, LootItem.lootTableItem(item).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 5.0F))).apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))));
+    }
 
 
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidkin:void_cobblestone_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_void_cobblestone_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidkin:void_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_void_cobblestone_wall"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidkin:void_cobblestone_wall"
+    ]
+  }
+}

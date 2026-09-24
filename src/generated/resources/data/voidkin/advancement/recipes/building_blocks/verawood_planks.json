@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidkin:verawood_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_verawood_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidkin:verawood_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_verawood_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidkin:verawood_planks"
+    ]
+  }
+}

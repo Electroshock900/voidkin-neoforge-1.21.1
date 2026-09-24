@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dark_cobblestone_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "voidkin:dark_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "voidkin:dark_cobblestone_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dark_cobblestone_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "voidkin:dark_cobblestone_slab"
+    ]
+  }
+}

@@ -19,7 +19,7 @@ import net.voidkin.voidkin.item.ModItems;
 
 import java.util.function.IntFunction;
 
-public class ModChestBoatEntity extends ChestBoat {
+public class ModChestBoatEntity extends ModBoatEntity {
     private static final EntityDataAccessor<Integer> DATA_ID_TYPE = SynchedEntityData.defineId(ModChestBoatEntity.class, EntityDataSerializers.INT);
 
     public ModChestBoatEntity(EntityType<? extends ModChestBoatEntity> pEntityType, Level pLevel) {
@@ -37,9 +37,10 @@ public class ModChestBoatEntity extends ChestBoat {
     @Override
     public Item getDropItem() {
         return switch (getModVariant()) {
-            case DARK -> ModItems.DARK_BOAT.get();
-            case BLOOD -> ModItems.BLOOD_BOAT.get();
-            case VOID -> ModItems.VOID_BOAT.get();
+            case DARK -> ModItems.DARK_CHEST_BOAT.get();
+            case BLOOD -> ModItems.BLOOD_CHEST_BOAT.get();
+            case VOID -> ModItems.VOID_CHEST_BOAT.get();
+            case VERAWOOD -> ModItems.VERAWOOD_CHEST_BOAT.get();
         };
     }
 

@@ -1,0 +1,52 @@
+{
+  "carvers": {},
+  "downfall": 0.8,
+  "effects": {
+    "fog_color": 8927296,
+    "grass_color": 4456966,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 4229251,
+    "water_color": 4325376,
+    "water_fog_color": 4325376
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": [
+      {
+        "type": "voidkin:manta_ray",
+        "maxCount": 4,
+        "minCount": 1,
+        "weight": 1
+      }
+    ]
+  },
+  "temperature": 0.7
+}

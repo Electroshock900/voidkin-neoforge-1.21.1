@@ -130,6 +130,27 @@
   "block.voidkin.void_lantern": "Abyssal Lantern",
 
 
+
+  "block.voidkin.verawood_sapling": "Verawood Sapling",
+  "block.voidkin.verawood_log": "Verawood Log",
+  "block.voidkin.verawood_wood": "Verawood Wood",
+  "block.voidkin.stripped_verawood_log": "Stripped Verawood Log",
+  "block.voidkin.stripped_verawood_wood": "Stripped Verawood Wood",
+  "block.voidkin.verawood_leaves": "Verawood Leaves",
+  "block.voidkin.verawood_planks": "Verawood Wood Planks",
+  "block.voidkin.verawood_stairs": "Verawood Wood Stairs",
+  "block.voidkin.verawood_slab": "Verawood Wood Slab",
+  "block.voidkin.verawood_pressure_plate": "Verawood Wood Pressure Plate",
+  "block.voidkin.verawood_button": "Verawood Wood Button",
+  "block.voidkin.verawood_fence": "Verawood Wood Fence",
+  "block.voidkin.verawood_fence_gate": "Verawood Wood Fence Gate",
+  "block.voidkin.verawood_wall": "Verawood Wood Wall",
+  "block.voidkin.verawood_door": "Verawood Wood Door",
+  "block.voidkin.verawood_trapdoor": "Verawood Wood Trapdoor",
+  "block.voidkin.verawood_chest": "Verawood Chest",
+  "block.voidkin.verawood_sign": "Verawood Sign",
+  "block.voidkin.verawood_hanging_sign": "Verawood Hanging Sign",
+
   "block.voidkin.dark_cactus": "Dark Cactus",
   "block.voidkin.blood_cactus": "Blood Cactus",
   "block.voidkin.end_cactus": "Ender Cactus",
@@ -241,6 +262,8 @@
   "item.voidkin.blood_chest_boat": "Blood Chest Boat",
   "item.voidkin.void_boat": "Abyssal Boat",
   "item.voidkin.void_chest_boat": "Abyssal Chest Boat",
+  "item.voidkin.verawood_boat": "Verawood Boat",
+  "item.voidkin.verawood_chest_boat": "Verawood Chest Boat",
 
 
   "voidkin.container.obsidian_chest": "Obsidian Chest",
@@ -385,9 +408,19 @@
   "death.attack.voidkin.life_steals.item": "%s's life was stolen by %s with %s",
 
   "death.attack.voidkin.chakrams": "%s was burned to ash by %s",
-  "death.attack.voidkin.chakrams.item": "%s was burned to ash by %s using %s"
+  "death.attack.voidkin.chakrams.item": "%s was burned to ash by %s using %s",
 
 
 
+  "gamerule.playersVoidPortalCreativeDelay": "Player's Void portal delay in creative mode",
+  "gamerule.playersVoidPortalDefaultDelay": "Player's Void portal delay in non-creative mode",
+  "gamerule.playersXionPortalCreativeDelay": "Player's Xion portal delay in creative mode",
+  "gamerule.playersXionPortalDefaultDelay": "Player's Xion portal delay in non-creative mode",
 
+  "gamerule.bloodFluidSourceConversion": "Blood converts to source",
+  "gamerule.deityBloodFluidSourceConversion": "Deity blood converts to source",
+  "gamerule.enderBloodFluidSourceConversion": "Ender Blood converts to source",
+  "gamerule.darkEssenceFluidSourceConversion": "Dark essence converts to source",
+  "gamerule.voidLavaSourceConversion": "Void lava converts to source",
+  "gamerule.shimmerFluidSourceConversion": "Shimmer converts to source"
 }

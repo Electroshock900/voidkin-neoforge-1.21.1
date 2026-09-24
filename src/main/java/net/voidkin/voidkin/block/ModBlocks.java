@@ -55,6 +55,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0f,2.0f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> NETHER_DARK_SHARD_ORE = registerBlock("nether_dark_shard_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0f,2.0f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> END_DARK_SHARD_ORE = registerBlock("end_dark_shard_ore",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(2.0f,2.0f).requiresCorrectToolForDrops()));
+
+
     public static final DeferredBlock<Block> DARKNESS_BLOCK = registerBlock("darkness_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW).strength(2.0f,2.0f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> RAW_DARKNESS_BLOCK = registerBlock("raw_darkness_block",

@@ -62,6 +62,8 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.BLOOD_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
         event.registerLayerDefinition(ModModelLayers.VOID_BOAT_LAYER, BoatModel::createBodyModel);
         event.registerLayerDefinition(ModModelLayers.VOID_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ModModelLayers.VERAWOOD_BOAT_LAYER, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ModModelLayers.VERAWOOD_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
     }
     @SubscribeEvent
     public static void doSetup(FMLClientSetupEvent event) {

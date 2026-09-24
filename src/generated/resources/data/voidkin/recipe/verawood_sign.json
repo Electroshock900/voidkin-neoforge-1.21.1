@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "3": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "voidkin:verawood_planks"
+    }
+  },
+  "pattern": [
+    "DDD",
+    "DDD",
+    " 3 "
+  ],
+  "result": {
+    "count": 3,
+    "id": "voidkin:verawood_sign"
+  }
+}

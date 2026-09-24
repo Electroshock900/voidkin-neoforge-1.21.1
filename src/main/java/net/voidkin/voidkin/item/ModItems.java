@@ -212,6 +212,10 @@ public class ModItems {
             () -> new ModBoatItem(false, ModBoatEntity.Type.VOID, new Item.Properties()));
     public static final DeferredItem<Item> VOID_CHEST_BOAT = ITEMS.register("void_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.VOID, new Item.Properties()));
+    public static final DeferredItem<Item> VERAWOOD_BOAT = ITEMS.register("verawood_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.VERAWOOD, new Item.Properties()));
+    public static final DeferredItem<Item> VERAWOOD_CHEST_BOAT = ITEMS.register("verawood_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.VERAWOOD, new Item.Properties()));
 
 
 //MusicDiscs

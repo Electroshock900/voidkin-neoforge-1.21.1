@@ -1,5 +1,6 @@
 package net.voidkin.voidkin;
 
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
@@ -214,6 +215,10 @@ public class Voidkin {
             @SubscribeEvent
             public static void onClientSetup(FMLClientSetupEvent event) {
                 ModItemProperties.addCustomItemProperties();
+                Sheets.addWoodType(ModWoodTypes.DARK);
+                Sheets.addWoodType(ModWoodTypes.BLOOD);
+                Sheets.addWoodType(ModWoodTypes.VOID);
+                Sheets.addWoodType(ModWoodTypes.VERAWOOD);
             }
         }
 

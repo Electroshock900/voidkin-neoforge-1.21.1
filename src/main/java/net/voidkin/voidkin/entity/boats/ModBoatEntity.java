@@ -39,6 +39,7 @@ public class ModBoatEntity extends Boat {
             case DARK -> ModItems.DARK_BOAT.get();
             case BLOOD -> ModItems.BLOOD_BOAT.get();
             case VOID -> ModItems.VOID_BOAT.get();
+            case VERAWOOD  -> ModItems.VERAWOOD_BOAT.get();
         };
     }
 
@@ -79,7 +80,8 @@ public class ModBoatEntity extends Boat {
     public enum Type implements StringRepresentable {
         DARK(ModBlocks.DARK_PLANKS.get(), "dark"),
         BLOOD(ModBlocks.BLOOD_PLANKS.get(), "blood"),
-        VOID(ModBlocks.VOID_PLANKS.get(), "void");
+        VOID(ModBlocks.VOID_PLANKS.get(), "void"),
+        VERAWOOD(ModBlocks.VERAWOOD_PLANKS.get(), "verawood");
 
         private final String name;
         private final Block planks;

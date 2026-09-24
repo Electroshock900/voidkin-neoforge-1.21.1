@@ -49,6 +49,25 @@ public class ModGameRules {
             GameRules.IntegerValue.create(1)
     );
 
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> BLOOD_SOURCE_CONVERT = register("bloodFluidSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(true));
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> DEITY_BLOOD_SOURCE_CONVERT = register("deityBloodFluidSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(true));
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> ENDER_BLOOD_SOURCE_CONVERT = register("enderBloodFluidSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(true));
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> VOID_LAVA_SOURCE_CONVERT = register("voidLavaSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(false));
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> DARK_ESSENCE_SOURCE_CONVERT = register("darkEssenceFluidSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(true));
+    public static final Supplier<GameRules.Key<GameRules.BooleanValue>> SHIMMER_SOURCE_CONVERT = register("shimmerFluidSourceConversion",
+            GameRules.Category.UPDATES,
+            GameRules.BooleanValue.create(true));
+
     @SuppressWarnings("unchecked")
     private static <T extends GameRules.Value<T>> Supplier<GameRules.Key<T>> register(String name, GameRules.Category category, GameRules.Type<T> type) {
         Supplier<GameRules.Key<T>> supplier = Suppliers.memoize(() -> GameRules.register(name, category, type));

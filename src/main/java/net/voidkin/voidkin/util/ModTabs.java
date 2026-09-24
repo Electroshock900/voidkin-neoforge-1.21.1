@@ -124,6 +124,8 @@ public class ModTabs {
                         pOutput.accept(ModItems.BLOOD_CHEST_BOAT.get());
                         pOutput.accept(ModItems.VOID_BOAT.get());
                         pOutput.accept(ModItems.VOID_CHEST_BOAT.get());
+                        pOutput.accept(ModItems.VERAWOOD_BOAT.get());
+                        pOutput.accept(ModItems.VERAWOOD_CHEST_BOAT.get());
                         
 
                         pOutput.accept(ModBlocks.SBLOCK.get());

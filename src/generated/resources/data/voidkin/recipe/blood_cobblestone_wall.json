@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "voidkin:blood_cobblestone"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "voidkin:blood_cobblestone_wall"
+  }
+}
